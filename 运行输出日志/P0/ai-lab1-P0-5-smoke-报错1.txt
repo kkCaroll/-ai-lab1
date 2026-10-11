@@ -1,0 +1,258 @@
+2026-10-11T23:55:02.884772718+08:00 dlctk179n2jm11gd-master-0 git-sync-code INFO: detected pid 1, running init handler
+2026-10-11T23:55:02.919337708+08:00 dlctk179n2jm11gd-master-0 git-sync-code I1011 15:55:02.919164      12 main.go:473] "level"=0 "msg"="starting up" "pid"=12 "args"=["/git-sync"]
+2026-10-11T23:55:02.919354685+08:00 dlctk179n2jm11gd-master-0 git-sync-code I1011 15:55:02.919291      12 main.go:923] "level"=0 "msg"="cloning repo" "origin"="https://github.com/kkCaroll/AI_lab1.git" "path"="/code"
+2026-10-11T23:55:05.011772037+08:00 dlctk179n2jm11gd-master-0 git-sync-code I1011 15:55:05.011681      12 main.go:737] "level"=0 "msg"="syncing git" "rev"="HEAD" "hash"="7b484b7b5a5818771b24a3f20a51a26809956d68"
+2026-10-11T23:55:06.786822552+08:00 dlctk179n2jm11gd-master-0 git-sync-code I1011 15:55:06.786736      12 main.go:772] "level"=0 "msg"="adding worktree" "path"="/code/7b484b7b5a5818771b24a3f20a51a26809956d68" "branch"="origin/main"
+2026-10-11T23:55:06.793670225+08:00 dlctk179n2jm11gd-master-0 git-sync-code I1011 15:55:06.793598      12 main.go:833] "level"=0 "msg"="reset worktree to hash" "path"="/code/7b484b7b5a5818771b24a3f20a51a26809956d68" "hash"="7b484b7b5a5818771b24a3f20a51a26809956d68"
+2026-10-11T23:55:06.793681986+08:00 dlctk179n2jm11gd-master-0 git-sync-code I1011 15:55:06.793630      12 main.go:838] "level"=0 "msg"="updating submodules"
+2026-10-11T23:55:21.640473927+08:00 dlctk179n2jm11gd-master-0 pytorch INFO: Try to dump ENV REQUIREMENTS_TEXT to /tmp/requirements.txt.
+2026-10-11T23:55:21.64078135+08:00 dlctk179n2jm11gd-master-0 pytorch INFO: Try to install requirements from /tmp/requirements.txt.
+2026-10-11T23:55:22.486901168+08:00 dlctk179n2jm11gd-master-0 pytorch Looking in indexes: http://mirrors.cloud.aliyuncs.com/pypi/simple/
+2026-10-11T23:55:22.710766381+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting transformers
+2026-10-11T23:55:22.717039416+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b9/59/1e7f1212c215c73690ae6cab4678efe1555ff985953e145d88cc212859b0/transformers-5.19.0-py3-none-any.whl (12.6 MB)
+2026-10-11T23:55:22.995484142+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 60.8 MB/s eta 0:00:00
+2026-10-11T23:55:23.125515651+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting peft
+2026-10-11T23:55:23.155985903+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/70/0b/59441cdbfdd342ed03c08af90a2fe16173f0cd48ab219f523b39ca059a79/peft-0.21.2-py3-none-any.whl (835 kB)
+2026-10-11T23:55:23.169875151+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 835.4/835.4 kB 78.7 MB/s eta 0:00:00
+2026-10-11T23:55:23.275841494+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting datasets
+2026-10-11T23:55:23.281930713+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/24/cc/7f624629846c709ef1c68aa61bfb8d0ae2638cbe265104a1c2f7a630949e/datasets-5.1.0-py3-none-any.whl (604 kB)
+2026-10-11T23:55:23.292719718+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 604.4/604.4 kB 77.7 MB/s eta 0:00:00
+2026-10-11T23:55:23.380329499+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting accelerate
+2026-10-11T23:55:23.387425324+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/4c/34f0450479d01195027260da68d8a3880683f1640c3ca5adf64acb3185f1/accelerate-1.15.0-py3-none-any.whl (394 kB)
+2026-10-11T23:55:23.396092318+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 70.5 MB/s eta 0:00:00
+2026-10-11T23:55:23.760493228+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.10/site-packages (from transformers->-r /tmp/requirements.txt (line 1)) (2.1.2)
+2026-10-11T23:55:23.815407735+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting packaging>=20.0
+2026-10-11T23:55:23.821625209+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-11T23:55:23.82832502+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 34.5 MB/s eta 0:00:00
+2026-10-11T23:55:24.075422043+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting huggingface-hub<3.0,>=1.31.0
+2026-10-11T23:55:24.081875851+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/eb/b0/0f7b430fd100b3a3b037fdbb314878200241082e607b3383c63d91a13a72/huggingface_hub-2.2.0-py3-none-any.whl (839 kB)
+2026-10-11T23:55:24.096552232+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 kB 73.4 MB/s eta 0:00:00
+2026-10-11T23:55:24.67186865+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting safetensors>=0.8.0
+2026-10-11T23:55:24.678533697+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/50/f203ff3a3ddfe19308efc83c5a3a29ed02bf786732ec35e68bf9162f3365/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+2026-10-11T23:55:24.691321146+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 53.8 MB/s eta 0:00:00
+2026-10-11T23:55:25.387184913+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting tokenizers<0.24.0,>=0.23.1
+2026-10-11T23:55:25.394098112+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3a/40/6706b82693715581457c6d5423eaa7faae576bb0526c5738a57085eb4449/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+2026-10-11T23:55:25.439264619+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 80.9 MB/s eta 0:00:00
+2026-10-11T23:55:25.540103922+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting typer
+2026-10-11T23:55:25.546465201+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/07/ea/2e31b67051e91a133189e9c000c222502ddc6969856416de0d095de4c0b0/typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-11T23:55:25.553412565+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.3/123.3 kB 30.5 MB/s eta 0:00:00
+2026-10-11T23:55:27.619247244+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting regex>=2025.10.22
+2026-10-11T23:55:27.638322382+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/99/eae371ca63f7ea1f1eac025021527adb57ce3a4b67ff608b896fd31ea447/regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (797 kB)
+2026-10-11T23:55:27.662437495+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 kB 38.2 MB/s eta 0:00:00
+2026-10-11T23:55:27.828599736+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting pyyaml>=5.1
+2026-10-11T23:55:27.836511676+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/7a/1e/7acc4f0e74c4b3d9531e24739e0ab832a5edf40e64fbae1a9c01941cabd7/pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-10-11T23:55:27.848803639+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 84.9 MB/s eta 0:00:00
+2026-10-11T23:55:27.990956752+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting tqdm>=4.60
+2026-10-11T23:55:27.997370695+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-10-11T23:55:28.003222939+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 23.8 MB/s eta 0:00:00
+2026-10-11T23:55:28.099820561+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: torch>=1.13.0 in /usr/local/lib/python3.10/site-packages (from peft->-r /tmp/requirements.txt (line 2)) (2.6.0+cu126)
+2026-10-11T23:55:28.483044903+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting psutil
+2026-10-11T23:55:28.489973784+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-10-11T23:55:28.49736193+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 35.6 MB/s eta 0:00:00
+2026-10-11T23:55:29.397999122+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting xxhash
+2026-10-11T23:55:29.423525035+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5f/3b/e5d20b4f602d15fc5fc066f601052a7d6f5a401a50d67fac92098a5829a5/xxhash-4.0.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (249 kB)
+2026-10-11T23:55:29.43688036+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 249.5/249.5 kB 24.0 MB/s eta 0:00:00
+2026-10-11T23:55:29.440727821+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: fsspec[http]<=2026.7.0,>=2023.1.0 in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (2025.9.0)
+2026-10-11T23:55:29.482717846+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting dill<0.4.2,>=0.3.0
+2026-10-11T23:55:29.48836652+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/1e/77/dc8c558f7593132cf8fefec57c4f60c83b16941c574ac5f619abb3ae7933/dill-0.4.1-py3-none-any.whl (120 kB)
+2026-10-11T23:55:29.494594241+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 34.9 MB/s eta 0:00:00
+2026-10-11T23:55:29.592667223+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting multiprocess<0.70.20
+2026-10-11T23:55:29.663835043+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e3/45/8004d1e6b9185c1a444d6b55ac5682acf9d98035e54386d967366035a03a/multiprocess-0.70.19-py310-none-any.whl (134 kB)
+2026-10-11T23:55:29.670362782+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 36.2 MB/s eta 0:00:00
+2026-10-11T23:55:30.251146733+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting pandas
+2026-10-11T23:55:30.274108155+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/40/a8/4dac1f8f8235e5d25b9955d02ff6f29396191d4e665d71122c3722ca83c5/pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-10-11T23:55:30.410248291+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 89.9 MB/s eta 0:00:00
+2026-10-11T23:55:30.971626505+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting pyarrow>=24.0.0
+2026-10-11T23:55:30.992306235+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/57/5c/f8fc0eb2de03464a557d5a4d0c15e972d73362414696618833b771f7eddd/pyarrow-25.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (50.1 MB)
+2026-10-11T23:55:31.502452499+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 34.9 MB/s eta 0:00:00
+2026-10-11T23:55:31.718518605+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: filelock in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (3.19.1)
+2026-10-11T23:55:34.742648053+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting aiohttp!=4.0.0a0,!=4.0.0a1
+2026-10-11T23:55:34.75032087+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/38/01f5fc732d5373d6c099db0343279cd4e6607287d336bab6ff6ae9085a0d/aiohttp-3.14.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+2026-10-11T23:55:34.783329255+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 62.0 MB/s eta 0:00:00
+2026-10-11T23:55:34.983322229+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting httpx2<3,>=2.0.0
+2026-10-11T23:55:34.989260138+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/d8/9c/6fe8931fd9f381042a9e4c7d5a7b4cbf7016b252bec0c99a49fce42c3326/httpx2-2.13.1-py3-none-any.whl (95 kB)
+2026-10-11T23:55:34.99552087+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.6/95.6 kB 26.7 MB/s eta 0:00:00
+2026-10-11T23:55:35.124796963+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting tomli>=1.1.0
+2026-10-11T23:55:35.131649555+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/60/3f/3e3f8fd0919249b0200c80fbc4f9a1e70be19f9883da71dfb7f8b9ab8aca/tomli-2.5.0-py3-none-any.whl (14 kB)
+2026-10-11T23:55:35.219713161+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting click<9.0.0,>=8.4.2
+2026-10-11T23:55:35.225603158+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-11T23:55:35.23211771+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 35.5 MB/s eta 0:00:00
+2026-10-11T23:55:35.429266672+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting hf-xet<2.0.0,>=1.6.0
+2026-10-11T23:55:35.435293575+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a3/4c/2bf3b66c215d409655f28de1622393dde04c9461280d48c7924bb3b2decd/hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+2026-10-11T23:55:35.475195426+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 114.5 MB/s eta 0:00:00
+2026-10-11T23:55:35.495069819+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.10/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers->-r /tmp/requirements.txt (line 1)) (4.15.0)
+2026-10-11T23:55:35.69969949+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-nvjitlink-cu12==12.6.85 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.85)
+2026-10-11T23:55:35.700247368+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.1.3)
+2026-10-11T23:55:35.70237863+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-cuda-runtime-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-11T23:55:35.704451289+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-cudnn-cu12==9.5.1.17 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (9.5.1.17)
+2026-10-11T23:55:35.706254504+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.21.5)
+2026-10-11T23:55:35.708184162+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: triton==3.2.0 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.2.0)
+2026-10-11T23:55:35.710344074+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-11T23:55:35.712345467+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-cufft-cu12==11.3.0.4 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.3.0.4)
+2026-10-11T23:55:35.714884085+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-cusparse-cu12==12.5.4.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.5.4.2)
+2026-10-11T23:55:35.71703848+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-nvtx-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-11T23:55:35.717552565+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: networkx in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.3)
+2026-10-11T23:55:35.719324321+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-cublas-cu12==12.6.4.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.4.1)
+2026-10-11T23:55:35.721058951+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.13.1)
+2026-10-11T23:55:35.72308199+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-cusparselt-cu12==0.6.3 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (0.6.3)
+2026-10-11T23:55:35.724893624+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-cuda-cupti-cu12==12.6.80 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.80)
+2026-10-11T23:55:35.726931198+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-curand-cu12==10.3.7.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (10.3.7.77)
+2026-10-11T23:55:35.728944543+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: nvidia-cusolver-cu12==11.7.1.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.7.1.2)
+2026-10-11T23:55:35.783427535+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/site-packages (from sympy==1.13.1->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.3.0)
+2026-10-11T23:55:36.054341343+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting pytz>=2020.1
+2026-10-11T23:55:36.060799774+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/4f/ef/c66110d46fb800dda0bf33164182dfadabe26a90e4476844d502a23dca8e/pytz-2026.5-py2.py3-none-any.whl (506 kB)
+2026-10-11T23:55:36.071207025+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 68.3 MB/s eta 0:00:00
+2026-10-11T23:55:36.111053202+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting python-dateutil>=2.8.2
+2026-10-11T23:55:36.116368877+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-10-11T23:55:36.122905186+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 59.6 MB/s eta 0:00:00
+2026-10-11T23:55:36.173497905+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting tzdata>=2022.7
+2026-10-11T23:55:36.178762567+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/94/21/1e5995a1c920cce14e4bffae20c665ec10e7ed03ab25e006cd741092b718/tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-10-11T23:55:36.186010066+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.0/348.0 kB 76.0 MB/s eta 0:00:00
+2026-10-11T23:55:36.292383291+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting shellingham>=1.3.0
+2026-10-11T23:55:36.297714466+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-11T23:55:36.318907861+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting annotated-doc>=0.0.2
+2026-10-11T23:55:36.324053217+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-11T23:55:36.487891493+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting rich>=13.8.0
+2026-10-11T23:55:36.493608828+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-11T23:55:36.501361081+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 63.6 MB/s eta 0:00:00
+2026-10-11T23:55:36.586257011+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting aiohappyeyeballs>=2.5.0
+2026-10-11T23:55:36.591663633+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+2026-10-11T23:55:37.948246505+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting multidict<8.0,>=4.5
+2026-10-11T23:55:37.955365168+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5a/9c/598d765e98aa02ff7204b6f11cf790e5840f5e8252d7b1d955ed0043bb94/multidict-7.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (464 kB)
+2026-10-11T23:55:37.976211407+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.4/464.4 kB 25.7 MB/s eta 0:00:00
+2026-10-11T23:55:38.297385968+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting propcache>=0.2.0
+2026-10-11T23:55:38.304189288+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/f0/51/5adee15e12a7e314cece4543fbf295b0fe1b504dc78b32dff4c8eb1e29b0/propcache-0.5.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (224 kB)
+2026-10-11T23:55:38.313094865+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.3/224.3 kB 36.9 MB/s eta 0:00:00
+2026-10-11T23:55:38.605268277+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting frozenlist>=1.1.1
+2026-10-11T23:55:38.612287798+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/ed/c7895fd2fde7f3ee70d248175f9b6cdf792fb741ab92dc59cd9ef3bd241b/frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (219 kB)
+2026-10-11T23:55:38.620951274+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.5/219.5 kB 36.9 MB/s eta 0:00:00
+2026-10-11T23:55:38.654446492+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting aiosignal>=1.4.0
+2026-10-11T23:55:38.660176114+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2026-10-11T23:55:39.872303902+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting yarl<2.0,>=1.25.1
+2026-10-11T23:55:39.879104279+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/b9/7818ac6dec7fbcd16be2d19495807c01e2c38834e57d41c63356a75e786b/yarl-1.25.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (118 kB)
+2026-10-11T23:55:39.89064058+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 12.8 MB/s eta 0:00:00
+2026-10-11T23:55:39.942658011+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting attrs>=17.3.0
+2026-10-11T23:55:39.947874881+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-11T23:55:39.952978809+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 22.6 MB/s eta 0:00:00
+2026-10-11T23:55:39.990463502+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting async-timeout<6.0,>=4.0
+2026-10-11T23:55:39.995673161+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fe/ba/e2081de779ca30d473f21f5b30e0e737c438205440784c7dfc81efc2b029/async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+2026-10-11T23:55:40.083814793+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting httpcore2==2.13.1
+2026-10-11T23:55:40.089004558+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/09/ba/a4568248771ce81957bfb7cc600264a40fbcda092391ee1c415c50be4bea/httpcore2-2.13.1-py3-none-any.whl (83 kB)
+2026-10-11T23:55:40.094319641+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 27.2 MB/s eta 0:00:00
+2026-10-11T23:55:40.153277465+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting anyio>=4.10
+2026-10-11T23:55:40.158581672+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-11T23:55:40.165298972+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 31.1 MB/s eta 0:00:00
+2026-10-11T23:55:40.201718846+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting idna>=3.18
+2026-10-11T23:55:40.206837533+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl (69 kB)
+2026-10-11T23:55:40.21366067+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 13.8 MB/s eta 0:00:00
+2026-10-11T23:55:40.250336223+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting truststore>=0.10
+2026-10-11T23:55:40.255628808+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/19/97/56608b2249fe206a67cd573bc93cd9896e1efb9e98bce9c163bcdc704b88/truststore-0.10.4-py3-none-any.whl (18 kB)
+2026-10-11T23:55:40.29329646+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting h11>=0.16
+2026-10-11T23:55:40.298460275+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-11T23:55:40.347509722+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting six>=1.5
+2026-10-11T23:55:40.352712398+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-11T23:55:40.43865758+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting pygments<3.0.0,>=2.13.0
+2026-10-11T23:55:40.444175697+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-11T23:55:40.459801879+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 96.8 MB/s eta 0:00:00
+2026-10-11T23:55:40.523965493+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting markdown-it-py>=2.2.0
+2026-10-11T23:55:40.5292454+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-11T23:55:40.534973633+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 26.2 MB/s eta 0:00:00
+2026-10-11T23:55:40.569123914+08:00 dlctk179n2jm11gd-master-0 pytorch Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/site-packages (from jinja2->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.1.5)
+2026-10-11T23:55:40.65466999+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting exceptiongroup>=1.0.2
+2026-10-11T23:55:40.659855859+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/0e/97c33bf5009bdbac74fd2beace167cab3f978feb69cc36f1ef79360d6c4e/exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-10-11T23:55:40.770282381+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting typing-extensions>=4.1.0
+2026-10-11T23:55:40.77552473+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-11T23:55:40.780606866+08:00 dlctk179n2jm11gd-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 15.0 MB/s eta 0:00:00
+2026-10-11T23:55:40.8980591+08:00 dlctk179n2jm11gd-master-0 pytorch Collecting mdurl~=0.1
+2026-10-11T23:55:40.903236411+08:00 dlctk179n2jm11gd-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-11T23:55:42.453968078+08:00 dlctk179n2jm11gd-master-0 pytorch Installing collected packages: pytz, xxhash, tzdata, typing-extensions, truststore, tqdm, tomli, six, shellingham, safetensors, regex, pyyaml, pygments, pyarrow, psutil, propcache, packaging, mdurl, idna, hf-xet, h11, frozenlist, dill, click, attrs, async-timeout, annotated-doc, aiohappyeyeballs, python-dateutil, multiprocess, multidict, markdown-it-py, httpcore2, exceptiongroup, aiosignal, yarl, rich, pandas, anyio, typer, httpx2, aiohttp, huggingface-hub, tokenizers, datasets, accelerate, transformers, peft
+2026-10-11T23:55:42.762772242+08:00 dlctk179n2jm11gd-master-0 pytorch   Attempting uninstall: typing-extensions
+2026-10-11T23:55:42.763670593+08:00 dlctk179n2jm11gd-master-0 pytorch     Found existing installation: typing_extensions 4.15.0
+2026-10-11T23:55:42.767079685+08:00 dlctk179n2jm11gd-master-0 pytorch     Uninstalling typing_extensions-4.15.0:
+2026-10-11T23:55:43.35914889+08:00 dlctk179n2jm11gd-master-0 pytorch       Successfully uninstalled typing_extensions-4.15.0
+2026-10-11T23:55:46.360986162+08:00 dlctk179n2jm11gd-master-0 pytorch   Attempting uninstall: idna
+2026-10-11T23:55:46.362026949+08:00 dlctk179n2jm11gd-master-0 pytorch     Found existing installation: idna 3.11
+2026-10-11T23:55:46.367091245+08:00 dlctk179n2jm11gd-master-0 pytorch     Uninstalling idna-3.11:
+2026-10-11T23:55:46.368309504+08:00 dlctk179n2jm11gd-master-0 pytorch       Successfully uninstalled idna-3.11
+2026-10-11T23:56:03.540146926+08:00 dlctk179n2jm11gd-master-0 pytorch Successfully installed accelerate-1.15.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 annotated-doc-0.0.5 anyio-4.15.1 async-timeout-5.0.1 attrs-26.1.0 click-8.5.0 datasets-5.1.0 dill-0.4.1 exceptiongroup-1.3.1 frozenlist-1.8.0 h11-0.16.0 hf-xet-1.7.0 httpcore2-2.13.1 httpx2-2.13.1 huggingface-hub-2.2.0 idna-3.20 markdown-it-py-4.2.0 mdurl-0.1.2 multidict-7.1.0 multiprocess-0.70.19 packaging-26.3 pandas-2.3.3 peft-0.21.2 propcache-0.5.4 psutil-7.2.2 pyarrow-25.0.1 pygments-2.21.0 python-dateutil-2.9.0.post0 pytz-2026.5 pyyaml-6.0.3 regex-2026.9.29 rich-15.0.0 safetensors-0.8.0 shellingham-1.5.4 six-1.17.0 tokenizers-0.23.3 tomli-2.5.0 tqdm-4.70.1 transformers-5.19.0 truststore-0.10.4 typer-0.27.3 typing-extensions-4.16.0 tzdata-2026.5 xxhash-4.0.1 yarl-1.25.1
+2026-10-11T23:56:03.540514992+08:00 dlctk179n2jm11gd-master-0 pytorch WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2026-10-11T23:56:03.658898333+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:56:03.658917281+08:00 dlctk179n2jm11gd-master-0 pytorch [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+2026-10-11T23:56:03.658922435+08:00 dlctk179n2jm11gd-master-0 pytorch [notice] To update, run: pip install --upgrade pip
+2026-10-11T23:56:04.687587131+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:56:04.687617709+08:00 dlctk179n2jm11gd-master-0 pytorch ===== 环境 =====
+2026-10-11T23:56:04.687629184+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] python  3.10.19  可执行文件 /usr/local/bin/python
+2026-10-11T23:56:04.688904987+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] platform  Linux-5.10.134-18.0.12.lifsea8.x86_64-x86_64-with-glibc2.39
+2026-10-11T23:56:04.688912677+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] uname  Linux 5.10.134-18.0.12.lifsea8.x86_64 x86_64
+2026-10-11T23:56:04.71489685+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] nvidia-smi  Tesla V100-SXM2-16GB, 550.163.01, 16384 MiB
+2026-10-11T23:56:07.859735068+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] torch  2.6.0+cu126
+2026-10-11T23:56:07.85976784+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] torch 的 CUDA 构建  12.6
+2026-10-11T23:56:07.903601086+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] CUDA 可用  True
+2026-10-11T23:56:07.925189436+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] 可见 GPU 数  1
+2026-10-11T23:56:07.927511973+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] GPU 0  Tesla V100-SXM2-16GB  显存 15.8 GiB  算力 7.0
+2026-10-11T23:56:07.927537511+08:00 dlctk179n2jm11gd-master-0 pytorch [WARN] bf16 原生支持  False，算力低于 8.0，宜改用 float16
+2026-10-11T23:56:07.927549396+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:56:07.927556105+08:00 dlctk179n2jm11gd-master-0 pytorch ===== 依赖 =====
+2026-10-11T23:56:08.847217274+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] transformers  5.19.0
+2026-10-11T23:56:08.854277747+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] tokenizers  0.23.3
+2026-10-11T23:56:12.405870201+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] peft  0.21.2
+2026-10-11T23:56:12.88504332+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] datasets  5.1.0
+2026-10-11T23:56:12.885068246+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] accelerate  1.15.0
+2026-10-11T23:56:12.885089541+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] safetensors  0.8.0
+2026-10-11T23:56:12.885097006+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] huggingface_hub  2.2.0
+2026-10-11T23:56:12.885102436+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:56:12.885117624+08:00 dlctk179n2jm11gd-master-0 pytorch ===== 环境变量 =====
+2026-10-11T23:56:12.885138737+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] HF_ENDPOINT  https://hf-mirror.com
+2026-10-11T23:56:12.885144274+08:00 dlctk179n2jm11gd-master-0 pytorch [WARN] HF_HOME  未设置
+2026-10-11T23:56:12.885148621+08:00 dlctk179n2jm11gd-master-0 pytorch [WARN] HF_HUB_CACHE  未设置
+2026-10-11T23:56:12.885156721+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] PYTHONUNBUFFERED  1
+2026-10-11T23:56:12.885160864+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] TOKENIZERS_PARALLELISM  false
+2026-10-11T23:56:12.885168457+08:00 dlctk179n2jm11gd-master-0 pytorch [WARN] CUDA_VISIBLE_DEVICES  未设置
+2026-10-11T23:56:12.88517625+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] NVIDIA_VISIBLE_DEVICES  0
+2026-10-11T23:56:12.885226037+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] 平台注入变量  MASTER_ADDR=dlctk179n2jm11gd-master-0  MASTER_PORT=23456  WORLD_SIZE=1  RANK=0  POD_NAME=dlctk179n2jm11gd-master-0
+2026-10-11T23:56:12.885230883+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:56:12.885243818+08:00 dlctk179n2jm11gd-master-0 pytorch ===== 挂载 =====
+2026-10-11T23:56:12.885300008+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] /mnt/code  可见 1 项  AI_lab1
+2026-10-11T23:56:12.885332892+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] /mnt/code 容量  总计 226.2 GiB  可用 188.6 GiB
+2026-10-11T23:56:12.92658411+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] /mnt/data  可见 1 项  data
+2026-10-11T23:56:12.926611681+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] /mnt/data 容量  总计 524288.0 GiB  可用 524288.0 GiB
+2026-10-11T23:56:13.007226859+08:00 dlctk179n2jm11gd-master-0 pytorch [FAIL] 写入探测  目录不存在 /mnt/data/exp1
+2026-10-11T23:56:13.007242546+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:56:13.007248116+08:00 dlctk179n2jm11gd-master-0 pytorch ===== 数据 =====
+2026-10-11T23:56:13.075835721+08:00 dlctk179n2jm11gd-master-0 pytorch [FAIL] 数据根目录  不存在 /mnt/data/exp1/data/raw，请确认 OSS 挂载与上传前缀
+2026-10-11T23:56:13.075847816+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:56:13.075852626+08:00 dlctk179n2jm11gd-master-0 pytorch ===== 前向 =====
+2026-10-11T23:56:13.076027227+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] 推理精度  torch.float16，按硬件算力自动选择
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 765.25it/s]
+Loading weights:  73%|███████▎  | 226/311 [00:00<00:00, 796.74it/s]
+Loading weights:  41%|████      | 126/311 [00:00<00:00, 658.66it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:38,  8.01it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-11T23:57:51.694901802+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:58:06.022347077+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] 加载模型  Qwen/Qwen3-0.6B  用时 112.9 秒
+2026-10-11T23:58:11.214615668+08:00 dlctk179n2jm11gd-master-0 pytorch 输出如下
+2026-10-11T23:58:11.214646854+08:00 dlctk179n2jm11gd-master-0 pytorch Mia buys:
+2026-10-11T23:58:11.214651675+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:58:11.214656011+08:00 dlctk179n2jm11gd-master-0 pytorch - 4 pens at 3 yuan each:  
+2026-10-11T23:58:11.214660165+08:00 dlctk179n2jm11gd-master-0 pytorch   $ 4 \times 3 = 12 $ yuan
+2026-10-11T23:58:11.214663897+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:58:11.21466768+08:00 dlctk179n2jm11gd-master-0 pytorch - 5 notebooks at 7 yuan each:  
+2026-10-11T23:58:11.214672938+08:00 dlctk179n2jm11gd-master-0 pytorch   $ 5 \times 7 = 35 $ yuan
+2026-10-11T23:58:11.214678742+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:58:11.214684561+08:00 dlctk179n2jm11gd-master-0 pytorch **Total cost:**  
+2026-10-11T23:58:11.214689882+08:00 dlctk179n2jm11gd-master-0 pytorch $ 12 + 35 = 47 $ yuan
+2026-10-11T23:58:11.214695+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:58:11.21469998+08:00 dlctk179n2jm11gd-master-0 pytorch **Answer:** Mia pays **47 yuan** in total.
+2026-10-11T23:58:11.214704894+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] 生成  90 token  用时 5.2 秒  17.4 token/s
+2026-10-11T23:58:11.214719997+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] 显存峰值  1.14 GiB
+2026-10-11T23:58:11.214724341+08:00 dlctk179n2jm11gd-master-0 pytorch [OK] 答案正确性  参考答案 47 已出现在输出中
+2026-10-11T23:58:11.265708597+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:58:11.265731114+08:00 dlctk179n2jm11gd-master-0 pytorch ===== 汇总 =====
+2026-10-11T23:58:11.265743689+08:00 dlctk179n2jm11gd-master-0 pytorch 失败  写入探测  目录不存在 /mnt/data/exp1
+2026-10-11T23:58:11.265762777+08:00 dlctk179n2jm11gd-master-0 pytorch 失败  数据根目录  不存在 /mnt/data/exp1/data/raw，请确认 OSS 挂载与上传前缀
+2026-10-11T23:58:11.265768378+08:00 dlctk179n2jm11gd-master-0 pytorch 警告  bf16 原生支持  False，算力低于 8.0，宜改用 float16
+2026-10-11T23:58:11.265773069+08:00 dlctk179n2jm11gd-master-0 pytorch 警告  HF_HOME  未设置
+2026-10-11T23:58:11.265777131+08:00 dlctk179n2jm11gd-master-0 pytorch 警告  HF_HUB_CACHE  未设置
+2026-10-11T23:58:11.26579175+08:00 dlctk179n2jm11gd-master-0 pytorch 警告  CUDA_VISIBLE_DEVICES  未设置
+2026-10-11T23:58:11.265795812+08:00 dlctk179n2jm11gd-master-0 pytorch 
+2026-10-11T23:58:11.265799866+08:00 dlctk179n2jm11gd-master-0 pytorch 共计 36 项，OK 30，WARN 4，FAIL 2
