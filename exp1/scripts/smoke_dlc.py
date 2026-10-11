@@ -6,6 +6,7 @@
     deps     实验所需三方库是否齐备
     vars     关键环境变量与平台注入变量
     mount    代码集与存储挂载是否可见、是否可写
+    data     三个数据集是否已上传，行数与字段是否齐备
     forward  加载 Qwen3-0.6B 并完成一次贪心生成
 
 任一检查项判为 FAIL 即以非零码退出，便于在任务列表与日志中直接判断成败。
@@ -27,6 +28,7 @@ from __future__ import annotations
 
 import argparse
 import importlib
+import json
 import os
 import platform
 import shutil
@@ -40,7 +42,7 @@ OK = "OK"
 WARN = "WARN"
 FAIL = "FAIL"
 
-STAGES = ("env", "deps", "vars", "mount", "forward")
+STAGES = ("env", "deps", "vars", "mount", "data", "forward")
 DEFAULT_STAGES = ",".join(STAGES)
 
 # 镜像自带之外，实验还需要的库
@@ -79,6 +81,16 @@ INJECTED_VARS = (
 
 # 代码集与存储挂载的候选路径，前者见任务配置的代码配置挂载路径，后者固定为 /mnt/data
 DEFAULT_MOUNTS = ("/mnt/code", "/mnt/data")
+
+# 数据集在 OSS 中的前缀，与 RECORD/02-环境信息.md 的 OSS 目录约定一致
+DATA_ROOT = "/mnt/data/exp1/data/raw"
+
+# 文件名、行数与首行必备字段，取自本机落盘结果的核对记录
+DATA_FILES = (
+    ("gsm8k_train.jsonl", 7473, ("question", "answer")),
+    ("gsm8k_test.jsonl", 1319, ("question", "answer")),
+    ("arc_challenge_test.jsonl", 1172, ("id", "question", "choices", "answerKey")),
+)
 
 SMOKE_QUESTION = (
     "A store sells pens at 3 yuan each and notebooks at 7 yuan each. "
@@ -269,6 +281,50 @@ def stage_mounts(checks: list[Check], paths: list[str], probe_directory: str | N
         probe_write(checks, probe_directory)
 
 
+def stage_data(checks: list[Check], root: str) -> None:
+    """确认数据集已上传，且行数与字段结构与本机核对结果一致。
+
+    数据集缺失会使后续评测无法进行，属致命项，故与挂载段不同，此处取 FAIL 而非
+    WARN。行数与字段名取自本机落盘时的核对记录，见 `RECORD/02-环境信息.md` 第三节。
+    """
+    section("数据")
+    if not os.path.isdir(root):
+        report(checks, "数据根目录", FAIL, f"不存在 {root}，请确认 OSS 挂载与上传前缀")
+        return
+    report(checks, "数据根目录", OK, root)
+
+    for name, expected_lines, required_keys in DATA_FILES:
+        path = os.path.join(root, name)
+        if not os.path.isfile(path):
+            report(checks, name, FAIL, f"文件不存在 {path}")
+            continue
+
+        size_mib = os.path.getsize(path) / 1024**2
+        try:
+            with open(path, encoding="utf-8") as handle:
+                first_line = handle.readline()
+                lines = 1 + sum(1 for _ in handle)
+        except OSError as exc:
+            report(checks, name, FAIL, f"读取失败 {exc}")
+            continue
+
+        try:
+            keys = set(json.loads(first_line))
+        except ValueError as exc:
+            report(checks, name, FAIL, f"首行不是合法 JSON {exc}")
+            continue
+
+        detail = f"行数 {lines}，应为 {expected_lines}，{size_mib:.1f} MiB"
+        missing = sorted(set(required_keys) - keys)
+        if lines == expected_lines and not missing:
+            report(checks, name, OK, detail)
+            continue
+
+        if missing:
+            detail += f"，首行缺字段 {missing}"
+        report(checks, name, FAIL, detail)
+
+
 def preferred_dtype(torch) -> object:
     """按硬件算力选择推理精度。
 
@@ -373,6 +429,7 @@ def main() -> int:
     parser.add_argument("--stages", default=DEFAULT_STAGES, help=f"逗号分隔，可选 {','.join(STAGES)}")
     parser.add_argument("--mounts", nargs="*", default=list(DEFAULT_MOUNTS), help="待检查的挂载路径")
     parser.add_argument("--probe-write", default=None, help="向该目录写入探测文件以验证可写性")
+    parser.add_argument("--data-root", default=DATA_ROOT, help="数据集所在目录")
     parser.add_argument("--model", default="Qwen/Qwen3-0.6B")
     parser.add_argument("--max-new-tokens", type=int, default=256)
     parser.add_argument("--dtype", default="auto", choices=["auto", "bfloat16", "float16", "float32"])
@@ -399,6 +456,8 @@ def main() -> int:
         stage_variables(checks)
     if "mount" in selected:
         stage_mounts(checks, args.mounts, args.probe_write)
+    if "data" in selected:
+        stage_data(checks, args.data_root)
     if "forward" in selected:
         stage_forward(checks, args.model, args.max_new_tokens, args.dtype)
 
