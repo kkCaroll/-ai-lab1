@@ -23,6 +23,9 @@ outputs/
 checkpoints/
 exp1/runs/
 
+# 本机工具配置，与实验内容无关，不进入远程仓库
+工具配置/
+
 # 编辑器与系统
 .vscode/
 .idea/
