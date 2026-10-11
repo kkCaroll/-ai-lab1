@@ -17,6 +17,10 @@
 
 注意 torch 与 transformers 均延迟导入，因此 env、vars 与 mount 三段在依赖缺失时
 仍可运行并给出报告，便于区分环境问题与依赖问题。
+
+精度选择按硬件算力判定，算力 8.0 及以上取 bfloat16，否则取 float16。不采用
+torch.cuda.is_bf16_supported，该函数默认把软件模拟计入支持范围，对任意 CUDA 11
+以上的设备均返回 True，无法区分原生支持与模拟实现。
 """
 
 from __future__ import annotations
@@ -160,8 +164,17 @@ def stage_environment(checks: list[Check]) -> None:
             f"{props.name}  显存 {props.total_memory / 1024**3:.1f} GiB  "
             f"算力 {props.major}.{props.minor}",
         )
-    bf16 = torch.cuda.is_bf16_supported()
-    report(checks, "bf16 支持", OK if bf16 else WARN, str(bf16))
+    # is_bf16_supported 把软件模拟也计入支持范围，对任意 CUDA 11 以上的设备均返回
+    # True，不足以判定硬件是否原生支持，故以算力为准
+    capability = torch.cuda.get_device_capability(0)
+    native_bf16 = capability[0] >= 8
+    report(
+        checks,
+        "bf16 原生支持",
+        OK if native_bf16 else WARN,
+        str(native_bf16)
+        + ("" if native_bf16 else "，算力低于 8.0，宜改用 float16"),
+    )
 
 
 def stage_dependencies(checks: list[Check]) -> None:
@@ -256,6 +269,16 @@ def stage_mounts(checks: list[Check], paths: list[str], probe_directory: str | N
         probe_write(checks, probe_directory)
 
 
+def preferred_dtype(torch) -> object:
+    """按硬件算力选择推理精度。
+
+    算力 8.0 为 Ampere 及以后，原生支持 bfloat16。Volta 与 Turing 算力分别为 7.0
+    与 7.5，bfloat16 只能模拟，故取 float16。
+    """
+    major = torch.cuda.get_device_capability(0)[0]
+    return torch.bfloat16 if major >= 8 else torch.float16
+
+
 def stage_forward(checks: list[Check], model_id: str, max_new_tokens: int, dtype_name: str) -> None:
     """加载模型并完成一次贪心生成，确认权重可获取且 GPU 可完成前向。"""
     section("前向")
@@ -271,10 +294,12 @@ def stage_forward(checks: list[Check], model_id: str, max_new_tokens: int, dtype
         return
 
     if dtype_name == "auto":
-        dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+        dtype = preferred_dtype(torch)
+        origin = "按硬件算力自动选择"
     else:
         dtype = getattr(torch, dtype_name)
-    report(checks, "推理精度", OK, str(dtype))
+        origin = "由命令行指定"
+    report(checks, "推理精度", OK, f"{dtype}，{origin}")
 
     try:
         load_start = time.perf_counter()
@@ -317,11 +342,14 @@ def stage_forward(checks: list[Check], model_id: str, max_new_tokens: int, dtype
     print(completion)
     report(checks, "生成", OK, f"{new_tokens} token  用时 {generate_seconds:.1f} 秒  {speed:.1f} token/s")
     report(checks, "显存峰值", OK, f"{peak:.2f} GiB")
+    hit = SMOKE_ANSWER in completion
     report(
         checks,
         "答案正确性",
-        OK if SMOKE_ANSWER in completion else WARN,
-        f"参考答案 {SMOKE_ANSWER}，未在输出中直接出现，需人工核对",
+        OK if hit else WARN,
+        f"参考答案 {SMOKE_ANSWER} 已出现在输出中"
+        if hit
+        else f"参考答案 {SMOKE_ANSWER} 未在输出中直接出现，需人工核对",
     )
 
 
