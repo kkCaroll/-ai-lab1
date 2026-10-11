@@ -1,0 +1,97 @@
+2026-10-11T18:14:44.998786712+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code INFO: detected pid 1, running init handler
+2026-10-11T18:14:45.002886544+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code ERROR: --password or --password-file must be set when --username is specified
+2026-10-11T18:14:45.002904286+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code Usage of /git-sync:
+2026-10-11T18:14:45.002919244+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -add-user
+2026-10-11T18:14:45.002924517+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	add a record to /etc/passwd for the current UID/GID (needed to use SSH with a different UID)
+2026-10-11T18:14:45.002930034+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -alsologtostderr
+2026-10-11T18:14:45.002934911+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	log to standard error as well as files
+2026-10-11T18:14:45.002939483+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -askpass-url string
+2026-10-11T18:14:45.002943981+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the URL for GIT_ASKPASS callback
+2026-10-11T18:14:45.002948946+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -branch string
+2026-10-11T18:14:45.00295372+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the git branch to check out (default "main")
+2026-10-11T18:14:45.002958634+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -change-permissions int
+2026-10-11T18:14:45.002963273+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the file permissions to apply to the checked-out files (0 will not change permissions at all)
+2026-10-11T18:14:45.002967772+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -cookie-file
+2026-10-11T18:14:45.002972241+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	use git cookiefile
+2026-10-11T18:14:45.0029767+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -depth int
+2026-10-11T18:14:45.002981539+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	use a shallow clone with a history truncated to the specified number of commits (default 1)
+2026-10-11T18:14:45.002997744+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -dest string
+2026-10-11T18:14:45.003002451+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the path (absolute or relative to --root) at which to create a symlink to the directory holding the checked-out files (defaults to the leaf dir of --repo) (default "-ai-lab1")
+2026-10-11T18:14:45.003006753+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -error-file string
+2026-10-11T18:14:45.003011223+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the name of a file into which errors will be written under --root (defaults to "", disabling error reporting)
+2026-10-11T18:14:45.003015688+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -exechook-backoff duration
+2026-10-11T18:14:45.003020297+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the time to wait before retrying a failed command (default 3s)
+2026-10-11T18:14:45.003024874+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -exechook-command string
+2026-10-11T18:14:45.003029962+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	a command to be executed (without arguments, with the syncing repository as its working directory) after syncing a new hash of the remote repository. It is subject to --timeout out and will extend period between syncs.
+2026-10-11T18:14:45.003035363+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -exechook-timeout duration
+2026-10-11T18:14:45.003039734+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the timeout for the command (default 30s)
+2026-10-11T18:14:45.003050134+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -git string
+2026-10-11T18:14:45.003055361+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the git command to run (subject to PATH search, mostly for testing) (default "git")
+2026-10-11T18:14:45.003059884+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -git-config string
+2026-10-11T18:14:45.003064555+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	additional git config options in 'key1:val1,key2:val2' format
+2026-10-11T18:14:45.003069042+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -git-gc string
+2026-10-11T18:14:45.003074128+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	git garbage collection behavior: one of 'auto', 'always', 'aggressive', or 'off' (default "auto")
+2026-10-11T18:14:45.003078377+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -http-bind string
+2026-10-11T18:14:45.003083134+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the bind address (including port) for git-sync's HTTP endpoint
+2026-10-11T18:14:45.0030874+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -http-metrics
+2026-10-11T18:14:45.003091951+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	enable metrics on git-sync's HTTP endpoint (default true)
+2026-10-11T18:14:45.003096346+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -http-pprof
+2026-10-11T18:14:45.003101015+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	enable the pprof debug endpoints on git-sync's HTTP endpoint
+2026-10-11T18:14:45.003105356+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -log_backtrace_at value
+2026-10-11T18:14:45.003110006+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	when logging hits line file:N, emit a stack trace
+2026-10-11T18:14:45.003126205+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -log_dir string
+2026-10-11T18:14:45.003134641+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	If non-empty, write log files in this directory
+2026-10-11T18:14:45.003143376+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -logtostderr
+2026-10-11T18:14:45.00314673+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	log to standard error instead of files
+2026-10-11T18:14:45.003150041+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -max-sync-failures int
+2026-10-11T18:14:45.003153533+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the number of consecutive failures allowed before aborting (the first sync must succeed, -1 will retry forever after the initial sync) (default 3)
+2026-10-11T18:14:45.003157917+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -one-time
+2026-10-11T18:14:45.003162106+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	exit after the first sync (default true)
+2026-10-11T18:14:45.003166314+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -password string
+2026-10-11T18:14:45.003170553+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the password to use for git auth (prefer --password-file or this env var)
+2026-10-11T18:14:45.003174965+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -password-file string
+2026-10-11T18:14:45.003179306+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the file from which the password or personal access token for git auth will be sourced
+2026-10-11T18:14:45.003182813+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -repo string
+2026-10-11T18:14:45.003186725+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the git repository to clone (default "https://github.com/kkCaroll/-ai-lab1.git")
+2026-10-11T18:14:45.003190447+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -rev string
+2026-10-11T18:14:45.00319453+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the git revision (tag or hash) to check out (default "HEAD")
+2026-10-11T18:14:45.003198907+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -root string
+2026-10-11T18:14:45.003202086+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the root directory for git-sync operations, under which --dest will be created (default "/code")
+2026-10-11T18:14:45.003217489+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -sparse-checkout-file string
+2026-10-11T18:14:45.003227492+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the path to a sparse-checkout file.
+2026-10-11T18:14:45.00323085+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -ssh
+2026-10-11T18:14:45.003234472+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	use SSH for git operations
+2026-10-11T18:14:45.003237762+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -ssh-key-file string
+2026-10-11T18:14:45.003241131+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the SSH key to use (default "/etc/git-secret/ssh")
+2026-10-11T18:14:45.003244087+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -ssh-known-hosts
+2026-10-11T18:14:45.003247273+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	enable SSH known_hosts verification (default true)
+2026-10-11T18:14:45.003250386+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -ssh-known-hosts-file string
+2026-10-11T18:14:45.003253614+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the known_hosts file to use (default "/etc/git-secret/known_hosts")
+2026-10-11T18:14:45.00325658+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -stderrthreshold value
+2026-10-11T18:14:45.003259702+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	logs at or above this threshold go to stderr
+2026-10-11T18:14:45.003262729+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -submodules string
+2026-10-11T18:14:45.003266053+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	git submodule behavior: one of 'recursive', 'shallow', or 'off' (default "recursive")
+2026-10-11T18:14:45.003269066+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -sync-hook-command string
+2026-10-11T18:14:45.003272065+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	DEPRECATED: use --exechook-command instead
+2026-10-11T18:14:45.003276977+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -timeout int
+2026-10-11T18:14:45.003280131+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the max number of seconds allowed for a complete sync (default 1800)
+2026-10-11T18:14:45.003283053+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -username string
+2026-10-11T18:14:45.003286081+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the username to use for git auth (default "kkCaroll")
+2026-10-11T18:14:45.003289128+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -v value
+2026-10-11T18:14:45.003292331+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	log level for V logs
+2026-10-11T18:14:45.003295346+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -version
+2026-10-11T18:14:45.003298329+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	print the version and exit
+2026-10-11T18:14:45.003301246+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -vmodule value
+2026-10-11T18:14:45.003304504+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	comma-separated list of pattern=N settings for file-filtered logging
+2026-10-11T18:14:45.003318952+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -wait float
+2026-10-11T18:14:45.003322109+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the number of seconds between syncs (default 1)
+2026-10-11T18:14:45.003325216+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -webhook-backoff duration
+2026-10-11T18:14:45.00332825+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the time to wait before retrying a failed webhook (default 3s)
+2026-10-11T18:14:45.003331185+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -webhook-method string
+2026-10-11T18:14:45.003334245+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the HTTP method for the webhook (default "POST")
+2026-10-11T18:14:45.003360362+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -webhook-success-status int
+2026-10-11T18:14:45.003368783+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the HTTP status code indicating a successful webhook (-1 disables success checks to make webhooks fire-and-forget) (default 200)
+2026-10-11T18:14:45.00337231+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -webhook-timeout duration
+2026-10-11T18:14:45.003375341+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the timeout for the webhook (default 1s)
+2026-10-11T18:14:45.003378399+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code   -webhook-url string
+2026-10-11T18:14:45.003381418+08:00 dlc15efdaj1bvtb8-master-0 git-sync-code     	the URL for a webhook notification when syncs complete (default is no webhook)
