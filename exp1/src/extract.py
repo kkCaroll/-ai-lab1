@@ -19,7 +19,7 @@ from fractions import Fraction
 
 from src.utils import FAIL, OK, WARN
 
-EXTRACT_RULES_VERSION = "v1"
+EXTRACT_RULES_VERSION = "v2"
 
 # raw 字段的截断长度，避免少数失控输出把明细文件撑大
 RAW_LIMIT = 60
@@ -45,8 +45,9 @@ _ARC_TOKEN_RE = re.compile(r"(?<![A-Za-z0-9])([A-Za-z0-9])(?![A-Za-z0-9])")
 # 全文末位的孤立标签，其后只允许非字母数字字符。模型只输出一个标签时命中此式。
 # 要求落在末位，是因为句首的 A 与冠词无从区分，A car is moving 不得读作答 A
 _ARC_FINAL_RE = re.compile(r"(?<![A-Za-z0-9])([A-Za-z0-9])[^A-Za-z0-9]*$")
-# 输出开头可能先给标签再复述选项正文，如 B. Planetary days will become shorter.
-_LEADING_LABEL_RE = re.compile(r"^\s*\(?[A-Za-z0-9]\)?[\s.,:;)-]*")
+# 输出开头的标签，如 B. Planetary days will become shorter。标号之后必须紧跟空白，
+# 否则 3.5 m/s 一类数值会被读成标号 3。该式同时用于正文比对前剥去前置标签
+_ARC_LEAD_RE = re.compile(r"^\s*[*_`\s]*[(\[]?([A-Za-z0-9])[)\]]?\s*[.):,]\s")
 
 # 引导语之后取多长的窗口找标签。不用一条正则跨过 is、: 等连接成分，是因为这些成分
 # 本身由字母组成，正则会把 is 的 i 当成标签
@@ -105,7 +106,11 @@ def _number_result(value: str, method: str, context: str) -> ExtractResult:
 
 
 def _label_result(value: str, valid_labels: list[str], method: str, context: str) -> ExtractResult:
-    """组装 ARC 结果，标签不在本题标签集合内时判 WARN。"""
+    """组装 ARC 结果，标签不在本题标签集合内时判 WARN。
+
+    本模块只在末位降级路径上传入集合外的标签，其余各级的调用点均已在取用前核对
+    过集合归属。
+    """
     status = OK if value in valid_labels else WARN
     return ExtractResult(value, status, method, _truncate(context))
 
@@ -140,31 +145,52 @@ def extract_gsm8k(text: str) -> ExtractResult:
 
 
 def extract_arc(text: str, valid_labels: list[str], choices: list[str]) -> ExtractResult:
-    """按三级级联抽取选项标签，首个成功即返回。
+    """按四级级联抽取选项标签，首个命中本题标签集合者即返回。
 
     标签集合由题目自带，不假设 A 至 D，测试集中另有数字标签题与三选项、五选项
-    题。三级依次为作答引导语之后的标签、全文末位孤立标签、输出开头与选项正文
-    比对。
+    题。四级依次为作答引导语之后的标签、全文末位孤立标签、输出开头与选项正文
+    比对、输出开头的标签。
+
+    前两级只认本题标签集合内的字符，取到集合外的字符不就此返回，而是记下备作
+    降级并继续走完余下两级。依据是 R1-1 实测，模型多以标签点号接选项正文作答，
+    短输出的末位常是正文末字母如 F 与 s，若在末位就此返回，本可由正文比对接住的
+    样本会被记成降级或失败。四级均未命中本题标签时，才把记下的集合外字符按降级
+    返回，取值仍落盘供人工核对。
 
     第二级只认末位，是因为孤立字母出现在句中时与冠词、代词无从区分，宁可判失败
     也不猜。失败计入抽取失败率并落盘，属可见的损失，误判则是把错答记成普通错答，
     两种损失中前一种可被察觉。
     """
+    fallback = None
+
     for cue in reversed(list(_ARC_CUE_RE.finditer(text))):
         window = text[cue.end() : cue.end() + ARC_CUE_WINDOW]
         candidates = _ARC_TOKEN_RE.findall(window)
-        if candidates:
-            legal = [item for item in candidates if item in valid_labels]
-            value = legal[0] if legal else candidates[0]
-            return _label_result(value, valid_labels, "answer-pattern", window)
+        legal = [item for item in candidates if item in valid_labels]
+        if legal:
+            return _label_result(legal[0], valid_labels, "answer-pattern", window)
+        if candidates and fallback is None:
+            fallback = (candidates[0], "answer-pattern", window)
 
     final = _ARC_FINAL_RE.search(text)
-    if final:
-        return _label_result(final.group(1), valid_labels, "bare-label", text[final.start() :])
+    if final is not None:
+        value = final.group(1)
+        if value in valid_labels:
+            return _label_result(value, valid_labels, "bare-label", text[final.start() :])
+        if fallback is None:
+            fallback = (value, "bare-label", text[final.start() :])
 
     value = _match_option_text(text, valid_labels, choices)
     if value is not None:
         return _label_result(value, valid_labels, "option-text", text[:ARC_HEAD_CHARS])
+
+    leading = _ARC_LEAD_RE.match(text)
+    if leading is not None and leading.group(1) in valid_labels:
+        return _label_result(leading.group(1), valid_labels, "leading-label", text[:ARC_HEAD_CHARS])
+
+    if fallback is not None:
+        value, method, context = fallback
+        return _label_result(value, valid_labels, method, context)
 
     return ExtractResult(None, FAIL, "failed", _truncate(text))
 
@@ -177,13 +203,14 @@ def _normalize_option(text: str) -> str:
 def _match_option_text(text: str, valid_labels: list[str], choices: list[str]) -> str | None:
     """把输出开头与各选项正文比对，命中唯一选项则返回其标签。
 
-    模型有时复述选项原文而不给标签，也可能写成标签加点号再接原文，两种形态都试。
+    模型有时复述选项原文而不给标签，也可能写成标签加点号再接原文，两种形态都试，
+    后者以 _ARC_LEAD_RE 剥去前置标签。
     命中多条时取最长的一条，长度并列则放弃，不在歧义处硬猜。过短的选项不参与
     比对，以免匹配到任意文本。
     """
     head_text = text[:ARC_HEAD_CHARS]
 
-    for candidate in (head_text, _LEADING_LABEL_RE.sub("", head_text)):
+    for candidate in (head_text, _ARC_LEAD_RE.sub("", head_text)):
         head = _normalize_option(candidate)
         if not head:
             continue

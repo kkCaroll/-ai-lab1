@@ -4,8 +4,9 @@
 规则过严或过松都会系统性偏移准确率且不报错，是风险 R10，故每条规则都有正例、
 反例与边界三类用例。
 
-用例中的字符串为手写构造或取自 LOG/02-问题与解决.md Q2 记录的真实输出。完整的
-真实输出集待首次 DLC 运行后冻结至 tests/fixtures/real_outputs.jsonl。
+用例中的字符串为手写构造或取自 LOG/02-问题与解决.md Q2 记录的真实输出。另有二十八
+条真实输出冻结于 tests/fixtures/real_outputs.jsonl，覆盖七个数据集与规则名的组合，
+每条都经人工核对，规则再改动而抽取值偏离冻结值时会在此暴露。
 """
 
 import json
@@ -251,9 +252,51 @@ def test_extract_arc_numeric_labels_in_cue():
 
 
 def test_extract_arc_label_outside_valid_set_warns():
-    """三选项题被答成 D 时降级为 WARN，取值仍记下供人工核对。"""
+    """三选项题被答成 D 时降级为 WARN，取值仍记下供人工核对。
+
+    集合外的字符不再就地返回，而是记下备作降级，待四级走完仍无命中时才取出。
+    """
     result = extract_arc("Answer: D", ARC_LABELS[:3], ARC_CHOICES[:3])
     assert (result.status, result.method, result.value) == (WARN, "answer-pattern", "D")
+
+
+def test_extract_arc_earlier_legal_cue_wins():
+    """末次引导语窗口内只有集合外字符时回溯至更早的引导语。"""
+    result = extract_arc(
+        "The answer is B. However, the final answer is D.", ARC_LABELS[:3], ARC_CHOICES[:3]
+    )
+    assert (result.status, result.method, result.value) == (OK, "answer-pattern", "B")
+
+
+def test_extract_arc_tail_letter_falls_through_to_leading_label():
+    """末位级取到正文末字母时下沉，由前置标签级接住。
+
+    形态取自 R1-1 实测，模型以标签点号接选项正文作答，正文末尾的 F 与 s 会被
+    末位级读成标签。
+    """
+    result = extract_arc("A. 32° F  \nB. 41° F  \nC. 78° F  \nD. 98° F", ARC_LABELS, ARC_CHOICES)
+    assert (result.status, result.method, result.value) == (OK, "leading-label", "A")
+
+
+def test_extract_arc_tail_letter_falls_through_to_option_text():
+    """末位级取到集合外字母时下沉，由正文比对接住。"""
+    labels = ["A", "B", "C", "D"]
+    choices = ["6.45 J", "Planetary days will become shorter.", "3.2 J", "0.5 J"]
+    result = extract_arc("B. Planetary days will become shorter. J", labels, choices)
+    assert (result.status, result.method, result.value) == (OK, "option-text", "B")
+
+
+def test_extract_arc_leading_label_numeric_body():
+    """输出以数字标签开头时，正文比对剥去标签后仍能定位。"""
+    result = extract_arc("2. Venus", NUMERIC_LABELS, NUMERIC_CHOICES)
+    assert (result.status, result.method, result.value) == (OK, "option-text", "2")
+
+
+def test_extract_arc_label_prefix_without_space_is_not_a_label():
+    """标号之后必须紧跟空白，否则 3.5 m/s 会被读成标签 3。"""
+    result = extract_arc("3.5 m/s", NUMERIC_LABELS, NUMERIC_CHOICES)
+    assert result.value != "3"
+    assert (result.method, result.status) == ("bare-label", WARN)
 
 
 def test_extract_arc_five_options_accepts_e():
@@ -317,7 +360,7 @@ def test_is_correct_arc_is_case_insensitive():
 
 def test_extract_rules_version():
     """规则版本号须与 RECORD/01-实验配置.md 所记一致，改动规则时同步递增。"""
-    assert EXTRACT_RULES_VERSION == "v1"
+    assert EXTRACT_RULES_VERSION == "v2"
 
 
 def test_import_does_not_load_torch():
