@@ -1,0 +1,275 @@
+2026-10-13T00:00:34.807191936+08:00 dlcglsvm32hfb58e-master-0 git-sync-code INFO: detected pid 1, running init handler
+2026-10-13T00:00:34.841776931+08:00 dlcglsvm32hfb58e-master-0 git-sync-code I1012 16:00:34.841095      13 main.go:473] "level"=0 "msg"="starting up" "pid"=13 "args"=["/git-sync"]
+2026-10-13T00:00:34.841807281+08:00 dlcglsvm32hfb58e-master-0 git-sync-code I1012 16:00:34.841741      13 main.go:923] "level"=0 "msg"="cloning repo" "origin"="https://github.com/kkCaroll/AI_lab1.git" "path"="/code"
+2026-10-13T00:00:37.077859297+08:00 dlcglsvm32hfb58e-master-0 git-sync-code I1012 16:00:37.077746      13 main.go:737] "level"=0 "msg"="syncing git" "rev"="HEAD" "hash"="70c16a41bc0a126f8571d67c7f3049a662169470"
+2026-10-13T00:00:38.891281853+08:00 dlcglsvm32hfb58e-master-0 git-sync-code I1012 16:00:38.891180      13 main.go:772] "level"=0 "msg"="adding worktree" "path"="/code/70c16a41bc0a126f8571d67c7f3049a662169470" "branch"="origin/main"
+2026-10-13T00:00:38.900967356+08:00 dlcglsvm32hfb58e-master-0 git-sync-code I1012 16:00:38.900894      13 main.go:833] "level"=0 "msg"="reset worktree to hash" "path"="/code/70c16a41bc0a126f8571d67c7f3049a662169470" "hash"="70c16a41bc0a126f8571d67c7f3049a662169470"
+2026-10-13T00:00:38.900983599+08:00 dlcglsvm32hfb58e-master-0 git-sync-code I1012 16:00:38.900918      13 main.go:838] "level"=0 "msg"="updating submodules"
+2026-10-13T00:00:53.568867919+08:00 dlcglsvm32hfb58e-master-0 pytorch INFO: Try to dump ENV REQUIREMENTS_TEXT to /tmp/requirements.txt.
+2026-10-13T00:00:53.569148424+08:00 dlcglsvm32hfb58e-master-0 pytorch INFO: Try to install requirements from /tmp/requirements.txt.
+2026-10-13T00:00:54.421144861+08:00 dlcglsvm32hfb58e-master-0 pytorch Looking in indexes: http://mirrors.cloud.aliyuncs.com/pypi/simple/
+2026-10-13T00:00:54.750428859+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting transformers
+2026-10-13T00:00:54.758391885+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b9/59/1e7f1212c215c73690ae6cab4678efe1555ff985953e145d88cc212859b0/transformers-5.19.0-py3-none-any.whl (12.6 MB)
+2026-10-13T00:01:42.871652599+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 244.7 kB/s eta 0:00:00
+2026-10-13T00:01:42.999331794+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting peft
+2026-10-13T00:01:43.008559708+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/70/0b/59441cdbfdd342ed03c08af90a2fe16173f0cd48ab219f523b39ca059a79/peft-0.21.2-py3-none-any.whl (835 kB)
+2026-10-13T00:01:50.998324592+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 835.4/835.4 kB 103.4 kB/s eta 0:00:00
+2026-10-13T00:01:51.106014406+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting datasets
+2026-10-13T00:01:51.113533129+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/24/cc/7f624629846c709ef1c68aa61bfb8d0ae2638cbe265104a1c2f7a630949e/datasets-5.1.0-py3-none-any.whl (604 kB)
+2026-10-13T00:01:53.999780746+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 604.4/604.4 kB 206.1 kB/s eta 0:00:00
+2026-10-13T00:01:54.085825459+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting accelerate
+2026-10-13T00:01:54.094061114+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/4c/34f0450479d01195027260da68d8a3880683f1640c3ca5adf64acb3185f1/accelerate-1.15.0-py3-none-any.whl (394 kB)
+2026-10-13T00:01:54.81754139+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 535.2 kB/s eta 0:00:00
+2026-10-13T00:01:58.04332991+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting regex>=2025.10.22
+2026-10-13T00:01:58.052949213+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/99/eae371ca63f7ea1f1eac025021527adb57ce3a4b67ff608b896fd31ea447/regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (797 kB)
+2026-10-13T00:02:05.256756311+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 kB 109.4 kB/s eta 0:00:00
+2026-10-13T00:02:05.444148509+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting pyyaml>=5.1
+2026-10-13T00:02:05.45333132+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/7a/1e/7acc4f0e74c4b3d9531e24739e0ab832a5edf40e64fbae1a9c01941cabd7/pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-10-13T00:02:05.734024968+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 2.9 MB/s eta 0:00:00
+2026-10-13T00:02:05.90336271+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting tqdm>=4.60
+2026-10-13T00:02:05.910982253+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-10-13T00:02:05.940910617+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 2.6 MB/s eta 0:00:00
+2026-10-13T00:02:06.256049931+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting huggingface-hub<3.0,>=1.31.0
+2026-10-13T00:02:06.263532041+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/eb/b0/0f7b430fd100b3a3b037fdbb314878200241082e607b3383c63d91a13a72/huggingface_hub-2.2.0-py3-none-any.whl (839 kB)
+2026-10-13T00:02:07.79583748+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 kB 542.6 kB/s eta 0:00:00
+2026-10-13T00:02:08.555510243+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting tokenizers<0.24.0,>=0.23.1
+2026-10-13T00:02:08.563580451+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3a/40/6706b82693715581457c6d5423eaa7faae576bb0526c5738a57085eb4449/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+2026-10-13T00:02:14.095342823+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 612.4 kB/s eta 0:00:00
+2026-10-13T00:02:14.168988387+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting packaging>=20.0
+2026-10-13T00:02:14.176052711+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-13T00:02:14.217010105+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 3.1 MB/s eta 0:00:00
+2026-10-13T00:02:14.320464291+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting typer
+2026-10-13T00:02:14.327697167+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/07/ea/2e31b67051e91a133189e9c000c222502ddc6969856416de0d095de4c0b0/typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-13T00:02:14.379988365+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.3/123.3 kB 2.3 MB/s eta 0:00:00
+2026-10-13T00:02:15.232606755+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting safetensors>=0.8.0
+2026-10-13T00:02:15.26780475+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/50/f203ff3a3ddfe19308efc83c5a3a29ed02bf786732ec35e68bf9162f3365/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+2026-10-13T00:02:16.479561465+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 419.4 kB/s eta 0:00:00
+2026-10-13T00:02:16.484321789+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.10/site-packages (from transformers->-r /tmp/requirements.txt (line 1)) (2.1.2)
+2026-10-13T00:02:16.55758819+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: torch>=1.13.0 in /usr/local/lib/python3.10/site-packages (from peft->-r /tmp/requirements.txt (line 2)) (2.6.0+cu126)
+2026-10-13T00:02:17.316742529+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting psutil
+2026-10-13T00:02:17.400375704+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-10-13T00:02:17.474822078+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 2.1 MB/s eta 0:00:00
+2026-10-13T00:02:17.772290831+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting multiprocess<0.70.20
+2026-10-13T00:02:17.780382676+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e3/45/8004d1e6b9185c1a444d6b55ac5682acf9d98035e54386d967366035a03a/multiprocess-0.70.19-py310-none-any.whl (134 kB)
+2026-10-13T00:02:17.843543786+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 2.2 MB/s eta 0:00:00
+2026-10-13T00:02:17.876328851+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting dill<0.4.2,>=0.3.0
+2026-10-13T00:02:17.883494328+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/1e/77/dc8c558f7593132cf8fefec57c4f60c83b16941c574ac5f619abb3ae7933/dill-0.4.1-py3-none-any.whl (120 kB)
+2026-10-13T00:02:17.936189325+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 2.2 MB/s eta 0:00:00
+2026-10-13T00:02:17.939312728+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: fsspec[http]<=2026.7.0,>=2023.1.0 in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (2025.9.0)
+2026-10-13T00:02:18.577054347+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting pandas
+2026-10-13T00:02:18.603660164+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/40/a8/4dac1f8f8235e5d25b9955d02ff6f29396191d4e665d71122c3722ca83c5/pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-10-13T00:02:29.456301463+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 1.2 MB/s eta 0:00:00
+2026-10-13T00:02:29.960184058+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting pyarrow>=24.0.0
+2026-10-13T00:02:29.979495709+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/57/5c/f8fc0eb2de03464a557d5a4d0c15e972d73362414696618833b771f7eddd/pyarrow-25.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (50.1 MB)
+2026-10-13T00:02:36.314633883+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 22.6 MB/s eta 0:00:00
+2026-10-13T00:02:36.496318065+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: filelock in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (3.19.1)
+2026-10-13T00:02:37.210863585+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting xxhash
+2026-10-13T00:02:37.219543708+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5f/3b/e5d20b4f602d15fc5fc066f601052a7d6f5a401a50d67fac92098a5829a5/xxhash-4.0.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (249 kB)
+2026-10-13T00:02:37.237637252+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 249.5/249.5 kB 16.0 MB/s eta 0:00:00
+2026-10-13T00:02:40.022203758+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting aiohttp!=4.0.0a0,!=4.0.0a1
+2026-10-13T00:02:40.031877977+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/38/01f5fc732d5373d6c099db0343279cd4e6607287d336bab6ff6ae9085a0d/aiohttp-3.14.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+2026-10-13T00:02:40.090391109+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 33.2 MB/s eta 0:00:00
+2026-10-13T00:02:40.331902096+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting tomli>=1.1.0
+2026-10-13T00:02:40.356651983+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/60/3f/3e3f8fd0919249b0200c80fbc4f9a1e70be19f9883da71dfb7f8b9ab8aca/tomli-2.5.0-py3-none-any.whl (14 kB)
+2026-10-13T00:02:40.380084879+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.10/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers->-r /tmp/requirements.txt (line 1)) (4.15.0)
+2026-10-13T00:02:40.414837493+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting httpx2<3,>=2.0.0
+2026-10-13T00:02:40.421641843+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/d8/9c/6fe8931fd9f381042a9e4c7d5a7b4cbf7016b252bec0c99a49fce42c3326/httpx2-2.13.1-py3-none-any.whl (95 kB)
+2026-10-13T00:02:40.427172135+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.6/95.6 kB 30.6 MB/s eta 0:00:00
+2026-10-13T00:02:40.515095367+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting click<9.0.0,>=8.4.2
+2026-10-13T00:02:40.521898035+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-13T00:02:40.527958891+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 35.8 MB/s eta 0:00:00
+2026-10-13T00:02:40.756243973+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting hf-xet<2.0.0,>=1.6.0
+2026-10-13T00:02:40.763394779+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a3/4c/2bf3b66c215d409655f28de1622393dde04c9461280d48c7924bb3b2decd/hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+2026-10-13T00:02:40.866231176+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 42.1 MB/s eta 0:00:00
+2026-10-13T00:02:41.045925609+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.21.5)
+2026-10-13T00:02:41.047904656+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-cublas-cu12==12.6.4.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.4.1)
+2026-10-13T00:02:41.049568809+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-cusparselt-cu12==0.6.3 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (0.6.3)
+2026-10-13T00:02:41.051839622+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-cufft-cu12==11.3.0.4 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.3.0.4)
+2026-10-13T00:02:41.053819724+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-13T00:02:41.054330897+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.1.3)
+2026-10-13T00:02:41.056025199+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-cuda-runtime-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-13T00:02:41.056535589+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: networkx in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.3)
+2026-10-13T00:02:41.05843944+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-cusolver-cu12==11.7.1.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.7.1.2)
+2026-10-13T00:02:41.060350304+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-curand-cu12==10.3.7.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (10.3.7.77)
+2026-10-13T00:02:41.061996146+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-nvjitlink-cu12==12.6.85 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.85)
+2026-10-13T00:02:41.063853166+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: triton==3.2.0 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.2.0)
+2026-10-13T00:02:41.065755875+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-cusparse-cu12==12.5.4.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.5.4.2)
+2026-10-13T00:02:41.067983662+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-cuda-cupti-cu12==12.6.80 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.80)
+2026-10-13T00:02:41.069378918+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.13.1)
+2026-10-13T00:02:41.071276303+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-nvtx-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-13T00:02:41.073172583+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: nvidia-cudnn-cu12==9.5.1.17 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (9.5.1.17)
+2026-10-13T00:02:41.121262327+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/site-packages (from sympy==1.13.1->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.3.0)
+2026-10-13T00:02:41.373342517+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting pytz>=2020.1
+2026-10-13T00:02:41.380711837+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/4f/ef/c66110d46fb800dda0bf33164182dfadabe26a90e4476844d502a23dca8e/pytz-2026.5-py2.py3-none-any.whl (506 kB)
+2026-10-13T00:02:41.396840276+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 37.9 MB/s eta 0:00:00
+2026-10-13T00:02:41.437925143+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting python-dateutil>=2.8.2
+2026-10-13T00:02:41.444879825+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-10-13T00:02:41.451424129+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 59.2 MB/s eta 0:00:00
+2026-10-13T00:02:41.491368135+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting tzdata>=2022.7
+2026-10-13T00:02:41.498167851+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/94/21/1e5995a1c920cce14e4bffae20c665ec10e7ed03ab25e006cd741092b718/tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-10-13T00:02:41.509546016+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.0/348.0 kB 39.1 MB/s eta 0:00:00
+2026-10-13T00:02:41.61140393+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting shellingham>=1.3.0
+2026-10-13T00:02:41.618153761+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-13T00:02:41.678690688+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting annotated-doc>=0.0.2
+2026-10-13T00:02:41.685367304+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-13T00:02:41.872585504+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting rich>=13.8.0
+2026-10-13T00:02:41.880382245+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-13T00:02:41.891748675+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 36.7 MB/s eta 0:00:00
+2026-10-13T00:02:42.223491435+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting frozenlist>=1.1.1
+2026-10-13T00:02:42.23145224+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/ed/c7895fd2fde7f3ee70d248175f9b6cdf792fb741ab92dc59cd9ef3bd241b/frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (219 kB)
+2026-10-13T00:02:42.240379782+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.5/219.5 kB 34.7 MB/s eta 0:00:00
+2026-10-13T00:02:42.767175843+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting propcache>=0.2.0
+2026-10-13T00:02:42.775767426+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/f0/51/5adee15e12a7e314cece4543fbf295b0fe1b504dc78b32dff4c8eb1e29b0/propcache-0.5.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (224 kB)
+2026-10-13T00:02:42.788781607+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.3/224.3 kB 21.4 MB/s eta 0:00:00
+2026-10-13T00:02:44.017055087+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting multidict<8.0,>=4.5
+2026-10-13T00:02:44.025885129+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5a/9c/598d765e98aa02ff7204b6f11cf790e5840f5e8252d7b1d955ed0043bb94/multidict-7.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (464 kB)
+2026-10-13T00:02:44.053236043+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.4/464.4 kB 18.7 MB/s eta 0:00:00
+2026-10-13T00:02:44.133484311+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting attrs>=17.3.0
+2026-10-13T00:02:44.14037857+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-13T00:02:44.145518504+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 21.9 MB/s eta 0:00:00
+2026-10-13T00:02:44.199932736+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting aiosignal>=1.4.0
+2026-10-13T00:02:44.207031906+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2026-10-13T00:02:45.416316695+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting yarl<2.0,>=1.25.1
+2026-10-13T00:02:45.437893216+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/b9/7818ac6dec7fbcd16be2d19495807c01e2c38834e57d41c63356a75e786b/yarl-1.25.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (118 kB)
+2026-10-13T00:02:45.455037544+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 7.7 MB/s eta 0:00:00
+2026-10-13T00:02:45.755597197+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting aiohappyeyeballs>=2.5.0
+2026-10-13T00:02:45.762809015+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+2026-10-13T00:02:45.795611431+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting async-timeout<6.0,>=4.0
+2026-10-13T00:02:45.802402063+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fe/ba/e2081de779ca30d473f21f5b30e0e737c438205440784c7dfc81efc2b029/async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+2026-10-13T00:02:46.586152589+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting anyio>=4.10
+2026-10-13T00:02:46.593518902+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-13T00:02:46.608131609+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 10.6 MB/s eta 0:00:00
+2026-10-13T00:02:46.736607045+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting httpcore2==2.13.1
+2026-10-13T00:02:46.743513234+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/09/ba/a4568248771ce81957bfb7cc600264a40fbcda092391ee1c415c50be4bea/httpcore2-2.13.1-py3-none-any.whl (83 kB)
+2026-10-13T00:02:46.748765856+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 27.4 MB/s eta 0:00:00
+2026-10-13T00:02:46.840557387+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting truststore>=0.10
+2026-10-13T00:02:46.84738695+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/19/97/56608b2249fe206a67cd573bc93cd9896e1efb9e98bce9c163bcdc704b88/truststore-0.10.4-py3-none-any.whl (18 kB)
+2026-10-13T00:02:46.886530262+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting idna>=3.18
+2026-10-13T00:02:46.89329603+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl (69 kB)
+2026-10-13T00:02:46.898372005+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 23.2 MB/s eta 0:00:00
+2026-10-13T00:02:46.945050649+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting h11>=0.16
+2026-10-13T00:02:46.951792753+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-13T00:02:46.991621492+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting six>=1.5
+2026-10-13T00:02:46.998460443+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-13T00:02:47.072130052+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting pygments<3.0.0,>=2.13.0
+2026-10-13T00:02:47.079044681+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-13T00:02:47.107489988+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 48.1 MB/s eta 0:00:00
+2026-10-13T00:02:47.165656865+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting markdown-it-py>=2.2.0
+2026-10-13T00:02:47.172562224+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-13T00:02:47.177934735+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 28.5 MB/s eta 0:00:00
+2026-10-13T00:02:47.212864418+08:00 dlcglsvm32hfb58e-master-0 pytorch Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/site-packages (from jinja2->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.1.5)
+2026-10-13T00:02:47.315227453+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting exceptiongroup>=1.0.2
+2026-10-13T00:02:47.322446227+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/0e/97c33bf5009bdbac74fd2beace167cab3f978feb69cc36f1ef79360d6c4e/exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-10-13T00:02:47.37812177+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting typing-extensions>=4.1.0
+2026-10-13T00:02:47.384976378+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-13T00:02:47.389852375+08:00 dlcglsvm32hfb58e-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 15.8 MB/s eta 0:00:00
+2026-10-13T00:02:47.523654963+08:00 dlcglsvm32hfb58e-master-0 pytorch Collecting mdurl~=0.1
+2026-10-13T00:02:47.530486807+08:00 dlcglsvm32hfb58e-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-13T00:02:49.08518382+08:00 dlcglsvm32hfb58e-master-0 pytorch Installing collected packages: pytz, xxhash, tzdata, typing-extensions, truststore, tqdm, tomli, six, shellingham, safetensors, regex, pyyaml, pygments, pyarrow, psutil, propcache, packaging, mdurl, idna, hf-xet, h11, frozenlist, dill, click, attrs, async-timeout, annotated-doc, aiohappyeyeballs, python-dateutil, multiprocess, multidict, markdown-it-py, httpcore2, exceptiongroup, aiosignal, yarl, rich, pandas, anyio, typer, httpx2, aiohttp, huggingface-hub, tokenizers, datasets, accelerate, transformers, peft
+2026-10-13T00:02:49.393195412+08:00 dlcglsvm32hfb58e-master-0 pytorch   Attempting uninstall: typing-extensions
+2026-10-13T00:02:49.394083097+08:00 dlcglsvm32hfb58e-master-0 pytorch     Found existing installation: typing_extensions 4.15.0
+2026-10-13T00:02:49.397391243+08:00 dlcglsvm32hfb58e-master-0 pytorch     Uninstalling typing_extensions-4.15.0:
+2026-10-13T00:02:49.978546294+08:00 dlcglsvm32hfb58e-master-0 pytorch       Successfully uninstalled typing_extensions-4.15.0
+2026-10-13T00:02:52.963830715+08:00 dlcglsvm32hfb58e-master-0 pytorch   Attempting uninstall: idna
+2026-10-13T00:02:52.964899129+08:00 dlcglsvm32hfb58e-master-0 pytorch     Found existing installation: idna 3.11
+2026-10-13T00:02:52.970065257+08:00 dlcglsvm32hfb58e-master-0 pytorch     Uninstalling idna-3.11:
+2026-10-13T00:02:52.971261033+08:00 dlcglsvm32hfb58e-master-0 pytorch       Successfully uninstalled idna-3.11
+2026-10-13T00:03:10.105623706+08:00 dlcglsvm32hfb58e-master-0 pytorch Successfully installed accelerate-1.15.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 annotated-doc-0.0.5 anyio-4.15.1 async-timeout-5.0.1 attrs-26.1.0 click-8.5.0 datasets-5.1.0 dill-0.4.1 exceptiongroup-1.3.1 frozenlist-1.8.0 h11-0.16.0 hf-xet-1.7.0 httpcore2-2.13.1 httpx2-2.13.1 huggingface-hub-2.2.0 idna-3.20 markdown-it-py-4.2.0 mdurl-0.1.2 multidict-7.1.0 multiprocess-0.70.19 packaging-26.3 pandas-2.3.3 peft-0.21.2 propcache-0.5.4 psutil-7.2.2 pyarrow-25.0.1 pygments-2.21.0 python-dateutil-2.9.0.post0 pytz-2026.5 pyyaml-6.0.3 regex-2026.9.29 rich-15.0.0 safetensors-0.8.0 shellingham-1.5.4 six-1.17.0 tokenizers-0.23.3 tomli-2.5.0 tqdm-4.70.1 transformers-5.19.0 truststore-0.10.4 typer-0.27.3 typing-extensions-4.16.0 tzdata-2026.5 xxhash-4.0.1 yarl-1.25.1
+2026-10-13T00:03:10.10600972+08:00 dlcglsvm32hfb58e-master-0 pytorch WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2026-10-13T00:03:10.231434601+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:03:10.231453047+08:00 dlcglsvm32hfb58e-master-0 pytorch [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+2026-10-13T00:03:10.23145818+08:00 dlcglsvm32hfb58e-master-0 pytorch [notice] To update, run: pip install --upgrade pip
+2026-10-13T00:03:11.201012683+08:00 dlcglsvm32hfb58e-master-0 pytorch fatal: not a git repository: /mnt/code/AI_lab1/../.git/worktrees/70c16a41bc0a126f8571d67c7f3049a662169470
+2026-10-13T00:03:11.205547968+08:00 dlcglsvm32hfb58e-master-0 pytorch 评测命令 python -m src.eval --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/data/exp1/runs/R1-1 --dataset gsm8k,arc
+2026-10-13T00:03:14.366230942+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:03:14.366258271+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 环境 =====
+2026-10-13T00:03:14.366263736+08:00 dlcglsvm32hfb58e-master-0 pytorch   设备 cuda  精度 torch.float16  种子 42
+Loading weights: 100%|██████████| 311/311 [00:31<00:00,  9.82it/s]
+Loading weights:   1%|          | 2/311 [00:31<1:31:38, 17.80s/it]
+Loading weights:   0%|          | 1/311 [00:04<24:10,  4.68s/it]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-13T00:03:52.998685295+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:03:53.74594043+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 模型加载  35.8 秒
+2026-10-13T00:03:53.745971074+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:03:53.74597619+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 数据集 gsm8k =====
+2026-10-13T00:03:53.833185714+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 数据行数  1319，期望 1319
+2026-10-13T00:03:53.833341384+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 标准答案完整  缺失 0 条
+2026-10-13T00:03:53.83353139+08:00 dlcglsvm32hfb58e-master-0 pytorch   标准答案去重 353 种
+2026-10-13T00:03:54.317231479+08:00 dlcglsvm32hfb58e-master-0 pytorch   提示长度 最长 224，均值 97.3 token
+2026-10-13T00:03:54.317255046+08:00 dlcglsvm32hfb58e-master-0 pytorch   提示校验和 e3be7afa40b4fa52
+2026-10-13T00:03:54.317259982+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:03:54.317264889+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 推理 =====
+2026-10-13T00:03:54.317276156+08:00 dlcglsvm32hfb58e-master-0 pytorch   设备 cuda  精度 torch.float16  批大小 32  生成上限 512
+2026-10-13T00:03:54.317280482+08:00 dlcglsvm32hfb58e-master-0 pytorch   模型加载 35.8 秒
+2026-10-13T00:04:05.438720152+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 1  已完成 32/1319  已用 11.1 秒  预计剩余 7.5 分
+2026-10-13T00:04:52.456838417+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 5  已完成 160/1319  已用 58.1 秒  预计剩余 7.0 分
+2026-10-13T00:06:23.827127696+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 10  已完成 320/1319  已用 149.5 秒  预计剩余 7.8 分
+2026-10-13T00:07:32.787236478+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 15  已完成 480/1319  已用 218.5 秒  预计剩余 6.4 分
+2026-10-13T00:09:06.237877855+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 20  已完成 640/1319  已用 311.9 秒  预计剩余 5.5 分
+2026-10-13T00:10:35.147772577+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 25  已完成 800/1319  已用 400.8 秒  预计剩余 4.3 分
+2026-10-13T00:12:15.784967133+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 30  已完成 960/1319  已用 501.5 秒  预计剩余 3.1 分
+2026-10-13T00:13:55.374129677+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 35  已完成 1120/1319  已用 601.1 秒  预计剩余 1.8 分
+2026-10-13T00:15:34.470499624+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 40  已完成 1280/1319  已用 700.2 秒  预计剩余 0.4 分
+2026-10-13T00:16:18.325077163+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 42  已完成 1319/1319  已用 744.0 秒  预计剩余 0.0 分
+2026-10-13T00:16:18.325403609+08:00 dlcglsvm32hfb58e-master-0 pytorch   生成 744.0 秒  批次 42  显存峰值 3.64 GiB
+2026-10-13T00:16:18.437019211+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:16:18.437041023+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 结果 =====
+2026-10-13T00:16:18.437048015+08:00 dlcglsvm32hfb58e-master-0 pytorch   准确率 0.6035  正确 796/1319
+2026-10-13T00:16:18.437068287+08:00 dlcglsvm32hfb58e-master-0 pytorch   规则命中 {'cue': 820, 'marker': 491, 'tail-number': 8}
+2026-10-13T00:16:18.43708352+08:00 dlcglsvm32hfb58e-master-0 pytorch   标记命中率 0.3723
+2026-10-13T00:16:18.437097736+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 抽取失败率  0.0000，0 条
+2026-10-13T00:16:18.437127366+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 截断率  0.0091
+2026-10-13T00:16:18.437473012+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 预测逐条对齐  1319 条，期望 1319 条
+2026-10-13T00:16:18.437490759+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:16:18.437497339+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 样例 =====
+2026-10-13T00:16:18.43750317+08:00 dlcglsvm32hfb58e-master-0 pytorch   无抽取失败或降级的样本
+2026-10-13T00:16:19.710438275+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:16:19.710448203+08:00 dlcglsvm32hfb58e-master-0 pytorch   产物已写出至 /mnt/data/exp1/runs/R1-1
+2026-10-13T00:16:19.84523941+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:16:19.845248032+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 数据集 arc =====
+2026-10-13T00:16:19.946750264+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 数据行数  1172，期望 1172
+2026-10-13T00:16:19.946898901+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 标准答案完整  缺失 0 条
+2026-10-13T00:16:19.947354195+08:00 dlcglsvm32hfb58e-master-0 pytorch   标签分布 {'1': 3, '2': 10, '3': 7, '4': 2, 'A': 263, 'B': 301, 'C': 303, 'D': 283}
+2026-10-13T00:16:20.334624871+08:00 dlcglsvm32hfb58e-master-0 pytorch   提示长度 最长 217，均值 86.6 token
+2026-10-13T00:16:20.33465006+08:00 dlcglsvm32hfb58e-master-0 pytorch   提示校验和 786ac4b930e0f805
+2026-10-13T00:16:20.334655391+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:16:20.334660166+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 推理 =====
+2026-10-13T00:16:20.334670458+08:00 dlcglsvm32hfb58e-master-0 pytorch   设备 cuda  精度 torch.float16  批大小 64  生成上限 128
+2026-10-13T00:16:20.334674682+08:00 dlcglsvm32hfb58e-master-0 pytorch   模型加载 35.8 秒
+2026-10-13T00:16:21.583526396+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 1  已完成 64/1172  已用 1.2 秒  预计剩余 0.4 分
+2026-10-13T00:16:30.55149771+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 5  已完成 320/1172  已用 10.2 秒  预计剩余 0.5 分
+2026-10-13T00:16:47.475224202+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 10  已完成 640/1172  已用 27.1 秒  预计剩余 0.4 分
+2026-10-13T00:17:09.73055657+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 15  已完成 960/1172  已用 49.4 秒  预计剩余 0.2 分
+2026-10-13T00:17:29.525130813+08:00 dlcglsvm32hfb58e-master-0 pytorch   批 19  已完成 1172/1172  已用 69.2 秒  预计剩余 0.0 分
+2026-10-13T00:17:29.525443339+08:00 dlcglsvm32hfb58e-master-0 pytorch   生成 69.2 秒  批次 19  显存峰值 2.89 GiB
+2026-10-13T00:17:29.578097447+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:17:29.578126472+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 结果 =====
+2026-10-13T00:17:29.578138645+08:00 dlcglsvm32hfb58e-master-0 pytorch   准确率 0.4923  正确 577/1172
+2026-10-13T00:17:29.578156031+08:00 dlcglsvm32hfb58e-master-0 pytorch   规则命中 {'answer-pattern': 32, 'bare-label': 42, 'failed': 45, 'option-text': 1053}
+2026-10-13T00:17:29.578160819+08:00 dlcglsvm32hfb58e-master-0 pytorch [WARN] 抽取失败率  0.0384，45 条
+2026-10-13T00:17:29.578165109+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 截断率  0.0043
+2026-10-13T00:17:29.578475264+08:00 dlcglsvm32hfb58e-master-0 pytorch [OK] 预测逐条对齐  1172 条，期望 1172 条
+2026-10-13T00:17:29.578486836+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:17:29.5785027+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 样例 =====
+2026-10-13T00:17:29.578507348+08:00 dlcglsvm32hfb58e-master-0 pytorch   [WARN] Mercury_LBS10610  标准答案 C
+2026-10-13T00:17:29.578517681+08:00 dlcglsvm32hfb58e-master-0 pytorch     输出 A. 32° F B. 41° F C. 78° F D. 98° F
+2026-10-13T00:17:29.578522028+08:00 dlcglsvm32hfb58e-master-0 pytorch     抽取 F  规则 bare-label
+2026-10-13T00:17:29.578531772+08:00 dlcglsvm32hfb58e-master-0 pytorch   [WARN] Mercury_402216  标准答案 B
+2026-10-13T00:17:29.578538212+08:00 dlcglsvm32hfb58e-master-0 pytorch     输出 B. 2H₂O(l) → 2H₂(g) + O₂(g)
+2026-10-13T00:17:29.57854387+08:00 dlcglsvm32hfb58e-master-0 pytorch     抽取 g  规则 bare-label
+2026-10-13T00:17:29.578552684+08:00 dlcglsvm32hfb58e-master-0 pytorch   [WARN] MCAS_2002_8_11  标准答案 C
+2026-10-13T00:17:29.578570046+08:00 dlcglsvm32hfb58e-master-0 pytorch     输出 A. 43°F.
+2026-10-13T00:17:29.578573207+08:00 dlcglsvm32hfb58e-master-0 pytorch     抽取 F  规则 bare-label
+2026-10-13T00:17:29.578588442+08:00 dlcglsvm32hfb58e-master-0 pytorch   [WARN] Mercury_412202  标准答案 B
+2026-10-13T00:17:29.578593097+08:00 dlcglsvm32hfb58e-master-0 pytorch     输出 B. Object 1, Object 3, Object 2
+2026-10-13T00:17:29.57859619+08:00 dlcglsvm32hfb58e-master-0 pytorch     抽取 2  规则 bare-label
+2026-10-13T00:17:29.578606323+08:00 dlcglsvm32hfb58e-master-0 pytorch   [FAIL] Mercury_400877  标准答案 C
+2026-10-13T00:17:29.578610774+08:00 dlcglsvm32hfb58e-master-0 pytorch     输出 A. 13
+2026-10-13T00:17:29.578615184+08:00 dlcglsvm32hfb58e-master-0 pytorch     抽取 None  规则 failed
+2026-10-13T00:17:30.703012259+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:17:30.703027222+08:00 dlcglsvm32hfb58e-master-0 pytorch   产物已写出至 /mnt/data/exp1/runs/R1-1
+2026-10-13T00:17:30.775573175+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:17:30.775581475+08:00 dlcglsvm32hfb58e-master-0 pytorch ===== 汇总 =====
+2026-10-13T00:17:30.77560633+08:00 dlcglsvm32hfb58e-master-0 pytorch 警告  抽取失败率  0.0384，45 条
+2026-10-13T00:17:30.775621058+08:00 dlcglsvm32hfb58e-master-0 pytorch 
+2026-10-13T00:17:30.77562497+08:00 dlcglsvm32hfb58e-master-0 pytorch 共计 11 项，OK 10，WARN 1，FAIL 0
