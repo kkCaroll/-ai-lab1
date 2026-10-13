@@ -1,0 +1,11 @@
+# M4 自研方法。方案于 P3.1 依 P2 结果确定，本文件先占位。
+#
+# 方法段的键空间由 src/methods/custom.py 声明。方案的待选项见 PLAN/02 的 R6，
+# 限定为降低 LoRA rank 或可训练参数占比、以基座输出做 KL 正则、参数空间约束、
+# 早停四类，且不得使用 ARC-Challenge 数据。
+
+method: custom
+
+train:
+  lr: null                # 待 P3.1 定，置 null 时启动即报错，不使未填配置静默跑完
+  epochs: 3

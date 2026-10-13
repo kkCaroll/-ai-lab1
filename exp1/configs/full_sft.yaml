@@ -1,0 +1,13 @@
+# M1 全量 SFT。方法段留空，本方法没有专属超参，只覆写共用段。
+#
+# 方法名取 full_sft，对应模块 src/methods/sft.py。两者同义而用词不同，是因为本方法
+# 在序列里写作 M1 且强调全参，而 sft 单独出现时易与整个微调范式混淆。
+
+method: full_sft
+
+train:
+  lr: 1.0e-4
+  epochs: 3
+  batch_size: 8           # 全参微调，激活值与优化器状态均占显存，批取小
+  grad_accum: 8           # 有效批仍为 64
+  gradient_checkpointing: true

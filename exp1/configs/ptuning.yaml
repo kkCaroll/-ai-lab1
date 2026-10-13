@@ -1,0 +1,16 @@
+# M3 P-Tuning v2。在每一层前置可训练的虚拟键值对，不改动基座权重。
+#
+# 实际使用的 peft 类为 PrefixTuningConfig。peft 中名为 P-Tuning 的 PromptEncoderConfig
+# 实测只把软提示拼在输入嵌入之前，属 P-Tuning 而非 v2，理由见 src/methods/ptuning.py。
+
+method: ptuning
+
+train:
+  lr: 3.0e-4
+  epochs: 3
+  gradient_checkpointing: false
+
+ptuning:
+  num_virtual_tokens: 20          # 虚拟 token 数，P2.5 扫描
+  prefix_projection: false        # 假则各层前缀直接优化，真则另经一个小规模多层感知机生成
+  encoder_hidden_size: 512        # 仅 prefix_projection 为真时生效

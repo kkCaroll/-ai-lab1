@@ -149,6 +149,24 @@ def environment_snapshot() -> dict[str, object]:
     return snapshot
 
 
+def parameter_counts(model) -> dict[str, object]:
+    """统计参数量与可训练量，返回字典。
+
+    可训练量按 requires_grad 判定，故须在方法装配之后调用。占比是风险 R15 的直接
+    证据，也是记录表要填的一列，故与两项绝对量一并返回。
+
+    本函数不导入 torch，只依赖模型对象的 parameters 迭代协议，故不破坏本模块顶部
+    不导入 torch 的约定。
+    """
+    total = sum(parameter.numel() for parameter in model.parameters())
+    trainable = sum(parameter.numel() for parameter in model.parameters() if parameter.requires_grad)
+    return {
+        "total_parameters": total,
+        "trainable_parameters": trainable,
+        "trainable_ratio": round(trainable / total, 6) if total else 0.0,
+    }
+
+
 def sha256_of(path: Path) -> str:
     """返回文件的 SHA256 校验和。
 

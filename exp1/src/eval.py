@@ -8,6 +8,10 @@ R8 的控制点。
 批量生成自行实现，理由与要点见 PLAN/01-任务分解.md 与实施计划第五节。要点为左填充、
 显式位置编号、贪心解码与按提示长度分组。
 
+生成与抽取合为一个函数 predict_examples，不由 evaluate_dataset 独享。训练过程中的中间
+评测直接调用它，故训练侧的读数与独立评测出自同一条代码路径，两者可比是结构保证而非
+约定。
+
 用法示例
     cd exp1
     python -m src.eval --model-path models/Qwen3-0.6B --dataset gsm8k --data-dir ../data/raw \\
@@ -209,6 +213,56 @@ def _check_consistency(model, tokenizer, encoded, max_new_tokens, device, count,
     return not mismatched
 
 
+def predict_examples(model, tokenizer, encoded, examples, dataset, device, batch_size, max_new_tokens):
+    """批量生成并抽取答案，返回逐条记录与生成统计。
+
+    逐条记录即 predictions 文件的字段，含模型原文、抽取取值、命中的规则名与判定结果。
+    本函数不写任何产物，也不打印汇总，由调用方处置。encoded 与 examples 须等长且逐位
+    对齐，后者提供标准答案、选项与标签。
+
+    进入生成前须把模型切到推理态。训练过程中的中间评测传进来的模型处于训练态，若不
+    切换，dropout 会随手生效，贪心解码不再确定，与独立评测的读数不可比。缓存开关同
+    此，梯度检查点会把它关掉，生成时开着可省去大量重复前向。两者用毕一律还原。
+    """
+    if len(encoded) != len(examples):
+        raise ValueError(f"输入与样本不对齐，{len(encoded)} 与 {len(examples)}")
+
+    was_training = model.training
+    saved_use_cache = model.config.use_cache
+    model.eval()
+    model.config.use_cache = True
+    try:
+        results, stats = _generate_all(model, tokenizer, encoded, max_new_tokens, device, batch_size)
+    finally:
+        model.train(was_training)
+        model.config.use_cache = saved_use_cache
+
+    records = []
+    for position, (example, (text, gen_tokens, truncated)) in enumerate(zip(examples, results)):
+        if dataset == "gsm8k":
+            outcome = extract.extract_gsm8k(text)
+        else:
+            outcome = extract.extract_arc(text, example["labels"], example["choices"])
+        records.append(
+            {
+                "index": example["index"],
+                "id": example["id"],
+                "dataset": dataset,
+                "question": example["question"],
+                "gold": example["gold"],
+                "output": text,
+                "pred": outcome.value,
+                "extract_status": outcome.status,
+                "extract_method": outcome.method,
+                "correct": extract.is_correct(outcome.value, example["gold"], dataset),
+                "prompt_tokens": len(encoded[position]),
+                "gen_tokens": gen_tokens,
+                "truncated": truncated,
+            }
+        )
+    return records, stats
+
+
 def evaluate_dataset(args, dataset, tokenizer, model, device, dtype, load_seconds, checks):
     """评测一个数据集，写出产物并返回指标字典，前置检查未过时返回 None。"""
     section(f"数据集 {dataset}")
@@ -252,39 +306,15 @@ def evaluate_dataset(args, dataset, tokenizer, model, device, dtype, load_second
     if device.type == "cuda":
         torch.cuda.reset_peak_memory_stats()
 
-    results, stats = _generate_all(model, tokenizer, encoded, max_new_tokens, device, batch_size)
+    records, stats = predict_examples(
+        model, tokenizer, encoded, examples, dataset, device, batch_size, max_new_tokens
+    )
     peak_gb = torch.cuda.max_memory_allocated() / 1024**3 if device.type == "cuda" else 0.0
     print(f"  生成 {stats['seconds']:.1f} 秒  批次 {stats['batches']}  显存峰值 {peak_gb:.2f} GiB")
 
-    records = []
-    failures = []
-    method_counts = Counter()
-    status_counts = Counter()
-    for position, (example, (text, gen_tokens, truncated)) in enumerate(zip(examples, results)):
-        if dataset == "gsm8k":
-            outcome = extract.extract_gsm8k(text)
-        else:
-            outcome = extract.extract_arc(text, example["labels"], example["choices"])
-        record = {
-            "index": example["index"],
-            "id": example["id"],
-            "dataset": dataset,
-            "question": example["question"],
-            "gold": example["gold"],
-            "output": text,
-            "pred": outcome.value,
-            "extract_status": outcome.status,
-            "extract_method": outcome.method,
-            "correct": extract.is_correct(outcome.value, example["gold"], dataset),
-            "prompt_tokens": lengths[position],
-            "gen_tokens": gen_tokens,
-            "truncated": truncated,
-        }
-        records.append(record)
-        method_counts[outcome.method] += 1
-        status_counts[outcome.status] += 1
-        if outcome.status != OK:
-            failures.append(record)
+    failures = [item for item in records if item["extract_status"] != OK]
+    method_counts = Counter(item["extract_method"] for item in records)
+    status_counts = Counter(item["extract_status"] for item in records)
 
     samples = len(records)
     correct = sum(1 for item in records if item["correct"])

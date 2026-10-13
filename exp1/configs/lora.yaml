@@ -1,0 +1,19 @@
+# M2 LoRA。冻结基座权重，只训练旁路低秩增量矩阵。
+
+method: lora
+
+train:
+  lr: 2.0e-4              # 可训练参数少，学习率取全参微调的两倍
+  epochs: 3
+  gradient_checkpointing: false   # 可训练参数占比低，显存余量足，关掉以换速度
+
+lora:
+  r: 8                    # 低秩矩阵的秩，P2.5 扫描
+  alpha: 16               # 缩放系数，实际缩放为 alpha 除以 r
+  dropout: 0.05
+  target_modules:         # 按模块名后缀匹配，只挂在注意力投影上
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+  bias: none

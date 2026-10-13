@@ -1,0 +1,46 @@
+# P2 五种方法共用的训练配置。
+#
+# 本文件只放与方法无关的默认值，方法专属超参写在各方法的配置文件内，后者逐段覆盖
+# 本文件。调用处的临时改动走命令行 --set 键路径=值，优先级最高。三层之外不再有第
+# 四处来源，段之外不再有第四层。
+#
+# 模型路径、数据目录、输出目录与运行标识不在此列，由命令行给出。理由是同一份配置
+# 要在本机与容器两处生效，两处的路径不同，写死进本文件必然要维护两份。
+#
+# 浮点一律写成 1.0e-4 的形式。YAML 1.1 只把含小数点的尾数认作浮点，写成 1e-4 会被
+# 读成字符串。
+
+run:
+  seed: 42                # 同时置 random、numpy、torch 三处，使划分与初始化可复现
+  limit: null             # 本机自检的截断条数，容器全量运行置 null
+  max_steps: null         # 自检用的步数上限，置位时以步数替代轮数
+
+data:
+  dataset: gsm8k          # 唯一取值，训练侧不得指向 ARC-Challenge
+  split: train
+  max_seq_len: 512        # 由 scripts/measure_lengths.py 实测定，7073 条全量覆盖，最长 479
+  dev_split: configs/dev_split.json   # 开发集索引，载入端据此剔除，正式训练集 7073 条
+
+train:
+  epochs: 3
+  batch_size: 16          # 单卡每步样本数
+  grad_accum: 4           # 与 batch_size 相乘得有效批 64
+  lr: null                # 由方法段给出，五种方法的量级不同
+  weight_decay: 0.0
+  warmup_ratio: 0.03
+  lr_scheduler: cosine
+  max_grad_norm: 1.0
+  gradient_checkpointing: true    # 控显存的主要手段，见 PLAN/02 的 R15
+  dtype: auto             # auto 经 utils.preferred_dtype 判定，V100 上落为 float16
+  log_every: 10           # 步
+
+eval:
+  every_epoch: true       # 训练中的中间评测，每轮跑开发集全量 400 条
+  dataset: dev            # 只接受 dev，置为 test 即中止，见 PLAN/02 的 R7
+  batch_size: 32
+  max_new_tokens: 512
+  limit: null
+
+output:
+  save_total_limit: 3             # 保留的最近轮次数，等价于只存末轮时说的一，故不另设开关
+  keep_optimizer_state: false     # 不存优化器状态，任务时长短，无需中途续训
