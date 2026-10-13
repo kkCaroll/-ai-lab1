@@ -287,8 +287,10 @@ def evaluate_dataset(args, dataset, tokenizer, model, device, dtype, load_second
     encoded = tokenizer(prompts, add_special_tokens=False)["input_ids"]
     lengths = [len(ids) for ids in encoded]
     prompt_digest = hashlib.sha256("\n".join(prompts).encode("utf-8")).hexdigest()
+    # 与数据集无关的模板指纹，训练侧另落一份同名同义的取值，两者相等即 R8 成立
+    template_digest = data.template_digest(tokenizer)
     print(f"  提示长度 最长 {max(lengths)}，均值 {sum(lengths) / len(lengths):.1f} token")
-    print(f"  提示校验和 {prompt_digest[:16]}")
+    print(f"  提示校验和 {prompt_digest[:16]}  模板指纹 {template_digest[:16]}")
 
     max_new_tokens = args.max_new_tokens or DEFAULT_MAX_NEW_TOKENS[dataset]
     batch_size = args.batch_size or DEFAULT_BATCH_SIZE[dataset]
@@ -381,6 +383,7 @@ def evaluate_dataset(args, dataset, tokenizer, model, device, dtype, load_second
         "prompt_version": data.PROMPT_VERSION,
         "extract_rules_version": extract.EXTRACT_RULES_VERSION,
         "prompt_sha256": prompt_digest,
+        "prompt_template_sha256": template_digest,
         "decoding": {
             "do_sample": False,
             "max_new_tokens": max_new_tokens,

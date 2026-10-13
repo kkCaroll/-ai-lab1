@@ -12,6 +12,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
@@ -40,6 +41,12 @@ DATA_FILES = {
 
 # 开发集索引文件，由 scripts/make_dev_split.py 生成并随仓库分发
 DEV_SPLIT_PATH = Path(__file__).resolve().parent.parent / "configs" / "dev_split.json"
+
+# 模板指纹用的固定样例，与任何数据集无涉，只求两侧渲染结果可比
+CANONICAL_EXAMPLES = (
+    {"dataset": "gsm8k", "question": "1+1?", "choices": None, "labels": None},
+    {"dataset": "arc", "question": "1+1?", "choices": ["2", "3"], "labels": ["A", "B"]},
+)
 
 
 def _normalize_gsm8k(row, index, split):
@@ -135,11 +142,24 @@ def load_dev_indices(path=DEV_SPLIT_PATH):
     return _read_dev_record(path)["indices"]
 
 
+def _verified_train_examples(data_dir, split_path):
+    """载入 GSM8K 训练集全文并核对源文件校验和，返回样本与索引记录。
+
+    若源文件换版而索引未换，剔除的将是另一批样本，且不会报错，只会让开发集与训练集
+    悄悄错位，故此处显式拦下。
+    """
+    record = _read_dev_record(split_path)
+    source = Path(data_dir) / record["source_file"]
+    actual = sha256_of(source)
+    if actual != record["source_sha256"]:
+        raise ValueError(
+            f"源文件校验和不符，索引记录 {record['source_sha256'][:16]}，实得 {actual[:16]}"
+        )
+    return load_examples("gsm8k", "train", data_dir), record
+
+
 def load_train_split(data_dir, split_path=DEV_SPLIT_PATH):
     """载入 GSM8K 训练集并剔除开发集，得正式训练集 7073 条。
-
-    先核对源文件校验和与索引文件所记是否一致。若源文件换版而索引未换，剔除的将是
-    另一批样本，且不会报错，只会让开发集与训练集悄悄错位，故此处显式拦下。
 
     Args:
         data_dir: 原始 jsonl 目录。
@@ -151,15 +171,26 @@ def load_train_split(data_dir, split_path=DEV_SPLIT_PATH):
     Raises:
         ValueError: 源文件校验和与索引文件所记不符。
     """
-    record = _read_dev_record(split_path)
-    source = Path(data_dir) / record["source_file"]
-    actual = sha256_of(source)
-    if actual != record["source_sha256"]:
-        raise ValueError(
-            f"源文件校验和不符，索引记录 {record['source_sha256'][:16]}，实得 {actual[:16]}"
-        )
+    examples, record = _verified_train_examples(data_dir, split_path)
     dev = set(record["indices"])
-    return [e for e in load_examples("gsm8k", "train", data_dir) if e["index"] not in dev]
+    return [e for e in examples if e["index"] not in dev]
+
+
+def load_dev_split(data_dir, split_path=DEV_SPLIT_PATH):
+    """载入开发集，供训练过程中的中间评测使用。
+
+    与 load_train_split 同源同校验，差别只在按索引取中选而非剔除。索引文件的完整性
+    由 _read_dev_record 保证，此处再核一次实得条数，使索引与源文件错位不致静默。
+
+    Returns:
+        统一结构的字典列表，顺序与源文件相同。
+    """
+    examples, record = _verified_train_examples(data_dir, split_path)
+    dev = set(record["indices"])
+    selected = [e for e in examples if e["index"] in dev]
+    if len(selected) != record["dev_size"]:
+        raise ValueError(f"开发集实得 {len(selected)} 条，索引记录 {record['dev_size']} 条")
+    return selected
 
 
 def build_messages(example):
@@ -198,6 +229,17 @@ def strip_calc_annotations(answer):
     匹配。末行 #### 标记必须保留，指令与抽取的第一级规则都依赖它。
     """
     return re.sub(r"<<[^>]*>>", "", answer)
+
+
+def template_digest(tokenizer) -> str:
+    """取提示模板的指纹。
+
+    对两条固定样例渲染提示后取哈希，故指纹与数据集无关，训练与评测两侧的取值可以逐字
+    比较。渲染经 build_messages 与 apply_chat_template 两步，模板文本与对话模板两者的
+    改动都会被捕捉到。这是风险 R8 由人工打印比对升级为文件等值核对的依据。
+    """
+    rendered = [render_prompt(tokenizer, example) for example in CANONICAL_EXAMPLES]
+    return hashlib.sha256("\n".join(rendered).encode("utf-8")).hexdigest()
 
 
 def build_target_text(example):

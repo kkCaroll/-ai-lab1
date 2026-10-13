@@ -20,11 +20,13 @@ from src.data import (
     build_messages,
     build_target_text,
     load_dev_indices,
+    load_dev_split,
     load_examples,
     load_train_split,
     parse_gsm8k_gold,
     render_prompt,
     strip_calc_annotations,
+    template_digest,
 )
 
 EXPECTED_KEYS = ["index", "id", "dataset", "question", "choices", "labels", "gold", "gold_raw"]
@@ -346,3 +348,57 @@ def test_load_train_split_rejects_stale_checksum(tmp_path):
     source.write_text(source.read_text(encoding="utf-8") + "\n", encoding="utf-8")
     with pytest.raises(ValueError):
         load_train_split(str(tmp_path), path)
+
+
+def test_load_dev_split_selects_dev(tmp_path):
+    """开发集取中选而非剔除，索引为 1 与 3，且顺序与源文件相同。"""
+    source = _write_train(tmp_path)
+    path = _write_split(tmp_path, [3, 1], 10, source)
+    dev = load_dev_split(str(tmp_path), path)
+    assert [e["index"] for e in dev] == [1, 3]
+    assert [e["gold"] for e in dev] == ["1", "3"]
+
+
+def test_load_dev_split_and_train_split_are_complementary(tmp_path):
+    """两部分并集为原文件全部样本且无交集。"""
+    source = _write_train(tmp_path)
+    path = _write_split(tmp_path, [3, 1], 10, source)
+    dev = [e["index"] for e in load_dev_split(str(tmp_path), path)]
+    kept = [e["index"] for e in load_train_split(str(tmp_path), path)]
+    assert sorted(dev + kept) == list(range(10))
+    assert not set(dev) & set(kept)
+
+
+def test_load_dev_split_rejects_stale_checksum(tmp_path):
+    """与训练集同源同校验，源文件换版即拦下。"""
+    source = _write_train(tmp_path)
+    path = _write_split(tmp_path, [1, 3], 10, source)
+    source.write_text(source.read_text(encoding="utf-8") + "\n", encoding="utf-8")
+    with pytest.raises(ValueError):
+        load_dev_split(str(tmp_path), path)
+
+
+# ----------------- 模板指纹 ------------------
+
+
+class _StubTokenizer:
+    """只实现 apply_chat_template 的分词器替身，使指纹可在不加载模型时测。"""
+
+    def __init__(self, suffix=""):
+        self.suffix = suffix
+
+    def apply_chat_template(self, messages, **kwargs):
+        return messages[0]["content"] + self.suffix
+
+
+def test_template_digest_is_stable():
+    """同一分词器两次取指纹结果相同，且为 64 位十六进制。"""
+    tokenizer = _StubTokenizer("<|assistant|>")
+    digest = template_digest(tokenizer)
+    assert digest == template_digest(tokenizer)
+    assert len(digest) == 64 and all(c in "0123456789abcdef" for c in digest)
+
+
+def test_template_digest_tracks_chat_template():
+    """对话模板改动后指纹必须变化，否则该核对形同虚设。"""
+    assert template_digest(_StubTokenizer("<|a|>")) != template_digest(_StubTokenizer("<|b|>"))

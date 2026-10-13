@@ -10,6 +10,9 @@
     extra_loss(model, batch, outputs, config) -> Tensor 或 None
     save(model, tokenizer, output_dir) -> list[str]
 
+extra_loss 的 batch 为送入模型的张量字典，含 input_ids、attention_mask 与 labels 三项；
+outputs 为该次前向的输出对象。返回 None 表示只用语言建模损失，训练入口据此不做加法。
+
 config 只传本方法自己那一段。方法模块看不到 train 与 data 两段，也无从读到数据集路径，
 风险 R6 的约束由接口结构保证而非靠自觉。
 
