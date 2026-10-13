@@ -16,6 +16,11 @@ max_seq_len，否则大部分算力耗在填充符上。提示段与目标段分
 同一条代码路径。配置的 eval.dataset 只接受 dev，取值校验写在 config.check 内，训练过程
 不会触及测试集，这是风险 R7。
 
+混合精度的取法为先按配置算出计算精度，权重一律以 float32 载入，再由 autocast 在算子内降到
+半步精度，梯度缩放只在计算精度为 float16 时启用。不可把权重直接载入 float16，那样梯度同为
+float16，而梯度缩放要求反缩放一步能在 float32 上进行，torch 遇 float16 梯度即报错，见
+LOG/02-问题与解决.md Q12。
+
 用法示例
     cd exp1
     python -m src.train --config configs/lora.yaml --model-path models/Qwen3-0.6B \\
@@ -102,7 +107,7 @@ def _parse_args() -> argparse.Namespace:
 
 
 def _resolve_dtype(name: str, device) -> torch.dtype:
-    """按配置取值定训练精度，auto 时按设备与算力判定。"""
+    """按配置取值定计算精度，auto 时按设备与算力判定。权重精度不由此项决定，恒为 float32。"""
     if name != "auto":
         return getattr(torch, name)
     if device.type == "cpu":
@@ -159,27 +164,29 @@ def _epoch_groups(size, batch_size, grad_accum, generator):
     return [micro[start : start + grad_accum] for start in range(0, len(micro), grad_accum)]
 
 
-def _evaluate_dev(model, tokenizer, examples, encoded, settings, device):
+def _evaluate_dev(model, tokenizer, examples, encoded, settings, device, amp_dtype):
     """在开发集上评测一次，返回指标字典。
 
     predict_examples 自带推理态与缓存开关的存取还原，故此处不必另行切换。limit 置位时只
-    取前若干条，供本机自检压缩耗时。
+    取前若干条，供本机自检压缩耗时。生成包在计算精度上下文内，权重为 float32 时若不加这
+    一层，缓存与算子在整条生成过程中都停在 float32，显存与时耗都会明显偏离独立评测。
     """
     if settings["limit"] is not None:
         examples, encoded = examples[: settings["limit"]], encoded[: settings["limit"]]
     if not examples:
         raise ValueError("开发集为空，核对 eval.limit 与 data.dev_split")
 
-    records, stats = eval_module.predict_examples(
-        model,
-        tokenizer,
-        encoded,
-        examples,
-        "gsm8k",
-        device,
-        settings["batch_size"],
-        settings["max_new_tokens"],
-    )
+    with _autocast(device, amp_dtype):
+        records, stats = eval_module.predict_examples(
+            model,
+            tokenizer,
+            encoded,
+            examples,
+            "gsm8k",
+            device,
+            settings["batch_size"],
+            settings["max_new_tokens"],
+        )
     correct = sum(1 for item in records if item["correct"])
     return {
         "samples": len(records),
@@ -220,12 +227,20 @@ def main() -> int:  # noqa: C901
     checks: list[Check] = []
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    dtype = _resolve_dtype(train_config["dtype"], device)
+    compute_dtype = _resolve_dtype(train_config["dtype"], device)
+    amp_dtype = (
+        compute_dtype
+        if device.type == "cuda" and compute_dtype in (torch.float16, torch.bfloat16)
+        else None
+    )
     set_seed(run_config["seed"])
 
     log("")
     log("===== 环境 =====")
-    log(f"  方法 {method}  设备 {device}  精度 {dtype}  种子 {run_config['seed']}")
+    log(
+        f"  方法 {method}  设备 {device}  参数精度 float32"
+        f"  计算精度 {amp_dtype or torch.float32}  种子 {run_config['seed']}"
+    )
     log(f"  配置 {args.config}  覆盖 {args.overrides or '无'}")
 
     from transformers import AutoModelForCausalLM, AutoTokenizer, get_cosine_schedule_with_warmup
@@ -233,7 +248,8 @@ def main() -> int:  # noqa: C901
     log("===== 载入 =====")
     started = time.perf_counter()
     tokenizer = AutoTokenizer.from_pretrained(args.model_path)
-    model = AutoModelForCausalLM.from_pretrained(args.model_path, dtype=dtype).to(device)
+    # 权重以 float32 载入。载入 float16 会使梯度同为 float16，缩放的梯度无法反缩放
+    model = AutoModelForCausalLM.from_pretrained(args.model_path, dtype=torch.float32).to(device)
     log(f"  模型加载 {time.perf_counter() - started:.1f} 秒")
     log.report(
         checks,
@@ -325,7 +341,7 @@ def main() -> int:  # noqa: C901
     scheduler = get_cosine_schedule_with_warmup(
         optimizer, num_warmup_steps=warmup_steps, num_training_steps=total_steps
     )
-    amp_dtype = dtype if device.type == "cuda" and dtype in (torch.float16, torch.bfloat16) else None
+    # 缩放只对 float16 生效，bfloat16 与 float32 的指数范围无需缩放
     scaler = torch.amp.GradScaler("cuda") if amp_dtype is torch.float16 else None
 
     log("===== 训练 =====")
@@ -413,7 +429,9 @@ def main() -> int:  # noqa: C901
             log(f"  已达 max_steps {total_steps}，本轮样本未跑完")
 
         if eval_config["every_epoch"]:
-            metrics = _evaluate_dev(model, tokenizer, dev_examples, dev_encoded, eval_config, device)
+            metrics = _evaluate_dev(
+                model, tokenizer, dev_examples, dev_encoded, eval_config, device, amp_dtype
+            )
             metrics["epoch"] = epoch
             eval_history.append(metrics)
             log(
@@ -455,7 +473,8 @@ def main() -> int:  # noqa: C901
                 "output_dir": str(output_dir),
                 "overrides": args.overrides,
                 "device": str(device),
-                "dtype": str(dtype),
+                "param_dtype": "float32",
+                "compute_dtype": str(amp_dtype or torch.float32),
                 "seed": run_config["seed"],
             },
             # 四个派生量为记录表直接引用。模板指纹与评测入口的 config_<dataset>.json 同名
