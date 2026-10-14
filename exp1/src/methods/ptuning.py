@@ -13,6 +13,10 @@ PrefixTuningConfig 不改输入长度，改在每一层的注意力缓存里多�
 prefix_projection 为假时各层前缀直接作为可训练表优化，为真时另经一个小规模多层感知机生成。
 P-Tuning v2 的结论是规模变大后重参数化并非必要，故本方法的默认取假，encoder_hidden_size
 在该情形下不参与计算，仅在 prefix_projection 为真时生效。
+
+init_weights 取 zero 时前缀表整体置零，取 null 时随机初始化。置零并非恒等映射，同批两条
+样本的首步损失本机实测为基座 1.5824、置零 5.4823、随机 8.2298，随机一侧随装配在 4.75
+至 11.73 间波动，理由见 LOG/02 的 Q15。
 """
 
 from __future__ import annotations
@@ -26,17 +30,25 @@ CONFIG_SCHEMA: dict[str, tuple[object, type]] = {
     "num_virtual_tokens": (20, int),
     "prefix_projection": (False, bool),
     "encoder_hidden_size": (512, int),
+    "init_weights": ("zero", str),
 }
 
 
 def build(model, config):
-    """在每一层前置虚拟键值对，返回 PeftModel。"""
+    """在每一层前置虚拟键值对，返回 PeftModel。
+
+    peft 只认 zero 与空值两种，其余取值会静默退回随机初始化，故在此拦下。
+    """
     from peft import PrefixTuningConfig, get_peft_model
 
+    init_weights = config["init_weights"]
+    if init_weights not in (None, "zero"):
+        raise ValueError(f"ptuning.init_weights 取 null 或 zero，收到 {init_weights!r}")
     settings = PrefixTuningConfig(
         num_virtual_tokens=config["num_virtual_tokens"],
         prefix_projection=config["prefix_projection"],
         encoder_hidden_size=config["encoder_hidden_size"],
+        init_weights=init_weights,
         task_type="CAUSAL_LM",
     )
     return get_peft_model(model, settings)

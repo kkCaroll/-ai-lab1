@@ -5,10 +5,10 @@ method: lora
 train:
   lr: 2.0e-4              # 可训练参数少，学习率取全参微调的两倍
   epochs: 3
-  gradient_checkpointing: false   # 关掉以换速度，代价是激活值随微批线性涨，故微批取 8 而非 16
+  gradient_checkpointing: true    # 显存由激活值主导而非可训练参数量，关掉后微批 8 仍超上限，见 LOG/02 的 Q13
 
 lora:
-  r: 8                    # 低秩矩阵的秩，P2.5 扫描
+  r: 8                    # 低秩矩阵的秩，改其值即改可训练参数量，故不随 P2.5 扫，见 PLAN/01 的 P2.5 设计
   alpha: 16               # 缩放系数，实际缩放为 alpha 除以 r
   dropout: 0.05
   target_modules:         # 按模块名后缀匹配，只挂在注意力投影上

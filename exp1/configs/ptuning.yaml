@@ -8,9 +8,12 @@ method: ptuning
 train:
   lr: 3.0e-4
   epochs: 3
-  gradient_checkpointing: false   # 同 lora.yaml，激活值随微批线性涨，故微批取 8 而非 16
+  batch_size: 4           # 本方法不能开梯度检查点，激活值随微批线性涨，故取共用值的一半
+  grad_accum: 16          # 有效批仍为 64
+  gradient_checkpointing: false   # 开则框架把 past_key_values 置空，前缀进不了注意力，见 LOG/02 的 Q14
 
 ptuning:
-  num_virtual_tokens: 20          # 虚拟 token 数，P2.5 扫描
+  num_virtual_tokens: 20          # 虚拟 token 数，改其值即改可训练参数量，故不随 P2.5 扫，见 PLAN/01 的 P2.5 设计
   prefix_projection: false        # 假则各层前缀直接优化，真则另经一个小规模多层感知机生成
   encoder_hidden_size: 512        # 仅 prefix_projection 为真时生效
+  init_weights: zero              # zero 或 null，P2.5 扫描；两者都不使前缀成为恒等映射，见 LOG/02 的 Q15
