@@ -9,6 +9,8 @@
 #   OUTPUT_DIR=/mnt/data/exp1/runs/R1-1 bash scripts/run_eval.sh
 #   # 换用适配器评测某方法的增量权重
 #   OUTPUT_DIR=/mnt/data/exp1/runs/R2-1 ADAPTER=/mnt/data/exp1/runs/R2-1/adapter bash scripts/run_eval.sh
+#   # 开发集读数，附加以 --split dev 覆盖默认的测试集
+#   DATASETS=gsm8k OUTPUT_DIR=/mnt/data/exp1/runs/R2-8-m0-dev bash scripts/run_eval.sh --split dev
 #
 # 退出码沿用评测入口，报告出现 FAIL 即为 1。
 
@@ -27,5 +29,5 @@ if [ -n "$ADAPTER" ]; then
     ARGS+=(--adapter "$ADAPTER")
 fi
 
-echo "评测命令 python -m src.eval ${ARGS[*]}"
-python -m src.eval "${ARGS[@]}"
+echo "评测命令 python -m src.eval ${ARGS[*]} $*"
+python -m src.eval "${ARGS[@]}" "$@"

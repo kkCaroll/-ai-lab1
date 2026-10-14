@@ -16,6 +16,9 @@ R8 的控制点。
     cd exp1
     python -m src.eval --model-path models/Qwen3-0.6B --dataset gsm8k --data-dir ../data/raw \\
         --output-dir ../results/R1-1 --limit 8 --dtype float32 --check-consistency 4
+    # 开发集读数，只对 gsm8k 成立，供超参选择取绝对对照
+    python -m src.eval --model-path /mnt/data/exp1/models/Qwen3-0.6B --dataset gsm8k \\
+        --split dev --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/data/exp1/runs/R2-8/m0-dev
 """
 
 from __future__ import annotations
@@ -63,7 +66,7 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--adapter", default=None, help="PEFT 适配器目录，基座评测时留空")
     parser.add_argument("--dataset", default="gsm8k,arc", help="逗号分隔，取 gsm8k 与 arc")
     parser.add_argument("--data-dir", default="../data/raw", help="原始 jsonl 目录")
-    parser.add_argument("--split", default="test", choices=["test"], help="评测一律取测试集")
+    parser.add_argument("--split", default="test", choices=["test", "dev"], help="dev 只对 gsm8k 成立，取训练集划出的 400 条开发集")
     parser.add_argument("--output-dir", required=True, help="运行目录，五类产物写于此")
     parser.add_argument("--batch-size", type=int, default=None, help="留空则按数据集取默认值")
     parser.add_argument("--max-new-tokens", type=int, default=None, help="留空则按数据集取默认值")
@@ -266,8 +269,15 @@ def predict_examples(model, tokenizer, encoded, examples, dataset, device, batch
 def evaluate_dataset(args, dataset, tokenizer, model, device, dtype, load_seconds, checks):
     """评测一个数据集，写出产物并返回指标字典，前置检查未过时返回 None。"""
     section(f"数据集 {dataset}")
-    examples = data.load_examples(dataset, args.split, args.data_dir, limit=args.limit)
-    expected = data.DATA_COUNTS[(dataset, args.split)]
+    if args.split == "dev":
+        # 开发集不是独立文件，条数由载入端与索引记录核对，此处不再重复
+        examples = data.load_dev_split(args.data_dir)
+        expected = len(examples)
+        if args.limit is not None:
+            examples = examples[: args.limit]
+    else:
+        examples = data.load_examples(dataset, args.split, args.data_dir, limit=args.limit)
+        expected = data.DATA_COUNTS[(dataset, args.split)]
 
     if args.limit is None:
         report(checks, "数据行数", OK if len(examples) == expected else FAIL, f"{len(examples)}，期望 {expected}")
@@ -416,6 +426,9 @@ def main() -> int:
     unknown = [item for item in datasets if item not in DEFAULT_BATCH_SIZE]
     if unknown or not datasets:
         print(f"数据集取值不合法 {datasets}，只接受 gsm8k 与 arc")
+        return 2
+    if args.split == "dev" and datasets != ["gsm8k"]:
+        print(f"--split dev 只对 gsm8k 成立，本次给出 {datasets}")
         return 2
 
     device = (

@@ -1,0 +1,434 @@
+2026-10-14T21:42:15.95819686+08:00 dlc1l987wrbyrzis-master-0 git-sync-code INFO: detected pid 1, running init handler
+2026-10-14T21:42:15.994516742+08:00 dlc1l987wrbyrzis-master-0 git-sync-code I1014 13:42:15.994354      12 main.go:473] "level"=0 "msg"="starting up" "pid"=12 "args"=["/git-sync"]
+2026-10-14T21:42:15.994544231+08:00 dlc1l987wrbyrzis-master-0 git-sync-code I1014 13:42:15.994489      12 main.go:923] "level"=0 "msg"="cloning repo" "origin"="https://github.com/kkCaroll/AI_lab1.git" "path"="/code"
+2026-10-14T21:42:18.220380102+08:00 dlc1l987wrbyrzis-master-0 git-sync-code I1014 13:42:18.220280      12 main.go:737] "level"=0 "msg"="syncing git" "rev"="HEAD" "hash"="9cb908191bf221407ea08e33e066ffc924100545"
+2026-10-14T21:42:20.20173838+08:00 dlc1l987wrbyrzis-master-0 git-sync-code I1014 13:42:20.201633      12 main.go:772] "level"=0 "msg"="adding worktree" "path"="/code/9cb908191bf221407ea08e33e066ffc924100545" "branch"="origin/main"
+2026-10-14T21:42:20.214879852+08:00 dlc1l987wrbyrzis-master-0 git-sync-code I1014 13:42:20.214778      12 main.go:833] "level"=0 "msg"="reset worktree to hash" "path"="/code/9cb908191bf221407ea08e33e066ffc924100545" "hash"="9cb908191bf221407ea08e33e066ffc924100545"
+2026-10-14T21:42:20.214898309+08:00 dlc1l987wrbyrzis-master-0 git-sync-code I1014 13:42:20.214838      12 main.go:838] "level"=0 "msg"="updating submodules"
+2026-10-14T21:42:24.369452612+08:00 dlc1l987wrbyrzis-master-0 pytorch INFO: Try to dump ENV REQUIREMENTS_TEXT to /tmp/requirements.txt.
+2026-10-14T21:42:24.3697608+08:00 dlc1l987wrbyrzis-master-0 pytorch INFO: Try to install requirements from /tmp/requirements.txt.
+2026-10-14T21:42:25.256902552+08:00 dlc1l987wrbyrzis-master-0 pytorch Looking in indexes: http://mirrors.cloud.aliyuncs.com/pypi/simple/
+2026-10-14T21:42:25.484184259+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting transformers
+2026-10-14T21:42:25.491480187+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b9/59/1e7f1212c215c73690ae6cab4678efe1555ff985953e145d88cc212859b0/transformers-5.19.0-py3-none-any.whl (12.6 MB)
+2026-10-14T21:42:25.637268758+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 88.5 MB/s eta 0:00:00
+2026-10-14T21:42:25.763808761+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting peft
+2026-10-14T21:42:25.783786214+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/70/0b/59441cdbfdd342ed03c08af90a2fe16173f0cd48ab219f523b39ca059a79/peft-0.21.2-py3-none-any.whl (835 kB)
+2026-10-14T21:42:25.797199632+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 835.4/835.4 kB 81.7 MB/s eta 0:00:00
+2026-10-14T21:42:25.895330516+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting datasets
+2026-10-14T21:42:25.902508912+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/24/cc/7f624629846c709ef1c68aa61bfb8d0ae2638cbe265104a1c2f7a630949e/datasets-5.1.0-py3-none-any.whl (604 kB)
+2026-10-14T21:42:25.91239659+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 604.4/604.4 kB 87.0 MB/s eta 0:00:00
+2026-10-14T21:42:25.998495318+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting accelerate
+2026-10-14T21:42:26.057705191+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/4c/34f0450479d01195027260da68d8a3880683f1640c3ca5adf64acb3185f1/accelerate-1.15.0-py3-none-any.whl (394 kB)
+2026-10-14T21:42:26.066395285+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 69.8 MB/s eta 0:00:00
+2026-10-14T21:42:26.659765592+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting huggingface-hub<3.0,>=1.31.0
+2026-10-14T21:42:26.667221878+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/eb/b0/0f7b430fd100b3a3b037fdbb314878200241082e607b3383c63d91a13a72/huggingface_hub-2.2.0-py3-none-any.whl (839 kB)
+2026-10-14T21:42:26.679511099+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 kB 93.2 MB/s eta 0:00:00
+2026-10-14T21:42:26.846593215+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting pyyaml>=5.1
+2026-10-14T21:42:26.854899983+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/7a/1e/7acc4f0e74c4b3d9531e24739e0ab832a5edf40e64fbae1a9c01941cabd7/pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-10-14T21:42:26.868782496+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 71.9 MB/s eta 0:00:00
+2026-10-14T21:42:27.001445698+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting tqdm>=4.60
+2026-10-14T21:42:27.008924218+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-10-14T21:42:27.015009885+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 22.7 MB/s eta 0:00:00
+2026-10-14T21:42:27.103467066+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting typer
+2026-10-14T21:42:27.110590372+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/07/ea/2e31b67051e91a133189e9c000c222502ddc6969856416de0d095de4c0b0/typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-14T21:42:27.117172394+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.3/123.3 kB 33.9 MB/s eta 0:00:00
+2026-10-14T21:42:27.794434616+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting tokenizers<0.24.0,>=0.23.1
+2026-10-14T21:42:27.80216716+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3a/40/6706b82693715581457c6d5423eaa7faae576bb0526c5738a57085eb4449/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+2026-10-14T21:42:27.842578837+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 91.3 MB/s eta 0:00:00
+2026-10-14T21:42:27.858537682+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.10/site-packages (from transformers->-r /tmp/requirements.txt (line 1)) (2.1.2)
+2026-10-14T21:42:28.417417488+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting safetensors>=0.8.0
+2026-10-14T21:42:28.424974806+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/50/f203ff3a3ddfe19308efc83c5a3a29ed02bf786732ec35e68bf9162f3365/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+2026-10-14T21:42:28.434711422+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 79.7 MB/s eta 0:00:00
+2026-10-14T21:42:30.490267919+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting regex>=2025.10.22
+2026-10-14T21:42:30.498852507+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/99/eae371ca63f7ea1f1eac025021527adb57ce3a4b67ff608b896fd31ea447/regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (797 kB)
+2026-10-14T21:42:30.546250873+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 kB 18.2 MB/s eta 0:00:00
+2026-10-14T21:42:30.633468533+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting packaging>=20.0
+2026-10-14T21:42:30.641384932+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-14T21:42:30.648292024+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 33.0 MB/s eta 0:00:00
+2026-10-14T21:42:30.693145092+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: torch>=1.13.0 in /usr/local/lib/python3.10/site-packages (from peft->-r /tmp/requirements.txt (line 2)) (2.6.0+cu126)
+2026-10-14T21:42:31.093705636+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting psutil
+2026-10-14T21:42:31.101810265+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-10-14T21:42:31.111662724+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 22.8 MB/s eta 0:00:00
+2026-10-14T21:42:31.421230169+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting multiprocess<0.70.20
+2026-10-14T21:42:31.429119363+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e3/45/8004d1e6b9185c1a444d6b55ac5682acf9d98035e54386d967366035a03a/multiprocess-0.70.19-py310-none-any.whl (134 kB)
+2026-10-14T21:42:31.436371365+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 32.4 MB/s eta 0:00:00
+2026-10-14T21:42:31.440024267+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: fsspec[http]<=2026.7.0,>=2023.1.0 in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (2025.9.0)
+2026-10-14T21:42:32.026416108+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting pandas
+2026-10-14T21:42:32.04771135+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/40/a8/4dac1f8f8235e5d25b9955d02ff6f29396191d4e665d71122c3722ca83c5/pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-10-14T21:42:32.185408464+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 90.1 MB/s eta 0:00:00
+2026-10-14T21:42:32.666274593+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting pyarrow>=24.0.0
+2026-10-14T21:42:32.674807353+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/57/5c/f8fc0eb2de03464a557d5a4d0c15e972d73362414696618833b771f7eddd/pyarrow-25.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (50.1 MB)
+2026-10-14T21:42:33.215343305+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 34.6 MB/s eta 0:00:00
+2026-10-14T21:42:33.411551182+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: filelock in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (3.19.1)
+2026-10-14T21:42:33.464781574+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting dill<0.4.2,>=0.3.0
+2026-10-14T21:42:33.47192069+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/1e/77/dc8c558f7593132cf8fefec57c4f60c83b16941c574ac5f619abb3ae7933/dill-0.4.1-py3-none-any.whl (120 kB)
+2026-10-14T21:42:33.478406005+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 34.1 MB/s eta 0:00:00
+2026-10-14T21:42:34.269281302+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting xxhash
+2026-10-14T21:42:34.278112887+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5f/3b/e5d20b4f602d15fc5fc066f601052a7d6f5a401a50d67fac92098a5829a5/xxhash-4.0.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (249 kB)
+2026-10-14T21:42:34.289375249+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 249.5/249.5 kB 30.5 MB/s eta 0:00:00
+2026-10-14T21:42:37.307505334+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting aiohttp!=4.0.0a0,!=4.0.0a1
+2026-10-14T21:42:37.315750357+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/38/01f5fc732d5373d6c099db0343279cd4e6607287d336bab6ff6ae9085a0d/aiohttp-3.14.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+2026-10-14T21:42:37.354762302+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 51.5 MB/s eta 0:00:00
+2026-10-14T21:42:37.509979078+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.10/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers->-r /tmp/requirements.txt (line 1)) (4.15.0)
+2026-10-14T21:42:37.541373953+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting httpx2<3,>=2.0.0
+2026-10-14T21:42:37.548133397+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/d8/9c/6fe8931fd9f381042a9e4c7d5a7b4cbf7016b252bec0c99a49fce42c3326/httpx2-2.13.1-py3-none-any.whl (95 kB)
+2026-10-14T21:42:37.554099188+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.6/95.6 kB 27.7 MB/s eta 0:00:00
+2026-10-14T21:42:37.770549988+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting hf-xet<2.0.0,>=1.6.0
+2026-10-14T21:42:37.777825873+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a3/4c/2bf3b66c215d409655f28de1622393dde04c9461280d48c7924bb3b2decd/hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+2026-10-14T21:42:37.816345466+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 118.6 MB/s eta 0:00:00
+2026-10-14T21:42:37.89170991+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting click<9.0.0,>=8.4.2
+2026-10-14T21:42:37.898622592+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-14T21:42:37.907266786+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 21.1 MB/s eta 0:00:00
+2026-10-14T21:42:38.036637472+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting tomli>=1.1.0
+2026-10-14T21:42:38.043783774+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/60/3f/3e3f8fd0919249b0200c80fbc4f9a1e70be19f9883da71dfb7f8b9ab8aca/tomli-2.5.0-py3-none-any.whl (14 kB)
+2026-10-14T21:42:38.226460913+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-cusparse-cu12==12.5.4.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.5.4.2)
+2026-10-14T21:42:38.228362551+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.13.1)
+2026-10-14T21:42:38.230139836+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-cublas-cu12==12.6.4.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.4.1)
+2026-10-14T21:42:38.23218136+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-cudnn-cu12==9.5.1.17 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (9.5.1.17)
+2026-10-14T21:42:38.234262358+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-cuda-cupti-cu12==12.6.80 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.80)
+2026-10-14T21:42:38.236012457+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.21.5)
+2026-10-14T21:42:38.236534356+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: networkx in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.3)
+2026-10-14T21:42:38.238545567+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-cusparselt-cu12==0.6.3 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (0.6.3)
+2026-10-14T21:42:38.240563002+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-curand-cu12==10.3.7.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (10.3.7.77)
+2026-10-14T21:42:38.241148837+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.1.3)
+2026-10-14T21:42:38.243513905+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-nvjitlink-cu12==12.6.85 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.85)
+2026-10-14T21:42:38.245515186+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-14T21:42:38.24747274+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-cufft-cu12==11.3.0.4 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.3.0.4)
+2026-10-14T21:42:38.249409959+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: triton==3.2.0 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.2.0)
+2026-10-14T21:42:38.252168636+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-nvtx-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-14T21:42:38.253259459+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-cusolver-cu12==11.7.1.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.7.1.2)
+2026-10-14T21:42:38.255352081+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: nvidia-cuda-runtime-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-14T21:42:38.309420729+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/site-packages (from sympy==1.13.1->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.3.0)
+2026-10-14T21:42:38.522367989+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting tzdata>=2022.7
+2026-10-14T21:42:38.529416216+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/94/21/1e5995a1c920cce14e4bffae20c665ec10e7ed03ab25e006cd741092b718/tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-10-14T21:42:38.538037016+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.0/348.0 kB 64.5 MB/s eta 0:00:00
+2026-10-14T21:42:38.667031359+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting pytz>=2020.1
+2026-10-14T21:42:38.674802415+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/4f/ef/c66110d46fb800dda0bf33164182dfadabe26a90e4476844d502a23dca8e/pytz-2026.5-py2.py3-none-any.whl (506 kB)
+2026-10-14T21:42:38.68422436+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 79.9 MB/s eta 0:00:00
+2026-10-14T21:42:38.726818943+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting python-dateutil>=2.8.2
+2026-10-14T21:42:38.733647469+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-10-14T21:42:38.740667529+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 55.1 MB/s eta 0:00:00
+2026-10-14T21:42:38.820884615+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting annotated-doc>=0.0.2
+2026-10-14T21:42:38.827400072+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-14T21:42:39.002817255+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting rich>=13.8.0
+2026-10-14T21:42:39.009451568+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-14T21:42:39.017219367+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 64.8 MB/s eta 0:00:00
+2026-10-14T21:42:39.067430014+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting shellingham>=1.3.0
+2026-10-14T21:42:39.074248066+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-14T21:42:39.133098446+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting aiosignal>=1.4.0
+2026-10-14T21:42:39.140190554+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2026-10-14T21:42:39.182104197+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting async-timeout<6.0,>=4.0
+2026-10-14T21:42:39.188637203+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fe/ba/e2081de779ca30d473f21f5b30e0e737c438205440784c7dfc81efc2b029/async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+2026-10-14T21:42:39.234960463+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting attrs>=17.3.0
+2026-10-14T21:42:39.241582827+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-14T21:42:39.249788326+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 11.0 MB/s eta 0:00:00
+2026-10-14T21:42:39.551374757+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting frozenlist>=1.1.1
+2026-10-14T21:42:39.559283831+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/ed/c7895fd2fde7f3ee70d248175f9b6cdf792fb741ab92dc59cd9ef3bd241b/frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (219 kB)
+2026-10-14T21:42:39.566726325+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.5/219.5 kB 50.7 MB/s eta 0:00:00
+2026-10-14T21:42:39.620133993+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting aiohappyeyeballs>=2.5.0
+2026-10-14T21:42:39.62678146+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+2026-10-14T21:42:39.962271823+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting propcache>=0.2.0
+2026-10-14T21:42:39.970190309+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/f0/51/5adee15e12a7e314cece4543fbf295b0fe1b504dc78b32dff4c8eb1e29b0/propcache-0.5.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (224 kB)
+2026-10-14T21:42:39.977789924+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.3/224.3 kB 50.9 MB/s eta 0:00:00
+2026-10-14T21:42:41.436593286+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting yarl<2.0,>=1.25.1
+2026-10-14T21:42:41.444617642+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/b9/7818ac6dec7fbcd16be2d19495807c01e2c38834e57d41c63356a75e786b/yarl-1.25.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (118 kB)
+2026-10-14T21:42:41.461553487+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 8.0 MB/s eta 0:00:00
+2026-10-14T21:42:42.764844787+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting multidict<8.0,>=4.5
+2026-10-14T21:42:42.82175375+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5a/9c/598d765e98aa02ff7204b6f11cf790e5840f5e8252d7b1d955ed0043bb94/multidict-7.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (464 kB)
+2026-10-14T21:42:42.849929987+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.4/464.4 kB 18.3 MB/s eta 0:00:00
+2026-10-14T21:42:42.959484871+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting idna>=3.18
+2026-10-14T21:42:42.96622364+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl (69 kB)
+2026-10-14T21:42:42.972112359+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 19.7 MB/s eta 0:00:00
+2026-10-14T21:42:43.037135006+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting anyio>=4.10
+2026-10-14T21:42:43.043708566+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-14T21:42:43.04990186+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 39.3 MB/s eta 0:00:00
+2026-10-14T21:42:43.081517894+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting httpcore2==2.13.1
+2026-10-14T21:42:43.088086888+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/09/ba/a4568248771ce81957bfb7cc600264a40fbcda092391ee1c415c50be4bea/httpcore2-2.13.1-py3-none-any.whl (83 kB)
+2026-10-14T21:42:43.093501592+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 27.3 MB/s eta 0:00:00
+2026-10-14T21:42:43.124496127+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting truststore>=0.10
+2026-10-14T21:42:43.131416626+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/51/e9/3a7820be2bb0fe53b6bc9c3be26d3d1158004e4c3ab953aa6840b955b1e9/truststore-0.10.5-py3-none-any.whl (19 kB)
+2026-10-14T21:42:43.172042163+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting h11>=0.16
+2026-10-14T21:42:43.178539923+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-14T21:42:43.220503754+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting six>=1.5
+2026-10-14T21:42:43.227003492+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-14T21:42:43.303219754+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting markdown-it-py>=2.2.0
+2026-10-14T21:42:43.309828258+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-14T21:42:43.31549023+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 28.3 MB/s eta 0:00:00
+2026-10-14T21:42:43.383675571+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting pygments<3.0.0,>=2.13.0
+2026-10-14T21:42:43.390231955+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-14T21:42:43.407320793+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 86.7 MB/s eta 0:00:00
+2026-10-14T21:42:43.451766876+08:00 dlc1l987wrbyrzis-master-0 pytorch Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/site-packages (from jinja2->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.1.5)
+2026-10-14T21:42:43.577299629+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting exceptiongroup>=1.0.2
+2026-10-14T21:42:43.660073919+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/0e/97c33bf5009bdbac74fd2beace167cab3f978feb69cc36f1ef79360d6c4e/exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-10-14T21:42:43.727929214+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting typing-extensions>=4.1.0
+2026-10-14T21:42:43.734589319+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-14T21:42:43.740678152+08:00 dlc1l987wrbyrzis-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 11.1 MB/s eta 0:00:00
+2026-10-14T21:42:43.854221478+08:00 dlc1l987wrbyrzis-master-0 pytorch Collecting mdurl~=0.1
+2026-10-14T21:42:43.860876006+08:00 dlc1l987wrbyrzis-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-14T21:42:45.349194232+08:00 dlc1l987wrbyrzis-master-0 pytorch Installing collected packages: pytz, xxhash, tzdata, typing-extensions, truststore, tqdm, tomli, six, shellingham, safetensors, regex, pyyaml, pygments, pyarrow, psutil, propcache, packaging, mdurl, idna, hf-xet, h11, frozenlist, dill, click, attrs, async-timeout, annotated-doc, aiohappyeyeballs, python-dateutil, multiprocess, multidict, markdown-it-py, httpcore2, exceptiongroup, aiosignal, yarl, rich, pandas, anyio, typer, httpx2, aiohttp, huggingface-hub, tokenizers, datasets, accelerate, transformers, peft
+2026-10-14T21:42:45.682317893+08:00 dlc1l987wrbyrzis-master-0 pytorch   Attempting uninstall: typing-extensions
+2026-10-14T21:42:45.683303556+08:00 dlc1l987wrbyrzis-master-0 pytorch     Found existing installation: typing_extensions 4.15.0
+2026-10-14T21:42:45.687312009+08:00 dlc1l987wrbyrzis-master-0 pytorch     Uninstalling typing_extensions-4.15.0:
+2026-10-14T21:42:46.321546148+08:00 dlc1l987wrbyrzis-master-0 pytorch       Successfully uninstalled typing_extensions-4.15.0
+2026-10-14T21:42:49.786341272+08:00 dlc1l987wrbyrzis-master-0 pytorch   Attempting uninstall: idna
+2026-10-14T21:42:49.787388266+08:00 dlc1l987wrbyrzis-master-0 pytorch     Found existing installation: idna 3.11
+2026-10-14T21:42:49.792541999+08:00 dlc1l987wrbyrzis-master-0 pytorch     Uninstalling idna-3.11:
+2026-10-14T21:42:49.793715553+08:00 dlc1l987wrbyrzis-master-0 pytorch       Successfully uninstalled idna-3.11
+2026-10-14T21:43:06.961544228+08:00 dlc1l987wrbyrzis-master-0 pytorch Successfully installed accelerate-1.15.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 annotated-doc-0.0.5 anyio-4.15.1 async-timeout-5.0.1 attrs-26.1.0 click-8.5.0 datasets-5.1.0 dill-0.4.1 exceptiongroup-1.3.1 frozenlist-1.8.0 h11-0.16.0 hf-xet-1.7.0 httpcore2-2.13.1 httpx2-2.13.1 huggingface-hub-2.2.0 idna-3.20 markdown-it-py-4.2.0 mdurl-0.1.2 multidict-7.1.0 multiprocess-0.70.19 packaging-26.3 pandas-2.3.3 peft-0.21.2 propcache-0.5.4 psutil-7.2.2 pyarrow-25.0.1 pygments-2.21.0 python-dateutil-2.9.0.post0 pytz-2026.5 pyyaml-6.0.3 regex-2026.9.29 rich-15.0.0 safetensors-0.8.0 shellingham-1.5.4 six-1.17.0 tokenizers-0.23.3 tomli-2.5.0 tqdm-4.70.1 transformers-5.19.0 truststore-0.10.5 typer-0.27.3 typing-extensions-4.16.0 tzdata-2026.5 xxhash-4.0.1 yarl-1.25.1
+2026-10-14T21:43:06.96194438+08:00 dlc1l987wrbyrzis-master-0 pytorch WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2026-10-14T21:43:07.090753375+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T21:43:07.090772077+08:00 dlc1l987wrbyrzis-master-0 pytorch [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+2026-10-14T21:43:07.090777165+08:00 dlc1l987wrbyrzis-master-0 pytorch [notice] To update, run: pip install --upgrade pip
+2026-10-14T21:43:08.176716651+08:00 dlc1l987wrbyrzis-master-0 pytorch 训练命令 python -m src.train --config configs/lora.yaml --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/code/AI_lab1/exp1/runs/R2-6-lora-lr1.0e-4 --set train.lr=1.0e-4 --set eval.mode=final --set output.save_total_limit=1
+2026-10-14T21:43:11.64978558+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T21:43:11.649811548+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 环境 =====
+2026-10-14T21:43:11.649828711+08:00 dlc1l987wrbyrzis-master-0 pytorch   方法 lora  设备 cuda  参数精度 float32  计算精度 torch.float16  种子 42
+2026-10-14T21:43:11.649835423+08:00 dlc1l987wrbyrzis-master-0 pytorch   配置 configs/lora.yaml  覆盖 ['train.lr=1.0e-4', 'eval.mode=final', 'output.save_total_limit=1']
+2026-10-14T21:43:16.09274467+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 载入 =====
+Loading weights: 100%|██████████| 311/311 [00:07<00:00, 40.67it/s]
+Loading weights:   1%|          | 2/311 [00:07<16:47,  3.26s/it]
+Loading weights:   0%|          | 1/311 [00:06<35:53,  6.95s/it]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-14T21:43:26.520916684+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T21:43:27.44058994+08:00 dlc1l987wrbyrzis-master-0 pytorch   模型加载 11.3 秒
+2026-10-14T21:43:27.440649715+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 分词器结束标记  <|im_end|> 编号 151645
+2026-10-14T21:43:27.862869427+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 方法 =====
+2026-10-14T21:43:27.862897309+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点形式 adapter
+2026-10-14T21:43:27.862908301+08:00 dlc1l987wrbyrzis-master-0 pytorch   参数量 总量 598,343,680  可训练 2,293,760  占比 0.003834
+2026-10-14T21:43:27.862952325+08:00 dlc1l987wrbyrzis-master-0 pytorch   挂载模块 112 处  后缀 k_proj、o_proj、q_proj、v_proj
+2026-10-14T21:43:27.862973286+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 存在可训练参数  2,293,760
+2026-10-14T21:43:27.862998585+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 数据 =====
+2026-10-14T21:43:28.124259537+08:00 dlc1l987wrbyrzis-master-0 pytorch   训练集 7073 条  开发集 400 条
+2026-10-14T21:43:28.124276871+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 训练集条数  7073，期望 7073
+2026-10-14T21:43:33.291906946+08:00 dlc1l987wrbyrzis-master-0 pytorch   训练文本 最长 479  均值 186.8 token  编码 5.2 秒
+2026-10-14T21:43:33.291935391+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 样本不超长  超 512 的 0 条，上限 512
+2026-10-14T21:43:33.469264237+08:00 dlc1l987wrbyrzis-master-0 pytorch   开发集提示 最长 214 token
+2026-10-14T21:43:33.474136094+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 训练 =====
+2026-10-14T21:43:33.47415819+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮数 3  每轮步数 111  计划总步数 333  预热 9 步
+2026-10-14T21:43:33.474186934+08:00 dlc1l987wrbyrzis-master-0 pytorch   微批 8  累积 8  有效批 64  学习率 1.00e-04  调度 cosine
+2026-10-14T21:44:08.722628771+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 10/333  损失 1.2717  学习率 1.00e-04  速度 3342 token/s  已用 0.6 分
+2026-10-14T21:44:43.755532357+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 20/333  损失 0.8309  学习率 9.97e-05  速度 3356 token/s  已用 1.2 分
+2026-10-14T21:45:19.209048984+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 30/333  损失 0.7165  学习率 9.90e-05  速度 3380 token/s  已用 1.8 分
+2026-10-14T21:45:54.273713034+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 40/333  损失 0.7119  学习率 9.78e-05  速度 3401 token/s  已用 2.3 分
+2026-10-14T21:46:29.115227704+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 50/333  损失 0.6938  学习率 9.61e-05  速度 3405 token/s  已用 2.9 分
+2026-10-14T21:47:04.366668266+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 60/333  损失 0.6676  学习率 9.40e-05  速度 3408 token/s  已用 3.5 分
+2026-10-14T21:47:39.686577392+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 70/333  损失 0.6706  学习率 9.15e-05  速度 3401 token/s  已用 4.1 分
+2026-10-14T21:48:15.13505458+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 80/333  损失 0.6734  学习率 8.86e-05  速度 3400 token/s  已用 4.7 分
+2026-10-14T21:48:50.689109125+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 90/333  损失 0.6593  学习率 8.54e-05  速度 3396 token/s  已用 5.3 分
+2026-10-14T21:49:25.660220913+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 100/333  损失 0.6278  学习率 8.18e-05  速度 3398 token/s  已用 5.9 分
+2026-10-14T21:50:00.507335325+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 110/333  损失 0.6108  学习率 7.79e-05  速度 3397 token/s  已用 6.5 分
+2026-10-14T21:50:02.642452926+08:00 dlc1l987wrbyrzis-master-0 pytorch   第 1 轮结束  平均损失 0.7392  本轮步数 111
+2026-10-14T21:50:03.002572929+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点 checkpoints/epoch-1  文件 3 个
+2026-10-14T21:50:34.510435594+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 120/333  损失 0.6499  学习率 7.37e-05  速度 3394 token/s  已用 7.0 分
+2026-10-14T21:51:09.43966728+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 130/333  损失 0.6276  学习率 6.94e-05  速度 3393 token/s  已用 7.6 分
+2026-10-14T21:51:44.727861201+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 140/333  损失 0.6190  学习率 6.48e-05  速度 3394 token/s  已用 8.2 分
+2026-10-14T21:52:19.600645367+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 150/333  损失 0.6279  学习率 6.01e-05  速度 3394 token/s  已用 8.8 分
+2026-10-14T21:52:54.327659033+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 160/333  损失 0.6423  学习率 5.53e-05  速度 3399 token/s  已用 9.3 分
+2026-10-14T21:53:29.334490477+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 170/333  损失 0.6338  学习率 5.05e-05  速度 3401 token/s  已用 9.9 分
+2026-10-14T21:54:04.914060221+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 180/333  损失 0.6196  学习率 4.56e-05  速度 3397 token/s  已用 10.5 分
+2026-10-14T21:54:39.489758405+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 190/333  损失 0.6188  学习率 4.08e-05  速度 3398 token/s  已用 11.1 分
+2026-10-14T21:55:14.220702604+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 200/333  损失 0.6242  学习率 3.61e-05  速度 3400 token/s  已用 11.7 分
+2026-10-14T21:55:49.463612956+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 210/333  损失 0.6102  学习率 3.15e-05  速度 3402 token/s  已用 12.3 分
+2026-10-14T21:56:25.542020361+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 220/333  损失 0.6033  学习率 2.71e-05  速度 3400 token/s  已用 12.9 分
+2026-10-14T21:56:31.177950194+08:00 dlc1l987wrbyrzis-master-0 pytorch   第 2 轮结束  平均损失 0.6234  本轮步数 111
+2026-10-14T21:56:31.555934851+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点 checkpoints/epoch-2  文件 3 个
+2026-10-14T21:56:31.557423748+08:00 dlc1l987wrbyrzis-master-0 pytorch   删除较早的检查点 checkpoints/epoch-1
+2026-10-14T21:56:58.934996902+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 230/333  损失 0.5878  学习率 2.29e-05  速度 3396 token/s  已用 13.4 分
+2026-10-14T21:57:33.840553935+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 240/333  损失 0.6281  学习率 1.90e-05  速度 3399 token/s  已用 14.0 分
+2026-10-14T21:58:08.71956261+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 250/333  损失 0.6248  学习率 1.53e-05  速度 3400 token/s  已用 14.6 分
+2026-10-14T21:58:43.718911559+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 260/333  损失 0.6069  学习率 1.20e-05  速度 3398 token/s  已用 15.2 分
+2026-10-14T21:59:18.5677049+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 270/333  损失 0.6110  学习率 9.04e-06  速度 3398 token/s  已用 15.8 分
+2026-10-14T21:59:54.327291323+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 280/333  损失 0.6223  学习率 6.46e-06  速度 3398 token/s  已用 16.3 分
+2026-10-14T22:00:29.433016426+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 290/333  损失 0.5815  学习率 4.28e-06  速度 3398 token/s  已用 16.9 分
+2026-10-14T22:01:04.733233953+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 300/333  损失 0.5987  学习率 2.54e-06  速度 3399 token/s  已用 17.5 分
+2026-10-14T22:01:39.77897105+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 310/333  损失 0.6014  学习率 1.24e-06  速度 3400 token/s  已用 18.1 分
+2026-10-14T22:02:15.049615691+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 320/333  损失 0.6070  学习率 3.97e-07  速度 3400 token/s  已用 18.7 分
+2026-10-14T22:02:49.375162505+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 330/333  损失 0.6124  学习率 2.12e-08  速度 3403 token/s  已用 19.3 分
+2026-10-14T22:02:58.80260012+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 333/333  损失 0.6194  学习率 0.00e+00  速度 3401 token/s  已用 19.4 分
+2026-10-14T22:02:58.802918404+08:00 dlc1l987wrbyrzis-master-0 pytorch   第 3 轮结束  平均损失 0.6085  本轮步数 111
+2026-10-14T22:03:06.360881931+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 1  已完成 16/400  已用 7.5 秒  预计剩余 3.0 分
+2026-10-14T22:04:14.502879332+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 5  已完成 80/400  已用 75.7 秒  预计剩余 5.0 分
+2026-10-14T22:05:42.652883294+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 10  已完成 160/400  已用 163.8 秒  预计剩余 4.1 分
+2026-10-14T22:07:24.444832488+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 15  已完成 240/400  已用 265.6 秒  预计剩余 3.0 分
+2026-10-14T22:09:22.077213634+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 20  已完成 320/400  已用 383.3 秒  预计剩余 1.6 分
+2026-10-14T22:11:45.308289129+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 25  已完成 400/400  已用 526.5 秒  预计剩余 0.0 分
+2026-10-14T22:11:45.337774655+08:00 dlc1l987wrbyrzis-master-0 pytorch   开发集  准确率 0.4925  正确 197/400  均长 97.9 token  用时 526.5 秒
+2026-10-14T22:11:45.678146539+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点 checkpoints/epoch-3  文件 3 个
+2026-10-14T22:11:45.679664534+08:00 dlc1l987wrbyrzis-master-0 pytorch   删除较早的检查点 checkpoints/epoch-2
+2026-10-14T22:11:45.679976864+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 结束 =====
+2026-10-14T22:11:45.679999768+08:00 dlc1l987wrbyrzis-master-0 pytorch   总步数 333  用时 28.2 分  显存峰值 10.58 GiB  处理 token 3,962,898  速度 2342 token/s
+2026-10-14T22:11:45.700453665+08:00 dlc1l987wrbyrzis-master-0 pytorch   产物已写出至 /mnt/code/AI_lab1/exp1/runs/R2-6-lora-lr1.0e-4
+2026-10-14T22:11:45.700462977+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T22:11:45.70046759+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 汇总 =====
+2026-10-14T22:11:45.70047974+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T22:11:45.700484573+08:00 dlc1l987wrbyrzis-master-0 pytorch 共计 4 项，OK 4，WARN 0，FAIL 0
+2026-10-14T22:11:46.992261889+08:00 dlc1l987wrbyrzis-master-0 pytorch 训练命令 python -m src.train --config configs/lora.yaml --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/code/AI_lab1/exp1/runs/R2-6-lora-lr2.0e-4 --set train.lr=2.0e-4 --set eval.mode=final --set output.save_total_limit=1
+2026-10-14T22:11:49.064962267+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T22:11:49.064992259+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 环境 =====
+2026-10-14T22:11:49.065011481+08:00 dlc1l987wrbyrzis-master-0 pytorch   方法 lora  设备 cuda  参数精度 float32  计算精度 torch.float16  种子 42
+2026-10-14T22:11:49.065020698+08:00 dlc1l987wrbyrzis-master-0 pytorch   配置 configs/lora.yaml  覆盖 ['train.lr=2.0e-4', 'eval.mode=final', 'output.save_total_limit=1']
+2026-10-14T22:11:52.577767858+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 载入 =====
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 595.50it/s]
+Loading weights:  90%|████████▉ | 279/311 [00:00<00:00, 670.19it/s]
+Loading weights:  65%|██████▍   | 202/311 [00:00<00:00, 623.77it/s]
+Loading weights:  40%|████      | 125/311 [00:00<00:00, 542.75it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:56,  5.51it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-14T22:11:54.791684432+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T22:11:55.707066479+08:00 dlc1l987wrbyrzis-master-0 pytorch   模型加载 3.1 秒
+2026-10-14T22:11:55.707126868+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 分词器结束标记  <|im_end|> 编号 151645
+2026-10-14T22:11:56.155660791+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 方法 =====
+2026-10-14T22:11:56.155697355+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点形式 adapter
+2026-10-14T22:11:56.155703797+08:00 dlc1l987wrbyrzis-master-0 pytorch   参数量 总量 598,343,680  可训练 2,293,760  占比 0.003834
+2026-10-14T22:11:56.155766672+08:00 dlc1l987wrbyrzis-master-0 pytorch   挂载模块 112 处  后缀 k_proj、o_proj、q_proj、v_proj
+2026-10-14T22:11:56.156307752+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 存在可训练参数  2,293,760
+2026-10-14T22:11:56.156315107+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 数据 =====
+2026-10-14T22:11:56.407390653+08:00 dlc1l987wrbyrzis-master-0 pytorch   训练集 7073 条  开发集 400 条
+2026-10-14T22:11:56.407434116+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 训练集条数  7073，期望 7073
+2026-10-14T22:12:01.640772382+08:00 dlc1l987wrbyrzis-master-0 pytorch   训练文本 最长 479  均值 186.8 token  编码 5.2 秒
+2026-10-14T22:12:01.640811153+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 样本不超长  超 512 的 0 条，上限 512
+2026-10-14T22:12:01.82787987+08:00 dlc1l987wrbyrzis-master-0 pytorch   开发集提示 最长 214 token
+2026-10-14T22:12:01.832861918+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 训练 =====
+2026-10-14T22:12:01.83288605+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮数 3  每轮步数 111  计划总步数 333  预热 9 步
+2026-10-14T22:12:01.832894513+08:00 dlc1l987wrbyrzis-master-0 pytorch   微批 8  累积 8  有效批 64  学习率 2.00e-04  调度 cosine
+2026-10-14T22:12:37.013958824+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 10/333  损失 1.1835  学习率 2.00e-04  速度 3348 token/s  已用 0.6 分
+2026-10-14T22:13:12.383215145+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 20/333  损失 0.7514  学习率 1.99e-04  速度 3343 token/s  已用 1.2 分
+2026-10-14T22:13:48.095015496+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 30/333  损失 0.6829  学习率 1.98e-04  速度 3364 token/s  已用 1.8 分
+2026-10-14T22:14:23.179633943+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 40/333  损失 0.6882  学习率 1.96e-04  速度 3388 token/s  已用 2.4 分
+2026-10-14T22:14:57.7153275+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 50/333  损失 0.6711  学习率 1.92e-04  速度 3400 token/s  已用 2.9 分
+2026-10-14T22:15:32.642552078+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 60/333  损失 0.6482  学习率 1.88e-04  速度 3409 token/s  已用 3.5 分
+2026-10-14T22:16:07.675489575+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 70/333  损失 0.6503  学习率 1.83e-04  速度 3406 token/s  已用 4.1 分
+2026-10-14T22:16:42.741285226+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 80/333  损失 0.6555  学习率 1.77e-04  速度 3409 token/s  已用 4.7 分
+2026-10-14T22:17:18.037790749+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 90/333  损失 0.6414  学习率 1.71e-04  速度 3407 token/s  已用 5.3 分
+2026-10-14T22:17:52.601018221+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 100/333  损失 0.6103  学习率 1.64e-04  速度 3411 token/s  已用 5.8 分
+2026-10-14T22:18:27.014282235+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 110/333  损失 0.5950  学习率 1.56e-04  速度 3413 token/s  已用 6.4 分
+2026-10-14T22:18:29.096133008+08:00 dlc1l987wrbyrzis-master-0 pytorch   第 1 轮结束  平均损失 0.7070  本轮步数 111
+2026-10-14T22:18:29.446916601+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点 checkpoints/epoch-1  文件 3 个
+2026-10-14T22:19:00.476849714+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 120/333  损失 0.6289  学习率 1.47e-04  速度 3413 token/s  已用 7.0 分
+2026-10-14T22:19:35.067429684+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 130/333  损失 0.6048  学习率 1.39e-04  速度 3414 token/s  已用 7.6 分
+2026-10-14T22:20:10.154591733+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 140/333  损失 0.5979  学习率 1.30e-04  速度 3414 token/s  已用 8.1 分
+2026-10-14T22:20:44.626350079+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 150/333  损失 0.6041  学习率 1.20e-04  速度 3416 token/s  已用 8.7 分
+2026-10-14T22:21:19.015012361+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 160/333  损失 0.6186  学习率 1.11e-04  速度 3421 token/s  已用 9.3 分
+2026-10-14T22:21:53.753834262+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 170/333  损失 0.6104  学习率 1.01e-04  速度 3423 token/s  已用 9.9 分
+2026-10-14T22:22:28.975648034+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 180/333  损失 0.5950  学习率 9.13e-05  速度 3421 token/s  已用 10.5 分
+2026-10-14T22:23:03.204841279+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 190/333  损失 0.5943  学习率 8.17e-05  速度 3421 token/s  已用 11.0 分
+2026-10-14T22:23:37.241104359+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 200/333  损失 0.6000  学习率 7.22e-05  速度 3426 token/s  已用 11.6 分
+2026-10-14T22:24:11.936034815+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 210/333  损失 0.5896  学习率 6.31e-05  速度 3429 token/s  已用 12.2 分
+2026-10-14T22:24:47.587957039+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 220/333  损失 0.5796  学习率 5.43e-05  速度 3428 token/s  已用 12.8 分
+2026-10-14T22:24:53.112842312+08:00 dlc1l987wrbyrzis-master-0 pytorch   第 2 轮结束  平均损失 0.6002  本轮步数 111
+2026-10-14T22:24:53.495474543+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点 checkpoints/epoch-2  文件 3 个
+2026-10-14T22:24:53.497092851+08:00 dlc1l987wrbyrzis-master-0 pytorch   删除较早的检查点 checkpoints/epoch-1
+2026-10-14T22:25:20.447161861+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 230/333  损失 0.5602  学习率 4.59e-05  速度 3426 token/s  已用 13.3 分
+2026-10-14T22:25:55.070271114+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 240/333  损失 0.5983  学习率 3.80e-05  速度 3428 token/s  已用 13.9 分
+2026-10-14T22:26:29.616766545+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 250/333  损失 0.5941  学习率 3.07e-05  速度 3429 token/s  已用 14.5 分
+2026-10-14T22:27:04.217319108+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 260/333  损失 0.5774  学习率 2.40e-05  速度 3428 token/s  已用 15.0 分
+2026-10-14T22:27:38.652427705+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 270/333  损失 0.5815  学习率 1.81e-05  速度 3428 token/s  已用 15.6 分
+2026-10-14T22:28:13.871755887+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 280/333  损失 0.5920  学习率 1.29e-05  速度 3429 token/s  已用 16.2 分
+2026-10-14T22:28:48.426838475+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 290/333  损失 0.5515  学习率 8.57e-06  速度 3430 token/s  已用 16.8 分
+2026-10-14T22:29:23.591066776+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 300/333  损失 0.5690  学习率 5.08e-06  速度 3430 token/s  已用 17.4 分
+2026-10-14T22:29:58.418204553+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 310/333  损失 0.5715  学习率 2.48e-06  速度 3430 token/s  已用 17.9 分
+2026-10-14T22:30:33.459269225+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 320/333  损失 0.5756  学习率 7.93e-07  速度 3430 token/s  已用 18.5 分
+2026-10-14T22:31:07.47144064+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 330/333  损失 0.5820  学习率 4.23e-08  速度 3433 token/s  已用 19.1 分
+2026-10-14T22:31:16.844102407+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 333/333  损失 0.5893  学习率 0.00e+00  速度 3431 token/s  已用 19.3 分
+2026-10-14T22:31:16.844392473+08:00 dlc1l987wrbyrzis-master-0 pytorch   第 3 轮结束  平均损失 0.5785  本轮步数 111
+2026-10-14T22:31:24.40830092+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 1  已完成 16/400  已用 7.6 秒  预计剩余 3.0 分
+2026-10-14T22:31:53.877822294+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 5  已完成 80/400  已用 37.0 秒  预计剩余 2.5 分
+2026-10-14T22:32:36.528299103+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 10  已完成 160/400  已用 79.7 秒  预计剩余 2.0 分
+2026-10-14T22:33:27.2332645+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 15  已完成 240/400  已用 130.4 秒  预计剩余 1.4 分
+2026-10-14T22:35:46.847908986+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 20  已完成 320/400  已用 270.0 秒  预计剩余 1.1 分
+2026-10-14T22:37:27.216535621+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 25  已完成 400/400  已用 370.4 秒  预计剩余 0.0 分
+2026-10-14T22:37:27.244505991+08:00 dlc1l987wrbyrzis-master-0 pytorch   开发集  准确率 0.4925  正确 197/400  均长 91.9 token  用时 370.4 秒
+2026-10-14T22:37:27.561686923+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点 checkpoints/epoch-3  文件 3 个
+2026-10-14T22:37:27.563279074+08:00 dlc1l987wrbyrzis-master-0 pytorch   删除较早的检查点 checkpoints/epoch-2
+2026-10-14T22:37:27.563572684+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 结束 =====
+2026-10-14T22:37:27.563609098+08:00 dlc1l987wrbyrzis-master-0 pytorch   总步数 333  用时 25.4 分  显存峰值 10.58 GiB  处理 token 3,962,898  速度 2597 token/s
+2026-10-14T22:37:27.576626564+08:00 dlc1l987wrbyrzis-master-0 pytorch   产物已写出至 /mnt/code/AI_lab1/exp1/runs/R2-6-lora-lr2.0e-4
+2026-10-14T22:37:27.576646474+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T22:37:27.576653369+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 汇总 =====
+2026-10-14T22:37:27.576665871+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T22:37:27.576672184+08:00 dlc1l987wrbyrzis-master-0 pytorch 共计 4 项，OK 4，WARN 0，FAIL 0
+2026-10-14T22:37:28.653040929+08:00 dlc1l987wrbyrzis-master-0 pytorch 训练命令 python -m src.train --config configs/lora.yaml --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/code/AI_lab1/exp1/runs/R2-6-lora-lr4.0e-4 --set train.lr=4.0e-4 --set eval.mode=final --set output.save_total_limit=1
+2026-10-14T22:37:30.609755684+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T22:37:30.609779843+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 环境 =====
+2026-10-14T22:37:30.609801637+08:00 dlc1l987wrbyrzis-master-0 pytorch   方法 lora  设备 cuda  参数精度 float32  计算精度 torch.float16  种子 42
+2026-10-14T22:37:30.609813503+08:00 dlc1l987wrbyrzis-master-0 pytorch   配置 configs/lora.yaml  覆盖 ['train.lr=4.0e-4', 'eval.mode=final', 'output.save_total_limit=1']
+2026-10-14T22:37:34.111610336+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 载入 =====
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 605.29it/s]
+Loading weights:  90%|████████▉ | 279/311 [00:00<00:00, 679.33it/s]
+Loading weights:  65%|██████▌   | 203/311 [00:00<00:00, 638.22it/s]
+Loading weights:  40%|████      | 125/311 [00:00<00:00, 568.41it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:52,  5.87it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-14T22:37:36.305095742+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T22:37:37.140124004+08:00 dlc1l987wrbyrzis-master-0 pytorch   模型加载 3.0 秒
+2026-10-14T22:37:37.140203755+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 分词器结束标记  <|im_end|> 编号 151645
+2026-10-14T22:37:37.558956949+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 方法 =====
+2026-10-14T22:37:37.558994439+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点形式 adapter
+2026-10-14T22:37:37.558999504+08:00 dlc1l987wrbyrzis-master-0 pytorch   参数量 总量 598,343,680  可训练 2,293,760  占比 0.003834
+2026-10-14T22:37:37.559050578+08:00 dlc1l987wrbyrzis-master-0 pytorch   挂载模块 112 处  后缀 k_proj、o_proj、q_proj、v_proj
+2026-10-14T22:37:37.559072924+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 存在可训练参数  2,293,760
+2026-10-14T22:37:37.559100919+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 数据 =====
+2026-10-14T22:37:37.818805507+08:00 dlc1l987wrbyrzis-master-0 pytorch   训练集 7073 条  开发集 400 条
+2026-10-14T22:37:37.818831006+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 训练集条数  7073，期望 7073
+2026-10-14T22:37:43.003927938+08:00 dlc1l987wrbyrzis-master-0 pytorch   训练文本 最长 479  均值 186.8 token  编码 5.2 秒
+2026-10-14T22:37:43.003960484+08:00 dlc1l987wrbyrzis-master-0 pytorch [OK] 样本不超长  超 512 的 0 条，上限 512
+2026-10-14T22:37:43.184153962+08:00 dlc1l987wrbyrzis-master-0 pytorch   开发集提示 最长 214 token
+2026-10-14T22:37:43.189631363+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 训练 =====
+2026-10-14T22:37:43.189646157+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮数 3  每轮步数 111  计划总步数 333  预热 9 步
+2026-10-14T22:37:43.189670102+08:00 dlc1l987wrbyrzis-master-0 pytorch   微批 8  累积 8  有效批 64  学习率 4.00e-04  调度 cosine
+2026-10-14T22:38:17.838640526+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 10/333  损失 1.0944  学习率 4.00e-04  速度 3400 token/s  已用 0.6 分
+2026-10-14T22:38:52.578388032+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 20/333  损失 0.7151  学习率 3.99e-04  速度 3399 token/s  已用 1.2 分
+2026-10-14T22:39:27.693876148+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 30/333  损失 0.6645  学习率 3.96e-04  速度 3420 token/s  已用 1.7 分
+2026-10-14T22:40:02.320453231+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 40/333  损失 0.6685  学习率 3.91e-04  速度 3442 token/s  已用 2.3 分
+2026-10-14T22:40:36.836345737+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 50/333  损失 0.6543  学习率 3.84e-04  速度 3444 token/s  已用 2.9 分
+2026-10-14T22:41:11.673474415+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 60/333  损失 0.6311  学习率 3.76e-04  速度 3447 token/s  已用 3.5 分
+2026-10-14T22:41:46.636499154+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 70/333  损失 0.6321  学习率 3.66e-04  速度 3440 token/s  已用 4.1 分
+2026-10-14T22:42:21.680995166+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 80/333  损失 0.6401  学习率 3.54e-04  速度 3439 token/s  已用 4.6 分
+2026-10-14T22:42:57.065706592+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 90/333  损失 0.6260  学习率 3.41e-04  速度 3432 token/s  已用 5.2 分
+2026-10-14T22:43:31.604746282+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 100/333  损失 0.5930  学习率 3.27e-04  速度 3434 token/s  已用 5.8 分
+2026-10-14T22:44:05.970789387+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 1/3  步 110/333  损失 0.5801  学习率 3.12e-04  速度 3435 token/s  已用 6.4 分
+2026-10-14T22:44:08.062502497+08:00 dlc1l987wrbyrzis-master-0 pytorch   第 1 轮结束  平均损失 0.6817  本轮步数 111
+2026-10-14T22:44:08.411156527+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点 checkpoints/epoch-1  文件 3 个
+2026-10-14T22:44:39.472684135+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 120/333  损失 0.6028  学习率 2.95e-04  速度 3433 token/s  已用 6.9 分
+2026-10-14T22:45:14.18297626+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 130/333  损失 0.5776  学习率 2.77e-04  速度 3431 token/s  已用 7.5 分
+2026-10-14T22:45:49.311338751+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 140/333  损失 0.5723  学习率 2.59e-04  速度 3430 token/s  已用 8.1 分
+2026-10-14T22:46:23.59228985+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 150/333  损失 0.5761  学习率 2.40e-04  速度 3431 token/s  已用 8.7 分
+2026-10-14T22:46:57.89715624+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 160/333  损失 0.5902  学习率 2.21e-04  速度 3436 token/s  已用 9.2 分
+2026-10-14T22:47:32.489003665+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 170/333  损失 0.5814  学习率 2.02e-04  速度 3438 token/s  已用 9.8 分
+2026-10-14T22:48:07.600428704+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 180/333  损失 0.5659  学习率 1.83e-04  速度 3436 token/s  已用 10.4 分
+2026-10-14T22:48:41.773812659+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 190/333  损失 0.5647  学习率 1.63e-04  速度 3436 token/s  已用 11.0 分
+2026-10-14T22:49:15.772086658+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 200/333  损失 0.5715  学习率 1.44e-04  速度 3440 token/s  已用 11.5 分
+2026-10-14T22:49:50.529326427+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 210/333  损失 0.5636  学习率 1.26e-04  速度 3442 token/s  已用 12.1 分
+2026-10-14T22:50:26.237785727+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 2/3  步 220/333  损失 0.5510  学习率 1.09e-04  速度 3440 token/s  已用 12.7 分
+2026-10-14T22:50:31.76773773+08:00 dlc1l987wrbyrzis-master-0 pytorch   第 2 轮结束  平均损失 0.5723  本轮步数 111
+2026-10-14T22:50:32.097549862+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点 checkpoints/epoch-2  文件 3 个
+2026-10-14T22:50:32.099073272+08:00 dlc1l987wrbyrzis-master-0 pytorch   删除较早的检查点 checkpoints/epoch-1
+2026-10-14T22:50:59.086288779+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 230/333  损失 0.5243  学习率 9.17e-05  速度 3437 token/s  已用 13.3 分
+2026-10-14T22:51:33.689804287+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 240/333  损失 0.5570  学习率 7.60e-05  速度 3439 token/s  已用 13.8 分
+2026-10-14T22:52:08.239730508+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 250/333  损失 0.5529  学习率 6.13e-05  速度 3440 token/s  已用 14.4 分
+2026-10-14T22:52:42.816509445+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 260/333  损失 0.5369  学习率 4.80e-05  速度 3438 token/s  已用 15.0 分
+2026-10-14T22:53:17.237297915+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 270/333  损失 0.5420  学习率 3.62e-05  速度 3439 token/s  已用 15.6 分
+2026-10-14T22:53:52.3343984+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 280/333  损失 0.5510  学习率 2.58e-05  速度 3439 token/s  已用 16.2 分
+2026-10-14T22:54:26.84258074+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 290/333  损失 0.5119  学习率 1.71e-05  速度 3440 token/s  已用 16.7 分
+2026-10-14T22:55:01.887496803+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 300/333  损失 0.5290  学习率 1.02e-05  速度 3440 token/s  已用 17.3 分
+2026-10-14T22:55:36.496201482+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 310/333  损失 0.5305  学习率 4.95e-06  速度 3441 token/s  已用 17.9 分
+2026-10-14T22:56:11.499712521+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 320/333  损失 0.5341  学习率 1.59e-06  速度 3440 token/s  已用 18.5 分
+2026-10-14T22:56:45.368756315+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 330/333  损失 0.5424  学习率 8.46e-08  速度 3444 token/s  已用 19.0 分
+2026-10-14T22:56:54.645794992+08:00 dlc1l987wrbyrzis-master-0 pytorch   轮 3/3  步 333/333  损失 0.5497  学习率 0.00e+00  速度 3442 token/s  已用 19.2 分
+2026-10-14T22:56:54.646083141+08:00 dlc1l987wrbyrzis-master-0 pytorch   第 3 轮结束  平均损失 0.5382  本轮步数 111
+2026-10-14T22:57:02.89436951+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 1  已完成 16/400  已用 8.2 秒  预计剩余 3.3 分
+2026-10-14T22:57:35.701679692+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 5  已完成 80/400  已用 41.0 秒  预计剩余 2.7 分
+2026-10-14T22:58:46.172128263+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 10  已完成 160/400  已用 111.5 秒  预计剩余 2.8 分
+2026-10-14T22:59:58.226331525+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 15  已完成 240/400  已用 183.6 秒  预计剩余 2.0 分
+2026-10-14T23:02:28.336904802+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 20  已完成 320/400  已用 333.7 秒  预计剩余 1.4 分
+2026-10-14T23:04:45.570229668+08:00 dlc1l987wrbyrzis-master-0 pytorch   批 25  已完成 400/400  已用 470.9 秒  预计剩余 0.0 分
+2026-10-14T23:04:45.599414142+08:00 dlc1l987wrbyrzis-master-0 pytorch   开发集  准确率 0.5150  正确 206/400  均长 95.2 token  用时 470.9 秒
+2026-10-14T23:04:45.941175096+08:00 dlc1l987wrbyrzis-master-0 pytorch   检查点 checkpoints/epoch-3  文件 3 个
+2026-10-14T23:04:45.942774928+08:00 dlc1l987wrbyrzis-master-0 pytorch   删除较早的检查点 checkpoints/epoch-2
+2026-10-14T23:04:45.943052862+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 结束 =====
+2026-10-14T23:04:45.943075895+08:00 dlc1l987wrbyrzis-master-0 pytorch   总步数 333  用时 27.0 分  显存峰值 10.58 GiB  处理 token 3,962,898  速度 2442 token/s
+2026-10-14T23:04:45.956002534+08:00 dlc1l987wrbyrzis-master-0 pytorch   产物已写出至 /mnt/code/AI_lab1/exp1/runs/R2-6-lora-lr4.0e-4
+2026-10-14T23:04:45.956015898+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T23:04:45.956020942+08:00 dlc1l987wrbyrzis-master-0 pytorch ===== 汇总 =====
+2026-10-14T23:04:45.956033444+08:00 dlc1l987wrbyrzis-master-0 pytorch 
+2026-10-14T23:04:45.956038227+08:00 dlc1l987wrbyrzis-master-0 pytorch 共计 4 项，OK 4，WARN 0，FAIL 0
