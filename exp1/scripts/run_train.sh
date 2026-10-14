@@ -22,6 +22,10 @@
 
 set -euo pipefail
 
+# 缓存器默认可扩展段关闭时，全参微调侧实测有 2.56 GiB 已保留却切不出的碎片。须在 torch
+# 初始化 CUDA 之前置入，故写在启动 python 之前。已在外部置位者不覆盖。
+export PYTORCH_CUDA_ALLOC_CONF=${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}
+
 MODEL_PATH=${MODEL_PATH:-/mnt/data/exp1/models/Qwen3-0.6B}
 DATA_DIR=${DATA_DIR:-/mnt/data/exp1/data/raw}
 CONFIG=${CONFIG:?需给出方法配置文件，如 configs/lora.yaml}

@@ -1,0 +1,347 @@
+2026-10-14T09:21:03.922161065+08:00 dlc6ajiff5z8rl9o-master-0 git-sync-code INFO: detected pid 1, running init handler
+2026-10-14T09:21:03.999934515+08:00 dlc6ajiff5z8rl9o-master-0 git-sync-code I1014 01:21:03.999773      12 main.go:473] "level"=0 "msg"="starting up" "pid"=12 "args"=["/git-sync"]
+2026-10-14T09:21:03.999952547+08:00 dlc6ajiff5z8rl9o-master-0 git-sync-code I1014 01:21:03.999884      12 main.go:923] "level"=0 "msg"="cloning repo" "origin"="https://github.com/kkCaroll/AI_lab1.git" "path"="/code"
+2026-10-14T09:21:06.927068184+08:00 dlc6ajiff5z8rl9o-master-0 git-sync-code I1014 01:21:06.926969      12 main.go:737] "level"=0 "msg"="syncing git" "rev"="HEAD" "hash"="0f37ab4153a27f7202a20735f2cfe47c85723ad1"
+2026-10-14T09:21:08.875088735+08:00 dlc6ajiff5z8rl9o-master-0 git-sync-code I1014 01:21:08.874981      12 main.go:772] "level"=0 "msg"="adding worktree" "path"="/code/0f37ab4153a27f7202a20735f2cfe47c85723ad1" "branch"="origin/main"
+2026-10-14T09:21:08.888223406+08:00 dlc6ajiff5z8rl9o-master-0 git-sync-code I1014 01:21:08.888139      12 main.go:833] "level"=0 "msg"="reset worktree to hash" "path"="/code/0f37ab4153a27f7202a20735f2cfe47c85723ad1" "hash"="0f37ab4153a27f7202a20735f2cfe47c85723ad1"
+2026-10-14T09:21:08.888240342+08:00 dlc6ajiff5z8rl9o-master-0 git-sync-code I1014 01:21:08.888166      12 main.go:838] "level"=0 "msg"="updating submodules"
+2026-10-14T09:21:13.463484789+08:00 dlc6ajiff5z8rl9o-master-0 pytorch INFO: Try to dump ENV REQUIREMENTS_TEXT to /tmp/requirements.txt.
+2026-10-14T09:21:13.463808137+08:00 dlc6ajiff5z8rl9o-master-0 pytorch INFO: Try to install requirements from /tmp/requirements.txt.
+2026-10-14T09:21:14.281709591+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Looking in indexes: http://mirrors.cloud.aliyuncs.com/pypi/simple/
+2026-10-14T09:21:14.507285025+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting transformers
+2026-10-14T09:21:14.513628495+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b9/59/1e7f1212c215c73690ae6cab4678efe1555ff985953e145d88cc212859b0/transformers-5.19.0-py3-none-any.whl (12.6 MB)
+2026-10-14T09:21:14.65762395+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 89.1 MB/s eta 0:00:00
+2026-10-14T09:21:14.78996265+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting peft
+2026-10-14T09:21:14.797245167+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/70/0b/59441cdbfdd342ed03c08af90a2fe16173f0cd48ab219f523b39ca059a79/peft-0.21.2-py3-none-any.whl (835 kB)
+2026-10-14T09:21:14.810245989+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 835.4/835.4 kB 84.7 MB/s eta 0:00:00
+2026-10-14T09:21:14.953819923+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting datasets
+2026-10-14T09:21:14.960779017+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/24/cc/7f624629846c709ef1c68aa61bfb8d0ae2638cbe265104a1c2f7a630949e/datasets-5.1.0-py3-none-any.whl (604 kB)
+2026-10-14T09:21:14.970554796+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 604.4/604.4 kB 89.7 MB/s eta 0:00:00
+2026-10-14T09:21:15.053222102+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting accelerate
+2026-10-14T09:21:15.060393576+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/4c/34f0450479d01195027260da68d8a3880683f1640c3ca5adf64acb3185f1/accelerate-1.15.0-py3-none-any.whl (394 kB)
+2026-10-14T09:21:15.068508732+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 77.6 MB/s eta 0:00:00
+2026-10-14T09:21:15.587994622+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting pyyaml>=5.1
+2026-10-14T09:21:15.596049444+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/7a/1e/7acc4f0e74c4b3d9531e24739e0ab832a5edf40e64fbae1a9c01941cabd7/pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-10-14T09:21:15.607771708+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 93.6 MB/s eta 0:00:00
+2026-10-14T09:21:15.710069717+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting typer
+2026-10-14T09:21:15.717492017+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/07/ea/2e31b67051e91a133189e9c000c222502ddc6969856416de0d095de4c0b0/typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-14T09:21:15.724301607+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.3/123.3 kB 33.8 MB/s eta 0:00:00
+2026-10-14T09:21:17.797707852+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting regex>=2025.10.22
+2026-10-14T09:21:17.80564992+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/99/eae371ca63f7ea1f1eac025021527adb57ce3a4b67ff608b896fd31ea447/regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (797 kB)
+2026-10-14T09:21:17.833126574+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 kB 32.8 MB/s eta 0:00:00
+2026-10-14T09:21:18.076491364+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting huggingface-hub<3.0,>=1.31.0
+2026-10-14T09:21:18.083362395+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/eb/b0/0f7b430fd100b3a3b037fdbb314878200241082e607b3383c63d91a13a72/huggingface_hub-2.2.0-py3-none-any.whl (839 kB)
+2026-10-14T09:21:18.095063853+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 kB 98.2 MB/s eta 0:00:00
+2026-10-14T09:21:18.663454966+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting safetensors>=0.8.0
+2026-10-14T09:21:18.670287665+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/50/f203ff3a3ddfe19308efc83c5a3a29ed02bf786732ec35e68bf9162f3365/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+2026-10-14T09:21:18.680220519+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 77.3 MB/s eta 0:00:00
+2026-10-14T09:21:18.81067004+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting tqdm>=4.60
+2026-10-14T09:21:18.81715557+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-10-14T09:21:18.822878792+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 25.0 MB/s eta 0:00:00
+2026-10-14T09:21:18.826402142+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.10/site-packages (from transformers->-r /tmp/requirements.txt (line 1)) (2.1.2)
+2026-10-14T09:21:18.880852565+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting packaging>=20.0
+2026-10-14T09:21:18.88695745+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-14T09:21:18.893111759+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 38.6 MB/s eta 0:00:00
+2026-10-14T09:21:19.566410165+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting tokenizers<0.24.0,>=0.23.1
+2026-10-14T09:21:19.573672465+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3a/40/6706b82693715581457c6d5423eaa7faae576bb0526c5738a57085eb4449/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+2026-10-14T09:21:19.613227008+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 93.8 MB/s eta 0:00:00
+2026-10-14T09:21:20.051759778+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting psutil
+2026-10-14T09:21:20.059120793+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-10-14T09:21:20.06602871+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 41.3 MB/s eta 0:00:00
+2026-10-14T09:21:20.069370533+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: torch>=1.13.0 in /usr/local/lib/python3.10/site-packages (from peft->-r /tmp/requirements.txt (line 2)) (2.6.0+cu126)
+2026-10-14T09:21:20.402806791+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting multiprocess<0.70.20
+2026-10-14T09:21:20.451008934+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e3/45/8004d1e6b9185c1a444d6b55ac5682acf9d98035e54386d967366035a03a/multiprocess-0.70.19-py310-none-any.whl (134 kB)
+2026-10-14T09:21:20.457582384+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 38.8 MB/s eta 0:00:00
+2026-10-14T09:21:20.879658388+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting pyarrow>=24.0.0
+2026-10-14T09:21:20.886578213+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/57/5c/f8fc0eb2de03464a557d5a4d0c15e972d73362414696618833b771f7eddd/pyarrow-25.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (50.1 MB)
+2026-10-14T09:21:21.385255769+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 36.0 MB/s eta 0:00:00
+2026-10-14T09:21:22.166849259+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting pandas
+2026-10-14T09:21:22.198951664+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/40/a8/4dac1f8f8235e5d25b9955d02ff6f29396191d4e665d71122c3722ca83c5/pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-10-14T09:21:22.332501014+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 89.4 MB/s eta 0:00:00
+2026-10-14T09:21:22.455214665+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting dill<0.4.2,>=0.3.0
+2026-10-14T09:21:22.461762693+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/1e/77/dc8c558f7593132cf8fefec57c4f60c83b16941c574ac5f619abb3ae7933/dill-0.4.1-py3-none-any.whl (120 kB)
+2026-10-14T09:21:22.468090581+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 35.9 MB/s eta 0:00:00
+2026-10-14T09:21:22.471536164+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: fsspec[http]<=2026.7.0,>=2023.1.0 in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (2025.9.0)
+2026-10-14T09:21:22.47213749+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: filelock in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (3.19.1)
+2026-10-14T09:21:23.230239738+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting xxhash
+2026-10-14T09:21:23.290661513+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5f/3b/e5d20b4f602d15fc5fc066f601052a7d6f5a401a50d67fac92098a5829a5/xxhash-4.0.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (249 kB)
+2026-10-14T09:21:23.298502748+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 249.5/249.5 kB 54.7 MB/s eta 0:00:00
+2026-10-14T09:21:26.322842193+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting aiohttp!=4.0.0a0,!=4.0.0a1
+2026-10-14T09:21:26.335803186+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/38/01f5fc732d5373d6c099db0343279cd4e6607287d336bab6ff6ae9085a0d/aiohttp-3.14.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+2026-10-14T09:21:26.371277424+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 57.2 MB/s eta 0:00:00
+2026-10-14T09:21:26.626888881+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting tomli>=1.1.0
+2026-10-14T09:21:26.704152591+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/60/3f/3e3f8fd0919249b0200c80fbc4f9a1e70be19f9883da71dfb7f8b9ab8aca/tomli-2.5.0-py3-none-any.whl (14 kB)
+2026-10-14T09:21:26.717225029+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.10/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers->-r /tmp/requirements.txt (line 1)) (4.15.0)
+2026-10-14T09:21:26.770656753+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting click<9.0.0,>=8.4.2
+2026-10-14T09:21:26.776933739+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-14T09:21:26.783315972+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 36.8 MB/s eta 0:00:00
+2026-10-14T09:21:26.823734014+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting httpx2<3,>=2.0.0
+2026-10-14T09:21:26.829753417+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/d8/9c/6fe8931fd9f381042a9e4c7d5a7b4cbf7016b252bec0c99a49fce42c3326/httpx2-2.13.1-py3-none-any.whl (95 kB)
+2026-10-14T09:21:26.835325067+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.6/95.6 kB 30.7 MB/s eta 0:00:00
+2026-10-14T09:21:27.031262678+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting hf-xet<2.0.0,>=1.6.0
+2026-10-14T09:21:27.037645269+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a3/4c/2bf3b66c215d409655f28de1622393dde04c9461280d48c7924bb3b2decd/hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+2026-10-14T09:21:27.075555099+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 120.8 MB/s eta 0:00:00
+2026-10-14T09:21:27.310875968+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-cudnn-cu12==9.5.1.17 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (9.5.1.17)
+2026-10-14T09:21:27.312916858+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-cusparselt-cu12==0.6.3 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (0.6.3)
+2026-10-14T09:21:27.314674193+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.21.5)
+2026-10-14T09:21:27.316756894+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-14T09:21:27.318779832+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-curand-cu12==10.3.7.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (10.3.7.77)
+2026-10-14T09:21:27.319277877+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.1.3)
+2026-10-14T09:21:27.321046714+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-cufft-cu12==11.3.0.4 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.3.0.4)
+2026-10-14T09:21:27.323066498+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-cusolver-cu12==11.7.1.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.7.1.2)
+2026-10-14T09:21:27.325137858+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-cuda-runtime-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-14T09:21:27.326906561+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-nvjitlink-cu12==12.6.85 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.85)
+2026-10-14T09:21:27.328988794+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-cuda-cupti-cu12==12.6.80 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.80)
+2026-10-14T09:21:27.330725189+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.13.1)
+2026-10-14T09:21:27.332471895+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-nvtx-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-14T09:21:27.334637638+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: triton==3.2.0 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.2.0)
+2026-10-14T09:21:27.335164098+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: networkx in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.3)
+2026-10-14T09:21:27.337493885+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-cusparse-cu12==12.5.4.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.5.4.2)
+2026-10-14T09:21:27.339560712+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: nvidia-cublas-cu12==12.6.4.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.4.1)
+2026-10-14T09:21:27.392754634+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/site-packages (from sympy==1.13.1->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.3.0)
+2026-10-14T09:21:27.592017687+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting python-dateutil>=2.8.2
+2026-10-14T09:21:27.598270672+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-10-14T09:21:27.605195739+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 59.0 MB/s eta 0:00:00
+2026-10-14T09:21:27.736873289+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting pytz>=2020.1
+2026-10-14T09:21:27.743398701+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/4f/ef/c66110d46fb800dda0bf33164182dfadabe26a90e4476844d502a23dca8e/pytz-2026.5-py2.py3-none-any.whl (506 kB)
+2026-10-14T09:21:27.752266883+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 86.5 MB/s eta 0:00:00
+2026-10-14T09:21:27.808929264+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting tzdata>=2022.7
+2026-10-14T09:21:27.815042392+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/94/21/1e5995a1c920cce14e4bffae20c665ec10e7ed03ab25e006cd741092b718/tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-10-14T09:21:27.822446343+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.0/348.0 kB 77.0 MB/s eta 0:00:00
+2026-10-14T09:21:28.05189846+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting rich>=13.8.0
+2026-10-14T09:21:28.058275853+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-14T09:21:28.065965051+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 67.5 MB/s eta 0:00:00
+2026-10-14T09:21:28.105111372+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting annotated-doc>=0.0.2
+2026-10-14T09:21:28.111252025+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-14T09:21:28.163362515+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting shellingham>=1.3.0
+2026-10-14T09:21:28.169559943+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-14T09:21:28.236619713+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting aiosignal>=1.4.0
+2026-10-14T09:21:28.243382865+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2026-10-14T09:21:28.302231196+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting aiohappyeyeballs>=2.5.0
+2026-10-14T09:21:28.308365987+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+2026-10-14T09:21:28.368040926+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting attrs>=17.3.0
+2026-10-14T09:21:28.37401368+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-14T09:21:28.381868888+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 11.7 MB/s eta 0:00:00
+2026-10-14T09:21:28.42637478+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting async-timeout<6.0,>=4.0
+2026-10-14T09:21:28.432370202+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fe/ba/e2081de779ca30d473f21f5b30e0e737c438205440784c7dfc81efc2b029/async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+2026-10-14T09:21:28.774918092+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting propcache>=0.2.0
+2026-10-14T09:21:28.82833502+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/f0/51/5adee15e12a7e314cece4543fbf295b0fe1b504dc78b32dff4c8eb1e29b0/propcache-0.5.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (224 kB)
+2026-10-14T09:21:28.835827239+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.3/224.3 kB 53.1 MB/s eta 0:00:00
+2026-10-14T09:21:30.306920023+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting multidict<8.0,>=4.5
+2026-10-14T09:21:30.33220633+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5a/9c/598d765e98aa02ff7204b6f11cf790e5840f5e8252d7b1d955ed0043bb94/multidict-7.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (464 kB)
+2026-10-14T09:21:30.355865783+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.4/464.4 kB 22.4 MB/s eta 0:00:00
+2026-10-14T09:21:30.686793116+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting frozenlist>=1.1.1
+2026-10-14T09:21:30.740881088+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/ed/c7895fd2fde7f3ee70d248175f9b6cdf792fb741ab92dc59cd9ef3bd241b/frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (219 kB)
+2026-10-14T09:21:30.748124293+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.5/219.5 kB 53.7 MB/s eta 0:00:00
+2026-10-14T09:21:32.050382027+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting yarl<2.0,>=1.25.1
+2026-10-14T09:21:32.085859339+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/b9/7818ac6dec7fbcd16be2d19495807c01e2c38834e57d41c63356a75e786b/yarl-1.25.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (118 kB)
+2026-10-14T09:21:32.099251317+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 10.8 MB/s eta 0:00:00
+2026-10-14T09:21:32.234607355+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting idna>=3.18
+2026-10-14T09:21:32.240717783+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl (69 kB)
+2026-10-14T09:21:32.246270131+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 22.1 MB/s eta 0:00:00
+2026-10-14T09:21:32.284910521+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting truststore>=0.10
+2026-10-14T09:21:32.29130858+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/51/e9/3a7820be2bb0fe53b6bc9c3be26d3d1158004e4c3ab953aa6840b955b1e9/truststore-0.10.5-py3-none-any.whl (19 kB)
+2026-10-14T09:21:32.35594703+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting anyio>=4.10
+2026-10-14T09:21:32.362000112+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-14T09:21:32.368097912+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 39.9 MB/s eta 0:00:00
+2026-10-14T09:21:32.408406212+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting httpcore2==2.13.1
+2026-10-14T09:21:32.414615778+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/09/ba/a4568248771ce81957bfb7cc600264a40fbcda092391ee1c415c50be4bea/httpcore2-2.13.1-py3-none-any.whl (83 kB)
+2026-10-14T09:21:32.420028836+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 27.2 MB/s eta 0:00:00
+2026-10-14T09:21:32.459062535+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting h11>=0.16
+2026-10-14T09:21:32.46499429+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-14T09:21:32.51402253+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting six>=1.5
+2026-10-14T09:21:32.519974503+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-14T09:21:32.603687667+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting markdown-it-py>=2.2.0
+2026-10-14T09:21:32.60968527+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-14T09:21:32.615250841+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 30.2 MB/s eta 0:00:00
+2026-10-14T09:21:32.678821395+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting pygments<3.0.0,>=2.13.0
+2026-10-14T09:21:32.684913234+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-14T09:21:32.701389318+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 91.3 MB/s eta 0:00:00
+2026-10-14T09:21:32.746986576+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/site-packages (from jinja2->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.1.5)
+2026-10-14T09:21:32.847218643+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting exceptiongroup>=1.0.2
+2026-10-14T09:21:32.853269606+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/0e/97c33bf5009bdbac74fd2beace167cab3f978feb69cc36f1ef79360d6c4e/exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-10-14T09:21:32.921340727+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting typing-extensions>=4.1.0
+2026-10-14T09:21:32.927333793+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-14T09:21:32.932396913+08:00 dlc6ajiff5z8rl9o-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 15.7 MB/s eta 0:00:00
+2026-10-14T09:21:33.046855284+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Collecting mdurl~=0.1
+2026-10-14T09:21:33.052807352+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-14T09:21:34.541052545+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Installing collected packages: pytz, xxhash, tzdata, typing-extensions, truststore, tqdm, tomli, six, shellingham, safetensors, regex, pyyaml, pygments, pyarrow, psutil, propcache, packaging, mdurl, idna, hf-xet, h11, frozenlist, dill, click, attrs, async-timeout, annotated-doc, aiohappyeyeballs, python-dateutil, multiprocess, multidict, markdown-it-py, httpcore2, exceptiongroup, aiosignal, yarl, rich, pandas, anyio, typer, httpx2, aiohttp, huggingface-hub, tokenizers, datasets, accelerate, transformers, peft
+2026-10-14T09:21:34.883630777+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Attempting uninstall: typing-extensions
+2026-10-14T09:21:34.884689133+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     Found existing installation: typing_extensions 4.15.0
+2026-10-14T09:21:34.88847259+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     Uninstalling typing_extensions-4.15.0:
+2026-10-14T09:21:35.453985784+08:00 dlc6ajiff5z8rl9o-master-0 pytorch       Successfully uninstalled typing_extensions-4.15.0
+2026-10-14T09:21:38.906311295+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   Attempting uninstall: idna
+2026-10-14T09:21:38.907483496+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     Found existing installation: idna 3.11
+2026-10-14T09:21:38.913055456+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     Uninstalling idna-3.11:
+2026-10-14T09:21:38.914370187+08:00 dlc6ajiff5z8rl9o-master-0 pytorch       Successfully uninstalled idna-3.11
+2026-10-14T09:21:56.391833888+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Successfully installed accelerate-1.15.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 annotated-doc-0.0.5 anyio-4.15.1 async-timeout-5.0.1 attrs-26.1.0 click-8.5.0 datasets-5.1.0 dill-0.4.1 exceptiongroup-1.3.1 frozenlist-1.8.0 h11-0.16.0 hf-xet-1.7.0 httpcore2-2.13.1 httpx2-2.13.1 huggingface-hub-2.2.0 idna-3.20 markdown-it-py-4.2.0 mdurl-0.1.2 multidict-7.1.0 multiprocess-0.70.19 packaging-26.3 pandas-2.3.3 peft-0.21.2 propcache-0.5.4 psutil-7.2.2 pyarrow-25.0.1 pygments-2.21.0 python-dateutil-2.9.0.post0 pytz-2026.5 pyyaml-6.0.3 regex-2026.9.29 rich-15.0.0 safetensors-0.8.0 shellingham-1.5.4 six-1.17.0 tokenizers-0.23.3 tomli-2.5.0 tqdm-4.70.1 transformers-5.19.0 truststore-0.10.5 typer-0.27.3 typing-extensions-4.16.0 tzdata-2026.5 xxhash-4.0.1 yarl-1.25.1
+2026-10-14T09:21:56.392194531+08:00 dlc6ajiff5z8rl9o-master-0 pytorch WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2026-10-14T09:21:56.520271596+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 
+2026-10-14T09:21:56.520293797+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+2026-10-14T09:21:56.520300092+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [notice] To update, run: pip install --upgrade pip
+2026-10-14T09:21:57.490268972+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 冒烟 full_sft =====
+2026-10-14T09:21:57.494388439+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 训练命令 python -m src.train --config configs/full_sft.yaml --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/code/AI_lab1/exp1/runs/R2-1-full_sft --set run.max_steps=12 --set train.log_every=1 --set eval.limit=16 --set output.save_total_limit=1
+2026-10-14T09:22:00.582605849+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 
+2026-10-14T09:22:00.582638622+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 环境 =====
+2026-10-14T09:22:00.582654269+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   方法 full_sft  设备 cuda  参数精度 float32  计算精度 torch.float16  种子 42
+2026-10-14T09:22:00.582660563+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   配置 configs/full_sft.yaml  覆盖 ['run.max_steps=12', 'train.log_every=1', 'eval.limit=16', 'output.save_total_limit=1']
+2026-10-14T09:22:04.843128995+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 载入 =====
+Loading weights: 100%|██████████| 311/311 [00:04<00:00, 69.78it/s] 
+Loading weights:  98%|█████████▊| 306/311 [00:04<00:00, 160.46it/s]
+Loading weights:  83%|████████▎ | 257/311 [00:04<00:00, 122.00it/s]
+Loading weights:  66%|██████▌   | 204/311 [00:04<00:01, 85.96it/s]
+Loading weights:  50%|████▉     | 154/311 [00:04<00:02, 58.72it/s]
+Loading weights:  32%|███▏      | 98/311 [00:04<00:06, 34.51it/s]
+Loading weights:   0%|          | 1/311 [00:03<20:08,  3.90s/it]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-14T09:22:12.22072614+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 
+2026-10-14T09:22:13.085991108+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   模型加载 8.2 秒
+2026-10-14T09:22:13.086062316+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 分词器结束标记  <|im_end|> 编号 151645
+2026-10-14T09:22:13.095071311+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 方法 =====
+2026-10-14T09:22:13.095096493+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   检查点形式 full
+2026-10-14T09:22:13.095110831+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   参数量 总量 596,049,920  可训练 596,049,920  占比 1.000000
+2026-10-14T09:22:13.095140383+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 存在可训练参数  596,049,920
+2026-10-14T09:22:13.095161317+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 数据 =====
+2026-10-14T09:22:13.408153192+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   训练集 7073 条  开发集 400 条
+2026-10-14T09:22:13.408175927+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 训练集条数  7073，期望 7073
+2026-10-14T09:22:18.859506883+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   训练文本 最长 479  均值 186.8 token  编码 5.5 秒
+2026-10-14T09:22:18.859558142+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 样本不超长  超 512 的 0 条，上限 512
+2026-10-14T09:22:19.04326166+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   开发集提示 最长 214 token
+2026-10-14T09:22:19.04528059+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 训练 =====
+2026-10-14T09:22:19.045309815+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   轮数 3  每轮步数 111  计划总步数 12  预热 0 步
+2026-10-14T09:22:19.045333097+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   微批 8  累积 8  有效批 64  学习率 1.00e-04  调度 cosine
+2026-10-14T09:22:22.960928444+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   轮 1/3  步 1/12  损失 1.4029  学习率 9.83e-05  速度 3058 token/s  已用 0.1 分
+2026-10-14T09:22:23.815503897+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Traceback (most recent call last):
+2026-10-14T09:22:23.815531785+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2026-10-14T09:22:23.815535872+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return _run_code(code, main_globals, None,
+2026-10-14T09:22:23.815551209+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+2026-10-14T09:22:23.815557123+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     exec(code, run_globals)
+2026-10-14T09:22:23.815560489+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/mnt/code/AI_lab1/exp1/src/train.py", line 511, in <module>
+2026-10-14T09:22:23.815563661+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     raise SystemExit(main())
+2026-10-14T09:22:23.815567225+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/mnt/code/AI_lab1/exp1/src/train.py", line 396, in main
+2026-10-14T09:22:23.815570594+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     (scaler.scale(scaled) if scaler else scaled).backward()
+2026-10-14T09:22:23.815575406+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+2026-10-14T09:22:23.815578531+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     torch.autograd.backward(
+2026-10-14T09:22:23.81558187+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+2026-10-14T09:22:23.81558522+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     _engine_run_backward(
+2026-10-14T09:22:23.815588506+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+2026-10-14T09:22:23.815591615+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-10-14T09:22:23.815595944+08:00 dlc6ajiff5z8rl9o-master-0 pytorch torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.33 GiB. GPU 0 has a total capacity of 15.77 GiB of which 13.44 MiB is free. Process 2490 has 15.75 GiB memory in use. Of the allocated memory 12.82 GiB is allocated by PyTorch, and 2.56 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2026-10-14T09:22:25.129362697+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 冒烟 lora =====
+2026-10-14T09:22:25.13290398+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 训练命令 python -m src.train --config configs/lora.yaml --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/code/AI_lab1/exp1/runs/R2-1-lora --set run.max_steps=12 --set train.log_every=1 --set eval.limit=16 --set output.save_total_limit=1
+2026-10-14T09:22:27.12535211+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 
+2026-10-14T09:22:27.125384417+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 环境 =====
+2026-10-14T09:22:27.125389315+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   方法 lora  设备 cuda  参数精度 float32  计算精度 torch.float16  种子 42
+2026-10-14T09:22:27.125405881+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   配置 configs/lora.yaml  覆盖 ['run.max_steps=12', 'train.log_every=1', 'eval.limit=16', 'output.save_total_limit=1']
+2026-10-14T09:22:30.610657617+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 载入 =====
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 618.67it/s]
+Loading weights:  90%|████████▉ | 279/311 [00:00<00:00, 692.24it/s]
+Loading weights:  64%|██████▍   | 199/311 [00:00<00:00, 652.67it/s]
+Loading weights:  37%|███▋      | 115/311 [00:00<00:00, 541.52it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:49,  6.28it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-14T09:22:32.205924343+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 
+2026-10-14T09:22:33.094945766+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   模型加载 2.5 秒
+2026-10-14T09:22:33.094997211+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 分词器结束标记  <|im_end|> 编号 151645
+2026-10-14T09:22:33.502838304+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 方法 =====
+2026-10-14T09:22:33.502864492+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   检查点形式 adapter
+2026-10-14T09:22:33.502876508+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   参数量 总量 598,343,680  可训练 2,293,760  占比 0.003834
+2026-10-14T09:22:33.502920852+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   挂载模块 112 处  后缀 k_proj、o_proj、q_proj、v_proj
+2026-10-14T09:22:33.502937947+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 存在可训练参数  2,293,760
+2026-10-14T09:22:33.502941774+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 数据 =====
+2026-10-14T09:22:33.661284509+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   训练集 7073 条  开发集 400 条
+2026-10-14T09:22:33.661316124+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 训练集条数  7073，期望 7073
+2026-10-14T09:22:38.880899289+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   训练文本 最长 479  均值 186.8 token  编码 5.2 秒
+2026-10-14T09:22:38.8809294+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 样本不超长  超 512 的 0 条，上限 512
+2026-10-14T09:22:39.062188288+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   开发集提示 最长 214 token
+2026-10-14T09:22:39.067178719+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 训练 =====
+2026-10-14T09:22:39.06720379+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   轮数 3  每轮步数 111  计划总步数 12  预热 0 步
+2026-10-14T09:22:39.067220437+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   微批 16  累积 4  有效批 64  学习率 2.00e-04  调度 cosine
+2026-10-14T09:22:39.545097138+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Traceback (most recent call last):
+2026-10-14T09:22:39.545125065+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2026-10-14T09:22:39.545130541+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return _run_code(code, main_globals, None,
+2026-10-14T09:22:39.545135129+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+2026-10-14T09:22:39.545139271+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     exec(code, run_globals)
+2026-10-14T09:22:39.545142526+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/mnt/code/AI_lab1/exp1/src/train.py", line 511, in <module>
+2026-10-14T09:22:39.545145768+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     raise SystemExit(main())
+2026-10-14T09:22:39.545148905+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/mnt/code/AI_lab1/exp1/src/train.py", line 385, in main
+2026-10-14T09:22:39.545152793+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     outputs = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+2026-10-14T09:22:39.545156274+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+2026-10-14T09:22:39.545159314+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return self._call_impl(*args, **kwargs)
+2026-10-14T09:22:39.545162381+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+2026-10-14T09:22:39.545165354+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return forward_call(*args, **kwargs)
+2026-10-14T09:22:39.545168701+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/peft/peft_model.py", line 2120, in forward
+2026-10-14T09:22:39.54517181+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return self.base_model(
+2026-10-14T09:22:39.545174911+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+2026-10-14T09:22:39.545177913+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return self._call_impl(*args, **kwargs)
+2026-10-14T09:22:39.545180954+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+2026-10-14T09:22:39.545184141+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return forward_call(*args, **kwargs)
+2026-10-14T09:22:39.545187199+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 359, in forward
+2026-10-14T09:22:39.545190299+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return self.model(*args, **kwargs)
+2026-10-14T09:22:39.545193241+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+2026-10-14T09:22:39.545196354+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return self._call_impl(*args, **kwargs)
+2026-10-14T09:22:39.545199273+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+2026-10-14T09:22:39.545202294+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return forward_call(*args, **kwargs)
+2026-10-14T09:22:39.545205218+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
+2026-10-14T09:22:39.545222563+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     output = func(self, *args, **kwargs)
+2026-10-14T09:22:39.545226091+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 486, in forward
+2026-10-14T09:22:39.545229074+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     loss = self.loss_function(logits=logits, labels=labels, vocab_size=self.config.vocab_size, **kwargs)
+2026-10-14T09:22:39.545232208+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/transformers/loss/loss_utils.py", line 59, in ForCausalLMLoss
+2026-10-14T09:22:39.545235306+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     logits = logits.float()
+2026-10-14T09:22:39.545240735+08:00 dlc6ajiff5z8rl9o-master-0 pytorch torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.72 GiB. GPU 0 has a total capacity of 15.77 GiB of which 225.44 MiB is free. Process 2688 has 15.54 GiB memory in use. Of the allocated memory 14.75 GiB is allocated by PyTorch, and 436.47 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2026-10-14T09:22:40.683209206+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 冒烟 ptuning =====
+2026-10-14T09:22:40.686482278+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 训练命令 python -m src.train --config configs/ptuning.yaml --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/code/AI_lab1/exp1/runs/R2-1-ptuning --set run.max_steps=12 --set train.log_every=1 --set eval.limit=16 --set output.save_total_limit=1
+2026-10-14T09:22:42.673606677+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 
+2026-10-14T09:22:42.673639418+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 环境 =====
+2026-10-14T09:22:42.673652439+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   方法 ptuning  设备 cuda  参数精度 float32  计算精度 torch.float16  种子 42
+2026-10-14T09:22:42.673656499+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   配置 configs/ptuning.yaml  覆盖 ['run.max_steps=12', 'train.log_every=1', 'eval.limit=16', 'output.save_total_limit=1']
+2026-10-14T09:22:46.172194922+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 载入 =====
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 606.47it/s]
+Loading weights:  89%|████████▊ | 276/311 [00:00<00:00, 673.06it/s]
+Loading weights:  64%|██████▍   | 199/311 [00:00<00:00, 637.58it/s]
+Loading weights:  39%|███▊      | 120/311 [00:00<00:00, 543.79it/s]
+Loading weights:   0%|          | 1/311 [00:00<00:50,  6.19it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-14T09:22:47.771931697+08:00 dlc6ajiff5z8rl9o-master-0 pytorch 
+2026-10-14T09:22:48.603682544+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   模型加载 2.4 秒
+2026-10-14T09:22:48.603728757+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 分词器结束标记  <|im_end|> 编号 151645
+2026-10-14T09:22:48.628140783+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 方法 =====
+2026-10-14T09:22:48.628175054+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   检查点形式 adapter
+2026-10-14T09:22:48.628189212+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   参数量 总量 597,196,800  可训练 1,146,880  占比 0.001920
+2026-10-14T09:22:48.628200796+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   注入位置 per-layer
+2026-10-14T09:22:48.628204989+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 存在可训练参数  1,146,880
+2026-10-14T09:22:48.628208157+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 数据 =====
+2026-10-14T09:22:48.788592046+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   训练集 7073 条  开发集 400 条
+2026-10-14T09:22:48.788620198+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 训练集条数  7073，期望 7073
+2026-10-14T09:22:54.164572018+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   训练文本 最长 479  均值 186.8 token  编码 5.4 秒
+2026-10-14T09:22:54.164604454+08:00 dlc6ajiff5z8rl9o-master-0 pytorch [OK] 样本不超长  超 512 的 0 条，上限 512
+2026-10-14T09:22:54.344967412+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   开发集提示 最长 214 token
+2026-10-14T09:22:54.346751499+08:00 dlc6ajiff5z8rl9o-master-0 pytorch ===== 训练 =====
+2026-10-14T09:22:54.346773963+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   轮数 3  每轮步数 111  计划总步数 12  预热 0 步
+2026-10-14T09:22:54.346778069+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   微批 16  累积 4  有效批 64  学习率 3.00e-04  调度 cosine
+2026-10-14T09:22:54.741999948+08:00 dlc6ajiff5z8rl9o-master-0 pytorch Traceback (most recent call last):
+2026-10-14T09:22:54.742035202+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2026-10-14T09:22:54.742039101+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return _run_code(code, main_globals, None,
+2026-10-14T09:22:54.742042247+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/runpy.py", line 86, in _run_code
+2026-10-14T09:22:54.742045655+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     exec(code, run_globals)
+2026-10-14T09:22:54.742048857+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/mnt/code/AI_lab1/exp1/src/train.py", line 511, in <module>
+2026-10-14T09:22:54.742051823+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     raise SystemExit(main())
+2026-10-14T09:22:54.742055761+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/mnt/code/AI_lab1/exp1/src/train.py", line 385, in main
+2026-10-14T09:22:54.742060778+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     outputs = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+2026-10-14T09:22:54.742066463+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+2026-10-14T09:22:54.742071535+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return self._call_impl(*args, **kwargs)
+2026-10-14T09:22:54.742074813+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+2026-10-14T09:22:54.742077838+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return forward_call(*args, **kwargs)
+2026-10-14T09:22:54.742080905+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/peft/peft_model.py", line 2158, in forward
+2026-10-14T09:22:54.742083988+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return self.base_model(input_ids=input_ids, inputs_embeds=inputs_embeds, **kwargs)
+2026-10-14T09:22:54.742087112+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+2026-10-14T09:22:54.74209016+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return self._call_impl(*args, **kwargs)
+2026-10-14T09:22:54.742093401+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+2026-10-14T09:22:54.742096462+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     return forward_call(*args, **kwargs)
+2026-10-14T09:22:54.742099553+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
+2026-10-14T09:22:54.742102681+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     output = func(self, *args, **kwargs)
+2026-10-14T09:22:54.742106794+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 486, in forward
+2026-10-14T09:22:54.742109773+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     loss = self.loss_function(logits=logits, labels=labels, vocab_size=self.config.vocab_size, **kwargs)
+2026-10-14T09:22:54.742112753+08:00 dlc6ajiff5z8rl9o-master-0 pytorch   File "/usr/local/lib/python3.10/site-packages/transformers/loss/loss_utils.py", line 59, in ForCausalLMLoss
+2026-10-14T09:22:54.742115752+08:00 dlc6ajiff5z8rl9o-master-0 pytorch     logits = logits.float()
+2026-10-14T09:22:54.742120753+08:00 dlc6ajiff5z8rl9o-master-0 pytorch torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.72 GiB. GPU 0 has a total capacity of 15.77 GiB of which 799.44 MiB is free. Process 2818 has 14.98 GiB memory in use. Of the allocated memory 12.92 GiB is allocated by PyTorch, and 1.69 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

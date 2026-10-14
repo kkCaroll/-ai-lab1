@@ -23,8 +23,8 @@ data:
 
 train:
   epochs: 3
-  batch_size: 16          # 单卡每步样本数
-  grad_accum: 4           # 与 batch_size 相乘得有效批 64
+  batch_size: 8           # 单卡每步样本数，上限由 logits 及其 float32 上转定，见 LOG/02 的 Q13
+  grad_accum: 8           # 与 batch_size 相乘得有效批 64
   lr: null                # 由方法段给出，五种方法的量级不同
   weight_decay: 0.0
   warmup_ratio: 0.03
@@ -37,7 +37,7 @@ train:
 eval:
   every_epoch: true       # 训练中的中间评测，每轮跑开发集全量 400 条
   dataset: dev            # 只接受 dev，置为 test 即中止，见 PLAN/02 的 R7
-  batch_size: 32
+  batch_size: 16          # 训练中的评测与优化器状态并存，须比独立评测的批小
   max_new_tokens: 512
   limit: null
 

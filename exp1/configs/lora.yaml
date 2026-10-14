@@ -5,7 +5,7 @@ method: lora
 train:
   lr: 2.0e-4              # 可训练参数少，学习率取全参微调的两倍
   epochs: 3
-  gradient_checkpointing: false   # 可训练参数占比低，显存余量足，关掉以换速度
+  gradient_checkpointing: false   # 关掉以换速度，代价是激活值随微批线性涨，故微批取 8 而非 16
 
 lora:
   r: 8                    # 低秩矩阵的秩，P2.5 扫描

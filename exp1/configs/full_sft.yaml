@@ -8,6 +8,6 @@ method: full_sft
 train:
   lr: 1.0e-4
   epochs: 3
-  batch_size: 8           # 全参微调，激活值与优化器状态均占显存，批取小
-  grad_accum: 8           # 有效批仍为 64
+  batch_size: 4           # 全参微调另有 8.9 GiB 的 float32 参数与优化器状态，批取共用值的一半
+  grad_accum: 16          # 有效批仍为 64
   gradient_checkpointing: true

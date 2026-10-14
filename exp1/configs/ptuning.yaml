@@ -8,7 +8,7 @@ method: ptuning
 train:
   lr: 3.0e-4
   epochs: 3
-  gradient_checkpointing: false
+  gradient_checkpointing: false   # 同 lora.yaml，激活值随微批线性涨，故微批取 8 而非 16
 
 ptuning:
   num_virtual_tokens: 20          # 虚拟 token 数，P2.5 扫描
