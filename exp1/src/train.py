@@ -428,7 +428,9 @@ def main() -> int:  # noqa: C901
         if truncated_epoch:
             log(f"  已达 max_steps {total_steps}，本轮样本未跑完")
 
-        if eval_config["every_epoch"]:
+        # eval.mode 取 final 时只评末次，被 max_steps 截断的那一轮也是末次
+        last_epoch = epoch == epochs or global_step >= total_steps
+        if eval_config["mode"] == "every_epoch" or last_epoch:
             metrics = _evaluate_dev(
                 model, tokenizer, dev_examples, dev_encoded, eval_config, device, amp_dtype
             )

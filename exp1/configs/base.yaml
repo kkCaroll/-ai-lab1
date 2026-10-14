@@ -35,7 +35,7 @@ train:
   log_every: 10           # 步
 
 eval:
-  every_epoch: true       # 训练中的中间评测，每轮跑开发集全量 400 条
+  mode: every_epoch       # every_epoch 每轮末评一次，final 只在末轮末评，两者都跑开发集全量 400 条
   dataset: dev            # 只接受 dev，置为 test 即中止，见 PLAN/02 的 R7
   batch_size: 16          # 训练中的评测与优化器状态并存，须比独立评测的批小
   max_new_tokens: 512

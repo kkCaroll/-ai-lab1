@@ -33,6 +33,7 @@ BASE_NAME = "base.yaml"
 METHOD_KEY = "method"
 OVERRIDE_SEPARATOR = "="
 PATH_SEPARATOR = "."
+EVAL_MODES = ("every_epoch", "final")
 
 # 基座段的键空间，键为段名，值为该段内每个键的默认取值与类型。默认取值置 None 表示
 # 该键未定，须由方法段或命令行给出，由 check 判定，不使未填的配置静默跑完。
@@ -62,7 +63,7 @@ BASE_SCHEMA: dict[str, dict[str, tuple[object, type]]] = {
         "log_every": (10, int),
     },
     "eval": {
-        "every_epoch": (True, bool),
+        "mode": ("every_epoch", str),
         "dataset": ("dev", str),
         "batch_size": (32, int),
         "max_new_tokens": (512, int),
@@ -263,6 +264,10 @@ def check(config: dict) -> None:
     if config["eval"]["dataset"] != "dev":
         raise ConfigError(
             f"eval.dataset 为 {config['eval']['dataset']}，中间评测只接受 dev，见 R7"
+        )
+    if config["eval"]["mode"] not in EVAL_MODES:
+        raise ConfigError(
+            f"eval.mode 为 {config['eval']['mode']}，可取的为 {'、'.join(EVAL_MODES)}"
         )
     if config["train"]["lr"] is None:
         raise ConfigError("train.lr 未填，须由方法段或 --set 给出")

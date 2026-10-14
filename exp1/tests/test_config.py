@@ -49,7 +49,7 @@ train:
   dtype: auto
   log_every: 10
 eval:
-  every_epoch: true
+  mode: every_epoch
   dataset: dev
   batch_size: 32
   max_new_tokens: 512
@@ -237,6 +237,12 @@ def test_check_rejects_non_gsm8k_training(layered: Path):
 def test_check_rejects_test_split_in_mid_training(layered: Path):
     merged = config.load(layered, ["eval.dataset=test"])
     with pytest.raises(config.ConfigError, match="只接受 dev"):
+        config.check(merged)
+
+
+def test_check_rejects_unknown_eval_mode(layered: Path):
+    merged = config.load(layered, ["eval.mode=last"])
+    with pytest.raises(config.ConfigError, match="eval.mode"):
         config.check(merged)
 
 
