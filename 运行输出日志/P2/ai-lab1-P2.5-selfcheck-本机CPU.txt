@@ -1,0 +1,46 @@
+===== 本机自检 开发集读数路径  2026-10-15 10:25:13
+----- 命令 python -m src.eval --model-path models/Qwen3-0.6B --data-dir ../data/raw --output-dir runs/selfcheck-dev --dataset gsm8k --split dev --limit 2 --dtype float32 --device cpu --check-consistency 2
+
+===== 环境 =====
+  设备 cpu  精度 torch.float32  种子 42
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█         | 33/311 [00:00<00:00, 324.38it/s]Loading weights:  21%|██        | 66/311 [00:00<00:00, 248.14it/s]Loading weights:  30%|██▉       | 92/311 [00:00<00:00, 227.48it/s]Loading weights:  37%|███▋      | 116/311 [00:00<00:00, 212.20it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 195.65it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 181.62it/s]Loading weights:  57%|█████▋    | 177/311 [00:00<00:00, 169.58it/s]Loading weights:  64%|██████▎   | 198/311 [00:01<00:00, 175.28it/s]Loading weights:  69%|██████▉   | 216/311 [00:01<00:00, 166.56it/s]Loading weights:  76%|███████▌  | 236/311 [00:01<00:00, 175.36it/s]Loading weights:  82%|████████▏ | 255/311 [00:01<00:00, 176.46it/s]Loading weights:  89%|████████▊ | 276/311 [00:01<00:00, 173.03it/s]Loading weights:  95%|█████████▌| 296/311 [00:01<00:00, 163.34it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 190.82it/s]
+[OK] 模型加载  4.5 秒
+
+===== 数据集 gsm8k =====
+[OK] 数据行数  2，本次限流 2 条，未与 400 核对
+[OK] 标准答案完整  缺失 0 条
+  标准答案去重 2 种
+  提示长度 最长 116，均值 89.0 token
+  提示校验和 1ec1e296a82da768  模板指纹 391a0ffc735091ce
+
+===== 一致性自检 =====
+[OK] 批量与单条一致  2 条，不一致 0 条
+
+===== 推理 =====
+  设备 cpu  精度 torch.float32  批大小 32  生成上限 512
+  模型加载 4.5 秒
+  批 1  已完成 2/2  已用 40.7 秒  预计剩余 0.0 分
+  生成 40.7 秒  批次 1  显存峰值 0.00 GiB
+
+===== 结果 =====
+  准确率 0.0000  正确 0/2
+  规则命中 {'cue': 2}
+  标记命中率 0.0000
+[OK] 抽取失败率  0.0000，0 条
+[OK] 截断率  0.0000
+[OK] 预测逐条对齐  2 条，期望 2 条
+
+===== 样例 =====
+  无抽取失败或降级的样本
+
+  产物已写出至 runs\selfcheck-dev
+
+===== 汇总 =====
+
+共计 7 项，OK 7，WARN 0，FAIL 0
+退出码 0
+
+===== 拒绝路径 开发集与不可用的数据集并列  10:28:07
+----- 命令 python -m src.eval --model-path models/Qwen3-0.6B --data-dir ../data/raw --output-dir runs/selfcheck-dev-reject --dataset arc --split dev --limit 2
+--split dev 只对 gsm8k 成立，本次给出 ['arc']
+退出码 2
