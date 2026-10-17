@@ -317,6 +317,60 @@ def test_extract_arc_short_option_skipped():
     assert result.status == FAIL
 
 
+def test_extract_arc_lead_bare_label():
+    """标签后无标点而直接接大写词，由 v3 的无标点标签级接住。"""
+    result = extract_arc("C The planet will stop rotating.", ARC_LABELS, ARC_CHOICES)
+    assert (result.status, result.method, result.value) == (OK, "lead-bare", "C")
+
+
+def test_extract_arc_lead_bare_requires_capital():
+    """无标点标签后须接大写词，冠词句仍判失败。"""
+    result = extract_arc("A car is moving down the road.", ARC_LABELS, ARC_CHOICES)
+    assert (result.status, result.method, result.value) == (FAIL, "failed", None)
+
+
+def test_extract_arc_body_anywhere():
+    """描述在前、选项原文在后时，由全文正文查找映射回标签。"""
+    result = extract_arc(
+        "Density falls as volume grows, so Planetary density will decrease.",
+        ARC_LABELS,
+        ARC_CHOICES,
+    )
+    assert (result.status, result.method, result.value) == (OK, "body-anywhere", "A")
+
+
+def test_extract_arc_body_anywhere_short_body_rejected():
+    """四字符正文可参与检测但不足以被接受，避免常用短词被误读。"""
+    choices = [
+        "Iron",
+        "Planetary days will become shorter.",
+        "The planet will stop rotating.",
+        "The planet will rotate faster.",
+    ]
+    result = extract_arc("The material is iron.", ARC_LABELS, choices)
+    assert (result.status, result.method, result.value) == (FAIL, "failed", None)
+
+
+def test_extract_arc_body_anywhere_ambiguity_rejected():
+    """两处正文同时出现即视为歧义，不取较长的一条硬猜。"""
+    choices = ["blue", "yellow", "reddish", "greenish"]
+    result = extract_arc("The river water is yellow, but the sky appears blue.", ARC_LABELS, choices)
+    assert (result.status, result.method, result.value) == (FAIL, "failed", None)
+
+
+def test_extract_arc_body_anywhere_unique_short_word():
+    """唯一命中且正文不短于五字符时接受，短正文仍可作答。"""
+    choices = ["blue", "yellow", "reddish", "greenish"]
+    result = extract_arc("The river water is yellow.", ARC_LABELS, choices)
+    assert (result.status, result.method, result.value) == (OK, "body-anywhere", "B")
+
+
+def test_extract_arc_lead_bare_conflicts_with_body():
+    """无标点标签与全文正文指向不同选项时判失败并单记 conflict。"""
+    result = extract_arc("C Planetary density will decrease.", ARC_LABELS, ARC_CHOICES)
+    assert (result.status, result.method, result.value) == (FAIL, "conflict", None)
+
+
 # ----------------- 等值判定 ------------------
 
 
@@ -360,7 +414,7 @@ def test_is_correct_arc_is_case_insensitive():
 
 def test_extract_rules_version():
     """规则版本号须与 RECORD/01-实验配置.md 所记一致，改动规则时同步递增。"""
-    assert EXTRACT_RULES_VERSION == "v2"
+    assert EXTRACT_RULES_VERSION == "v3"
 
 
 def test_import_does_not_load_torch():

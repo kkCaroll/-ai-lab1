@@ -19,7 +19,7 @@ from fractions import Fraction
 
 from src.utils import FAIL, OK, WARN
 
-EXTRACT_RULES_VERSION = "v2"
+EXTRACT_RULES_VERSION = "v3"
 
 # raw 字段的截断长度，避免少数失控输出把明细文件撑大
 RAW_LIMIT = 60
@@ -48,6 +48,9 @@ _ARC_FINAL_RE = re.compile(r"(?<![A-Za-z0-9])([A-Za-z0-9])[^A-Za-z0-9]*$")
 # 输出开头的标签，如 B. Planetary days will become shorter。标号之后必须紧跟空白，
 # 否则 3.5 m/s 一类数值会被读成标号 3。该式同时用于正文比对前剥去前置标签
 _ARC_LEAD_RE = re.compile(r"^\s*[*_`\s]*[(\[]?([A-Za-z0-9])[)\]]?\s*[.):,]\s")
+# 输出开头的标签后只有空白再接大写词，如 C The planet will stop rotating。与上式
+# 的区别在于标签后没有标点，故要求后续为大写，A car is moving 一类冠词句仍不命中
+_ARC_LEAD_BARE_RE = re.compile(r"^\s*[*_`\s]*[(\[]?([A-Za-z0-9])[)\]]?\s+(?=[A-Z])")
 
 # 引导语之后取多长的窗口找标签。不用一条正则跨过 is、: 等连接成分，是因为这些成分
 # 本身由字母组成，正则会把 is 的 i 当成标签
@@ -56,6 +59,10 @@ ARC_CUE_WINDOW = 24
 ARC_HEAD_CHARS = 80
 # 参与正文比对的选项至少这么长，过短会把任意文本都匹配上
 ARC_CHOICE_MIN_CHARS = 4
+# 全文查找选项正文的检测门槛与接受门槛。检测取四字符，使短正文也能参与竞争从而
+# 形成歧义被放弃；接受取五字符，避免 iron、sand 一类四字母常用词被读成选项
+ARC_BODY_DETECT_CHARS = 4
+ARC_BODY_ACCEPT_CHARS = 5
 
 # 数值附近可能出现但无意义的单位词
 _UNIT_RE = re.compile(
@@ -145,16 +152,23 @@ def extract_gsm8k(text: str) -> ExtractResult:
 
 
 def extract_arc(text: str, valid_labels: list[str], choices: list[str]) -> ExtractResult:
-    """按四级级联抽取选项标签，首个命中本题标签集合者即返回。
+    """按六级级联抽取选项标签，首个命中本题标签集合者即返回。
 
     标签集合由题目自带，不假设 A 至 D，测试集中另有数字标签题与三选项、五选项
-    题。四级依次为作答引导语之后的标签、全文末位孤立标签、输出开头与选项正文
-    比对、输出开头的标签。
+    题。前四级依次为作答引导语之后的标签、全文末位孤立标签、输出开头与选项正文
+    比对、输出开头的带标点标签，后两级为输出开头的无标点标签与全文选项正文查找。
+
+    后两级是 v3 追加的，不改变前四级的判定，只接管此前判失败的样本。微调后的
+    模型常省去标签后的标点而写成 C The planet will stop rotating，或在引用选项
+    原文之前先加一段描述，两种形态前四级均不覆盖，却会被读成模型未作答。无标点
+    标签须后接大写词才认，故冠词句不受影响。全文正文查找只接受唯一命中且正文不
+    短于五字符者，短正文只参与竞争而不被接受，两处命中即视为歧义放弃。后两级同
+    时命中而标签不一致时判失败并单记 conflict，不在冲突处猜测。
 
     前两级只认本题标签集合内的字符，取到集合外的字符不就此返回，而是记下备作
-    降级并继续走完余下两级。依据是 R1-1 实测，模型多以标签点号接选项正文作答，
+    降级并继续走完余下四级。依据是 R1-1 实测，模型多以标签点号接选项正文作答，
     短输出的末位常是正文末字母如 F 与 s，若在末位就此返回，本可由正文比对接住的
-    样本会被记成降级或失败。四级均未命中本题标签时，才把记下的集合外字符按降级
+    样本会被记成降级或失败。六级均未命中本题标签时，才把记下的集合外字符按降级
     返回，取值仍落盘供人工核对。
 
     第二级只认末位，是因为孤立字母出现在句中时与冠词、代词无从区分，宁可判失败
@@ -187,6 +201,21 @@ def extract_arc(text: str, valid_labels: list[str], choices: list[str]) -> Extra
     leading = _ARC_LEAD_RE.match(text)
     if leading is not None and leading.group(1) in valid_labels:
         return _label_result(leading.group(1), valid_labels, "leading-label", text[:ARC_HEAD_CHARS])
+
+    leading_bare = _ARC_LEAD_BARE_RE.match(text)
+    leading_bare = leading_bare.group(1) if leading_bare is not None else None
+    if leading_bare is not None and leading_bare not in valid_labels:
+        leading_bare = None
+    body = _match_option_anywhere(text, valid_labels, choices)
+
+    if leading_bare is not None and body is not None:
+        if leading_bare == body:
+            return _label_result(leading_bare, valid_labels, "lead-bare", text[:ARC_HEAD_CHARS])
+        return ExtractResult(None, FAIL, "conflict", _truncate(text))
+    if leading_bare is not None:
+        return _label_result(leading_bare, valid_labels, "lead-bare", text[:ARC_HEAD_CHARS])
+    if body is not None:
+        return _label_result(body, valid_labels, "body-anywhere", _truncate(text))
 
     if fallback is not None:
         value, method, context = fallback
@@ -229,6 +258,26 @@ def _match_option_text(text: str, valid_labels: list[str], choices: list[str]) -
         return hits[0][1]
 
     return None
+
+
+def _match_option_anywhere(text: str, valid_labels: list[str], choices: list[str]) -> str | None:
+    """在输出全文查找选项正文，命中唯一且足够长时返回其标签。
+
+    与 _match_option_text 的区别是不限定在输出开头，用于模型先写一段描述再引
+    选项原文的形态。检测门槛四字符，接受门槛五字符，后者防止常用短词被误读。
+    命中零处或多处一律返回 None，歧义处不猜。
+    """
+    flat = _normalize_option(text)
+    hits = []
+    for label, choice in zip(valid_labels, choices):
+        body = _normalize_option(choice)
+        if len(body) >= ARC_BODY_DETECT_CHARS and body in flat:
+            hits.append((label, len(body)))
+
+    if len(hits) != 1:
+        return None
+    label, length = hits[0]
+    return label if length >= ARC_BODY_ACCEPT_CHARS else None
 
 
 def normalize_number(fragment: str | None) -> str | None:

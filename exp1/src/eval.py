@@ -52,7 +52,7 @@ TRUNCATION_LIMITS = (0.02, 0.10)
 
 # 生成参数的按数据集默认值，依据见 PLAN/01-任务分解.md 的已定决策
 DEFAULT_BATCH_SIZE = {"gsm8k": 32, "arc": 64}
-DEFAULT_MAX_NEW_TOKENS = {"gsm8k": 512, "arc": 128}
+DEFAULT_MAX_NEW_TOKENS = {"gsm8k": 512, "arc": 512}
 
 PROGRESS_EVERY = 5
 SAMPLE_PREVIEW = 5

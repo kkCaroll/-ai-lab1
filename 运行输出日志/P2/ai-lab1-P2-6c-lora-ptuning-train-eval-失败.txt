@@ -1,0 +1,553 @@
+2026-10-17T20:26:46.683668297+08:00 dlc168pfkb9hcjoy-master-0 pytorch INFO: Try to dump ENV REQUIREMENTS_TEXT to /tmp/requirements.txt.
+2026-10-17T20:26:46.683801095+08:00 dlc168pfkb9hcjoy-master-0 pytorch INFO: Try to install requirements from /tmp/requirements.txt.
+2026-10-17T20:26:47.178983343+08:00 dlc168pfkb9hcjoy-master-0 pytorch Looking in indexes: http://mirrors.cloud.aliyuncs.com/pypi/simple/
+2026-10-17T20:26:47.320601264+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting transformers
+2026-10-17T20:26:47.326181868+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ae/ba/057af605774c3c7a9228ce61d88040749134ef320426403b31bb73755d43/transformers-5.20.1-py3-none-any.whl (12.8 MB)
+2026-10-17T20:26:47.415978896+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 154.1 MB/s eta 0:00:00
+2026-10-17T20:26:47.481860821+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting peft
+2026-10-17T20:26:47.496823483+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/70/0b/59441cdbfdd342ed03c08af90a2fe16173f0cd48ab219f523b39ca059a79/peft-0.21.2-py3-none-any.whl (835 kB)
+2026-10-17T20:26:47.503701802+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 835.4/835.4 kB 171.2 MB/s eta 0:00:00
+2026-10-17T20:26:47.566581571+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting datasets
+2026-10-17T20:26:47.57181192+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/24/cc/7f624629846c709ef1c68aa61bfb8d0ae2638cbe265104a1c2f7a630949e/datasets-5.1.0-py3-none-any.whl (604 kB)
+2026-10-17T20:26:47.577002028+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 604.4/604.4 kB 181.4 MB/s eta 0:00:00
+2026-10-17T20:26:47.633140907+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting accelerate
+2026-10-17T20:26:47.639093539+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/4c/34f0450479d01195027260da68d8a3880683f1640c3ca5adf64acb3185f1/accelerate-1.15.0-py3-none-any.whl (394 kB)
+2026-10-17T20:26:47.64362848+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 144.2 MB/s eta 0:00:00
+2026-10-17T20:26:48.016972948+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting huggingface-hub<3.0,>=1.31.0
+2026-10-17T20:26:48.022574193+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/eb/b0/0f7b430fd100b3a3b037fdbb314878200241082e607b3383c63d91a13a72/huggingface_hub-2.2.0-py3-none-any.whl (839 kB)
+2026-10-17T20:26:48.028977509+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 kB 190.9 MB/s eta 0:00:00
+2026-10-17T20:26:48.032414058+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.10/site-packages (from transformers->-r /tmp/requirements.txt (line 1)) (2.1.2)
+2026-10-17T20:26:48.078353216+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting packaging>=20.0
+2026-10-17T20:26:48.082871633+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-17T20:26:48.086672983+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 64.0 MB/s eta 0:00:00
+2026-10-17T20:26:48.166186043+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting tqdm>=4.60
+2026-10-17T20:26:48.171537901+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-10-17T20:26:48.174880959+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 44.2 MB/s eta 0:00:00
+2026-10-17T20:26:48.506494048+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting safetensors>=0.8.0
+2026-10-17T20:26:48.512108811+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/50/f203ff3a3ddfe19308efc83c5a3a29ed02bf786732ec35e68bf9162f3365/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+2026-10-17T20:26:48.5173586+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 157.1 MB/s eta 0:00:00
+2026-10-17T20:26:48.577242586+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting typer
+2026-10-17T20:26:48.582631552+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/07/ea/2e31b67051e91a133189e9c000c222502ddc6969856416de0d095de4c0b0/typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-17T20:26:48.586274382+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.3/123.3 kB 63.5 MB/s eta 0:00:00
+2026-10-17T20:26:48.677837309+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting pyyaml>=5.1
+2026-10-17T20:26:48.683416704+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/7a/1e/7acc4f0e74c4b3d9531e24739e0ab832a5edf40e64fbae1a9c01941cabd7/pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+2026-10-17T20:26:48.689362618+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 192.2 MB/s eta 0:00:00
+2026-10-17T20:26:49.95697286+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting regex>=2025.10.22
+2026-10-17T20:26:49.963145688+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/99/eae371ca63f7ea1f1eac025021527adb57ce3a4b67ff608b896fd31ea447/regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (797 kB)
+2026-10-17T20:26:49.98085117+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 kB 50.5 MB/s eta 0:00:00
+2026-10-17T20:26:50.417305826+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting tokenizers<0.24.0,>=0.23.1
+2026-10-17T20:26:50.422762575+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3a/40/6706b82693715581457c6d5423eaa7faae576bb0526c5738a57085eb4449/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+2026-10-17T20:26:50.444462724+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 171.7 MB/s eta 0:00:00
+2026-10-17T20:26:50.682051579+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting psutil
+2026-10-17T20:26:50.68764368+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-10-17T20:26:50.691709899+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 70.0 MB/s eta 0:00:00
+2026-10-17T20:26:50.700143082+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: torch>=1.13.0 in /usr/local/lib/python3.10/site-packages (from peft->-r /tmp/requirements.txt (line 2)) (2.6.0+cu126)
+2026-10-17T20:26:50.86186304+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: filelock in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (3.19.1)
+2026-10-17T20:26:51.263505915+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting xxhash
+2026-10-17T20:26:51.309276413+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5f/3b/e5d20b4f602d15fc5fc066f601052a7d6f5a401a50d67fac92098a5829a5/xxhash-4.0.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (249 kB)
+2026-10-17T20:26:51.31552517+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 249.5/249.5 kB 56.0 MB/s eta 0:00:00
+2026-10-17T20:26:51.317682993+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: fsspec[http]<=2026.7.0,>=2023.1.0 in /usr/local/lib/python3.10/site-packages (from datasets->-r /tmp/requirements.txt (line 3)) (2025.9.0)
+2026-10-17T20:26:51.353368334+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting dill<0.4.2,>=0.3.0
+2026-10-17T20:26:51.358476502+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/1e/77/dc8c558f7593132cf8fefec57c4f60c83b16941c574ac5f619abb3ae7933/dill-0.4.1-py3-none-any.whl (120 kB)
+2026-10-17T20:26:51.362160249+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 62.2 MB/s eta 0:00:00
+2026-10-17T20:26:51.414893273+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting multiprocess<0.70.20
+2026-10-17T20:26:51.432993363+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e3/45/8004d1e6b9185c1a444d6b55ac5682acf9d98035e54386d967366035a03a/multiprocess-0.70.19-py310-none-any.whl (134 kB)
+2026-10-17T20:26:51.436729563+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 66.4 MB/s eta 0:00:00
+2026-10-17T20:26:51.731294583+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting pyarrow>=24.0.0
+2026-10-17T20:26:51.76511141+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/57/5c/f8fc0eb2de03464a557d5a4d0c15e972d73362414696618833b771f7eddd/pyarrow-25.0.1-cp310-cp310-manylinux_2_28_x86_64.whl (50.1 MB)
+2026-10-17T20:26:52.062610991+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 54.3 MB/s eta 0:00:00
+2026-10-17T20:26:52.472576893+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting pandas
+2026-10-17T20:26:52.478028758+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/40/a8/4dac1f8f8235e5d25b9955d02ff6f29396191d4e665d71122c3722ca83c5/pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-10-17T20:26:52.547072931+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 179.5 MB/s eta 0:00:00
+2026-10-17T20:26:54.386169404+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting aiohttp!=4.0.0a0,!=4.0.0a1
+2026-10-17T20:26:54.392350126+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/38/01f5fc732d5373d6c099db0343279cd4e6607287d336bab6ff6ae9085a0d/aiohttp-3.14.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+2026-10-17T20:26:54.420929655+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 69.3 MB/s eta 0:00:00
+2026-10-17T20:26:54.532596071+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting click<9.0.0,>=8.4.2
+2026-10-17T20:26:54.537716632+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-17T20:26:54.541407523+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 64.6 MB/s eta 0:00:00
+2026-10-17T20:26:54.613993168+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting tomli>=1.1.0
+2026-10-17T20:26:54.619320775+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/60/3f/3e3f8fd0919249b0200c80fbc4f9a1e70be19f9883da71dfb7f8b9ab8aca/tomli-2.5.0-py3-none-any.whl (14 kB)
+2026-10-17T20:26:54.648456288+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting httpx2<3,>=2.0.0
+2026-10-17T20:26:54.653526189+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/d8/9c/6fe8931fd9f381042a9e4c7d5a7b4cbf7016b252bec0c99a49fce42c3326/httpx2-2.13.1-py3-none-any.whl (95 kB)
+2026-10-17T20:26:54.65751208+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.6/95.6 kB 39.1 MB/s eta 0:00:00
+2026-10-17T20:26:54.659255795+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.10/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers->-r /tmp/requirements.txt (line 1)) (4.15.0)
+2026-10-17T20:26:54.789037651+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting hf-xet<2.0.0,>=1.6.0
+2026-10-17T20:26:54.794339252+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/a3/4c/2bf3b66c215d409655f28de1622393dde04c9461280d48c7924bb3b2decd/hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+2026-10-17T20:26:54.812638573+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 259.8 MB/s eta 0:00:00
+2026-10-17T20:26:54.947386715+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-cusolver-cu12==11.7.1.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.7.1.2)
+2026-10-17T20:26:54.947722151+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: networkx in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.3)
+2026-10-17T20:26:54.948021146+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.1.3)
+2026-10-17T20:26:54.949303861+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.21.5)
+2026-10-17T20:26:54.950578803+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-cusparselt-cu12==0.6.3 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (0.6.3)
+2026-10-17T20:26:54.95169103+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-cuda-runtime-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-17T20:26:54.95296633+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-cusparse-cu12==12.5.4.2 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.5.4.2)
+2026-10-17T20:26:54.95421358+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-cudnn-cu12==9.5.1.17 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (9.5.1.17)
+2026-10-17T20:26:54.955295006+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-nvjitlink-cu12==12.6.85 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.85)
+2026-10-17T20:26:54.95699175+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-cuda-cupti-cu12==12.6.80 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.80)
+2026-10-17T20:26:54.958289937+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-17T20:26:54.959476019+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: triton==3.2.0 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (3.2.0)
+2026-10-17T20:26:54.960745069+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-cublas-cu12==12.6.4.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.4.1)
+2026-10-17T20:26:54.961806664+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.13.1)
+2026-10-17T20:26:54.962896652+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-curand-cu12==10.3.7.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (10.3.7.77)
+2026-10-17T20:26:54.964163948+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-cufft-cu12==11.3.0.4 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (11.3.0.4)
+2026-10-17T20:26:54.965484393+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: nvidia-nvtx-cu12==12.6.77 in /usr/local/lib/python3.10/site-packages (from torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (12.6.77)
+2026-10-17T20:26:54.999136242+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/site-packages (from sympy==1.13.1->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (1.3.0)
+2026-10-17T20:26:55.164382397+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting pytz>=2020.1
+2026-10-17T20:26:55.169994438+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/4f/ef/c66110d46fb800dda0bf33164182dfadabe26a90e4476844d502a23dca8e/pytz-2026.5-py2.py3-none-any.whl (506 kB)
+2026-10-17T20:26:55.175204263+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 155.4 MB/s eta 0:00:00
+2026-10-17T20:26:55.205937608+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting tzdata>=2022.7
+2026-10-17T20:26:55.211203702+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/94/21/1e5995a1c920cce14e4bffae20c665ec10e7ed03ab25e006cd741092b718/tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-10-17T20:26:55.215544195+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.0/348.0 kB 139.2 MB/s eta 0:00:00
+2026-10-17T20:26:55.252132675+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting python-dateutil>=2.8.2
+2026-10-17T20:26:55.257237039+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-10-17T20:26:55.261244473+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 103.0 MB/s eta 0:00:00
+2026-10-17T20:26:55.318716026+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting annotated-doc>=0.0.2
+2026-10-17T20:26:55.323683412+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-17T20:26:55.432736481+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting rich>=13.8.0
+2026-10-17T20:26:55.437957226+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-17T20:26:55.442441139+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 117.0 MB/s eta 0:00:00
+2026-10-17T20:26:55.474904711+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting shellingham>=1.3.0
+2026-10-17T20:26:55.479882876+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-17T20:26:56.356841963+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting yarl<2.0,>=1.25.1
+2026-10-17T20:26:56.362882576+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/28/b9/7818ac6dec7fbcd16be2d19495807c01e2c38834e57d41c63356a75e786b/yarl-1.25.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (118 kB)
+2026-10-17T20:26:56.37006026+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 21.0 MB/s eta 0:00:00
+2026-10-17T20:26:56.399062585+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting attrs>=17.3.0
+2026-10-17T20:26:56.404077477+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-17T20:26:56.407352758+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 37.5 MB/s eta 0:00:00
+2026-10-17T20:26:56.423936736+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting aiosignal>=1.4.0
+2026-10-17T20:26:56.429308839+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2026-10-17T20:26:56.611586749+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting frozenlist>=1.1.1
+2026-10-17T20:26:56.627165816+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5d/ed/c7895fd2fde7f3ee70d248175f9b6cdf792fb741ab92dc59cd9ef3bd241b/frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (219 kB)
+2026-10-17T20:26:56.631333656+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.5/219.5 kB 97.9 MB/s eta 0:00:00
+2026-10-17T20:26:57.416326266+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting multidict<8.0,>=4.5
+2026-10-17T20:26:57.433804585+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/5a/9c/598d765e98aa02ff7204b6f11cf790e5840f5e8252d7b1d955ed0043bb94/multidict-7.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (464 kB)
+2026-10-17T20:26:57.44501716+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.4/464.4 kB 49.6 MB/s eta 0:00:00
+2026-10-17T20:26:57.4771741+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting aiohappyeyeballs>=2.5.0
+2026-10-17T20:26:57.48226407+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+2026-10-17T20:26:57.681512615+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting propcache>=0.2.0
+2026-10-17T20:26:57.687631204+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/f0/51/5adee15e12a7e314cece4543fbf295b0fe1b504dc78b32dff4c8eb1e29b0/propcache-0.5.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (224 kB)
+2026-10-17T20:26:57.69192217+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.3/224.3 kB 98.9 MB/s eta 0:00:00
+2026-10-17T20:26:57.720309523+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting async-timeout<6.0,>=4.0
+2026-10-17T20:26:57.725642893+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/fe/ba/e2081de779ca30d473f21f5b30e0e737c438205440784c7dfc81efc2b029/async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+2026-10-17T20:26:57.804474362+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting anyio>=4.10
+2026-10-17T20:26:57.809631546+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-17T20:26:57.81315264+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 72.9 MB/s eta 0:00:00
+2026-10-17T20:26:57.838273703+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting idna>=3.18
+2026-10-17T20:26:57.843273322+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl (69 kB)
+2026-10-17T20:26:57.846503984+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 37.4 MB/s eta 0:00:00
+2026-10-17T20:26:57.875532614+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting truststore>=0.10
+2026-10-17T20:26:57.880862348+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/51/e9/3a7820be2bb0fe53b6bc9c3be26d3d1158004e4c3ab953aa6840b955b1e9/truststore-0.10.5-py3-none-any.whl (19 kB)
+2026-10-17T20:26:57.914798978+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting httpcore2==2.13.1
+2026-10-17T20:26:57.919758463+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/09/ba/a4568248771ce81957bfb7cc600264a40fbcda092391ee1c415c50be4bea/httpcore2-2.13.1-py3-none-any.whl (83 kB)
+2026-10-17T20:26:57.923132087+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 46.0 MB/s eta 0:00:00
+2026-10-17T20:26:57.955329043+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting h11>=0.16
+2026-10-17T20:26:57.960310798+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-17T20:26:57.998579769+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting six>=1.5
+2026-10-17T20:26:58.003604184+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-17T20:26:58.062624831+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting pygments<3.0.0,>=2.13.0
+2026-10-17T20:26:58.068013581+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-17T20:26:58.077846045+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 155.5 MB/s eta 0:00:00
+2026-10-17T20:26:58.118842059+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting markdown-it-py>=2.2.0
+2026-10-17T20:26:58.123897295+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-17T20:26:58.12729742+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 49.8 MB/s eta 0:00:00
+2026-10-17T20:26:58.150542638+08:00 dlc168pfkb9hcjoy-master-0 pytorch Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/site-packages (from jinja2->torch>=1.13.0->peft->-r /tmp/requirements.txt (line 2)) (2.1.5)
+2026-10-17T20:26:58.231235553+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting typing-extensions>=4.1.0
+2026-10-17T20:26:58.236328423+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-17T20:26:58.239421298+08:00 dlc168pfkb9hcjoy-master-0 pytorch      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 25.5 MB/s eta 0:00:00
+2026-10-17T20:26:58.261378254+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting exceptiongroup>=1.0.2
+2026-10-17T20:26:58.26640012+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/8a/0e/97c33bf5009bdbac74fd2beace167cab3f978feb69cc36f1ef79360d6c4e/exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-10-17T20:26:58.340397078+08:00 dlc168pfkb9hcjoy-master-0 pytorch Collecting mdurl~=0.1
+2026-10-17T20:26:58.345338803+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-17T20:26:59.237562512+08:00 dlc168pfkb9hcjoy-master-0 pytorch Installing collected packages: pytz, xxhash, tzdata, typing-extensions, truststore, tqdm, tomli, six, shellingham, safetensors, regex, pyyaml, pygments, pyarrow, psutil, propcache, packaging, mdurl, idna, hf-xet, h11, frozenlist, dill, click, attrs, async-timeout, annotated-doc, aiohappyeyeballs, python-dateutil, multiprocess, multidict, markdown-it-py, httpcore2, exceptiongroup, aiosignal, yarl, rich, pandas, anyio, typer, httpx2, aiohttp, huggingface-hub, tokenizers, datasets, accelerate, transformers, peft
+2026-10-17T20:26:59.417687782+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Attempting uninstall: typing-extensions
+2026-10-17T20:26:59.418206133+08:00 dlc168pfkb9hcjoy-master-0 pytorch     Found existing installation: typing_extensions 4.15.0
+2026-10-17T20:26:59.420357078+08:00 dlc168pfkb9hcjoy-master-0 pytorch     Uninstalling typing_extensions-4.15.0:
+2026-10-17T20:26:59.838008542+08:00 dlc168pfkb9hcjoy-master-0 pytorch       Successfully uninstalled typing_extensions-4.15.0
+2026-10-17T20:27:01.987656662+08:00 dlc168pfkb9hcjoy-master-0 pytorch   Attempting uninstall: idna
+2026-10-17T20:27:01.988341617+08:00 dlc168pfkb9hcjoy-master-0 pytorch     Found existing installation: idna 3.11
+2026-10-17T20:27:01.99131536+08:00 dlc168pfkb9hcjoy-master-0 pytorch     Uninstalling idna-3.11:
+2026-10-17T20:27:01.992055614+08:00 dlc168pfkb9hcjoy-master-0 pytorch       Successfully uninstalled idna-3.11
+2026-10-17T20:27:13.860544307+08:00 dlc168pfkb9hcjoy-master-0 pytorch Successfully installed accelerate-1.15.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 annotated-doc-0.0.5 anyio-4.15.1 async-timeout-5.0.1 attrs-26.1.0 click-8.5.0 datasets-5.1.0 dill-0.4.1 exceptiongroup-1.3.1 frozenlist-1.8.0 h11-0.16.0 hf-xet-1.7.0 httpcore2-2.13.1 httpx2-2.13.1 huggingface-hub-2.2.0 idna-3.20 markdown-it-py-4.2.0 mdurl-0.1.2 multidict-7.1.0 multiprocess-0.70.19 packaging-26.3 pandas-2.3.3 peft-0.21.2 propcache-0.5.4 psutil-7.2.2 pyarrow-25.0.1 pygments-2.21.0 python-dateutil-2.9.0.post0 pytz-2026.5 pyyaml-6.0.3 regex-2026.9.29 rich-15.0.0 safetensors-0.8.0 shellingham-1.5.4 six-1.17.0 tokenizers-0.23.3 tomli-2.5.0 tqdm-4.70.1 transformers-5.20.1 truststore-0.10.5 typer-0.27.3 typing-extensions-4.16.0 tzdata-2026.5 xxhash-4.0.1 yarl-1.25.1
+2026-10-17T20:27:13.860829155+08:00 dlc168pfkb9hcjoy-master-0 pytorch WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2026-10-17T20:27:13.95547134+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T20:27:13.955481242+08:00 dlc168pfkb9hcjoy-master-0 pytorch [notice] A new release of pip is available: 23.0.1 -> 26.2.1
+2026-10-17T20:27:13.955483257+08:00 dlc168pfkb9hcjoy-master-0 pytorch [notice] To update, run: pip install --upgrade pip
+2026-10-17T20:27:14.442772081+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== P2-6c 段 1/4 M2 LoRA 训练 =====
+2026-10-17T20:27:14.444904253+08:00 dlc168pfkb9hcjoy-master-0 pytorch 训练命令 python -m src.train --config configs/lora.yaml --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train --set train.lr=1.0e-4 --set train.epochs=3 --set eval.mode=final --set output.save_total_limit=1 --set train.dtype=float16
+2026-10-17T20:27:16.383474534+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T20:27:16.383493498+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 环境 =====
+2026-10-17T20:27:16.383499921+08:00 dlc168pfkb9hcjoy-master-0 pytorch   方法 lora  设备 cuda  参数精度 float32  计算精度 torch.float16  种子 42
+2026-10-17T20:27:16.383501915+08:00 dlc168pfkb9hcjoy-master-0 pytorch   配置 configs/lora.yaml  覆盖 ['train.lr=1.0e-4', 'train.epochs=3', 'eval.mode=final', 'output.save_total_limit=1', 'train.dtype=float16']
+2026-10-17T20:27:19.037464691+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 载入 =====
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 197.10it/s]
+Loading weights:  94%|█████████▍| 293/311 [00:01<00:00, 234.16it/s]
+Loading weights:  60%|█████▉    | 186/311 [00:01<00:00, 229.42it/s]
+Loading weights:   0%|          | 1/311 [00:01<05:13,  1.01s/it]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-17T20:27:22.903726828+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T20:27:23.376394546+08:00 dlc168pfkb9hcjoy-master-0 pytorch   模型加载 4.3 秒
+2026-10-17T20:27:23.376425032+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 分词器结束标记  <|im_end|> 编号 151645
+2026-10-17T20:27:23.631322985+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 方法 =====
+2026-10-17T20:27:23.631344629+08:00 dlc168pfkb9hcjoy-master-0 pytorch   检查点形式 adapter
+2026-10-17T20:27:23.63134795+08:00 dlc168pfkb9hcjoy-master-0 pytorch   参数量 总量 598,343,680  可训练 2,293,760  占比 0.003834
+2026-10-17T20:27:23.631366735+08:00 dlc168pfkb9hcjoy-master-0 pytorch   挂载模块 112 处  后缀 k_proj、o_proj、q_proj、v_proj
+2026-10-17T20:27:23.631376798+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 存在可训练参数  2,293,760
+2026-10-17T20:27:23.631378661+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 数据 =====
+2026-10-17T20:27:23.871719706+08:00 dlc168pfkb9hcjoy-master-0 pytorch   训练集 7073 条  开发集 400 条
+2026-10-17T20:27:23.871734728+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 训练集条数  7073，期望 7073
+2026-10-17T20:27:26.993954396+08:00 dlc168pfkb9hcjoy-master-0 pytorch   训练文本 最长 479  均值 186.8 token  编码 3.1 秒
+2026-10-17T20:27:26.993975073+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 样本不超长  超 512 的 0 条，上限 512
+2026-10-17T20:27:27.100284697+08:00 dlc168pfkb9hcjoy-master-0 pytorch   开发集提示 最长 214 token
+2026-10-17T20:27:27.103560951+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 训练 =====
+2026-10-17T20:27:27.10357515+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮数 3  每轮步数 111  计划总步数 333  预热 9 步
+2026-10-17T20:27:27.10359519+08:00 dlc168pfkb9hcjoy-master-0 pytorch   微批 8  累积 8  有效批 64  学习率 1.00e-04  调度 cosine
+2026-10-17T20:28:08.358555362+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 10/333  损失 1.2718  学习率 1.00e-04  速度 2855 token/s  已用 0.7 分
+2026-10-17T20:28:50.101904157+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 20/333  损失 0.8309  学习率 9.97e-05  速度 2842 token/s  已用 1.4 分
+2026-10-17T20:29:33.685358301+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 30/333  损失 0.7165  学习率 9.90e-05  速度 2824 token/s  已用 2.1 分
+2026-10-17T20:30:16.408143648+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 40/333  损失 0.7119  学习率 9.78e-05  速度 2829 token/s  已用 2.8 分
+2026-10-17T20:30:57.786389946+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 50/333  损失 0.6938  学习率 9.61e-05  速度 2838 token/s  已用 3.5 分
+2026-10-17T20:31:40.78286977+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 60/333  损失 0.6675  学习率 9.40e-05  速度 2833 token/s  已用 4.2 分
+2026-10-17T20:32:23.661539673+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 70/333  损失 0.6705  学习率 9.15e-05  速度 2824 token/s  已用 4.9 分
+2026-10-17T20:33:06.122819873+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 80/333  损失 0.6735  学习率 8.86e-05  速度 2825 token/s  已用 5.7 分
+2026-10-17T20:33:49.765722976+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 90/333  损失 0.6593  学习率 8.54e-05  速度 2815 token/s  已用 6.4 分
+2026-10-17T20:34:32.334064319+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 100/333  损失 0.6278  学习率 8.18e-05  速度 2814 token/s  已用 7.1 分
+2026-10-17T20:35:13.269354394+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 110/333  损失 0.6108  学习率 7.79e-05  速度 2820 token/s  已用 7.8 分
+2026-10-17T20:35:15.602578935+08:00 dlc168pfkb9hcjoy-master-0 pytorch   第 1 轮结束  平均损失 0.7392  本轮步数 111
+2026-10-17T20:35:15.907673931+08:00 dlc168pfkb9hcjoy-master-0 pytorch   检查点 checkpoints/epoch-1  文件 3 个
+2026-10-17T20:35:53.443014156+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 120/333  损失 0.6498  学习率 7.37e-05  速度 2822 token/s  已用 8.4 分
+2026-10-17T20:36:35.608790965+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 130/333  损失 0.6276  学习率 6.94e-05  速度 2821 token/s  已用 9.1 分
+2026-10-17T20:37:18.683493819+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 140/333  损失 0.6189  学习率 6.48e-05  速度 2818 token/s  已用 9.9 分
+2026-10-17T20:38:00.471252249+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 150/333  损失 0.6279  学习率 6.01e-05  速度 2819 token/s  已用 10.6 分
+2026-10-17T20:38:42.39122182+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 160/333  损失 0.6425  学习率 5.53e-05  速度 2823 token/s  已用 11.3 分
+2026-10-17T20:39:25.122521569+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 170/333  损失 0.6337  学习率 5.05e-05  速度 2822 token/s  已用 12.0 分
+2026-10-17T20:40:08.59569982+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 180/333  损失 0.6196  学习率 4.56e-05  速度 2817 token/s  已用 12.7 分
+2026-10-17T20:40:49.779336597+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 190/333  损失 0.6187  学习率 4.08e-05  速度 2819 token/s  已用 13.4 分
+2026-10-17T20:41:30.965815482+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 200/333  损失 0.6242  学习率 3.61e-05  速度 2823 token/s  已用 14.1 分
+2026-10-17T20:42:13.778793376+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 210/333  损失 0.6103  学习率 3.15e-05  速度 2823 token/s  已用 14.8 分
+2026-10-17T20:42:58.475877626+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 220/333  损失 0.6033  学习率 2.71e-05  速度 2818 token/s  已用 15.5 分
+2026-10-17T20:43:04.655707868+08:00 dlc168pfkb9hcjoy-master-0 pytorch   第 2 轮结束  平均损失 0.6234  本轮步数 111
+2026-10-17T20:43:05.014732105+08:00 dlc168pfkb9hcjoy-master-0 pytorch   检查点 checkpoints/epoch-2  文件 3 个
+2026-10-17T20:43:05.015696154+08:00 dlc168pfkb9hcjoy-master-0 pytorch   删除较早的检查点 checkpoints/epoch-1
+2026-10-17T20:43:36.828259497+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 230/333  损失 0.5877  学习率 2.29e-05  速度 2821 token/s  已用 16.2 分
+2026-10-17T20:44:19.747720322+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 240/333  损失 0.6280  学习率 1.90e-05  速度 2821 token/s  已用 16.9 分
+2026-10-17T20:45:01.798865805+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 250/333  损失 0.6248  学习率 1.53e-05  速度 2821 token/s  已用 17.6 分
+2026-10-17T20:45:44.076294948+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 260/333  损失 0.6070  学习率 1.20e-05  速度 2820 token/s  已用 18.3 分
+2026-10-17T20:46:26.07091968+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 270/333  损失 0.6110  学习率 9.04e-06  速度 2820 token/s  已用 19.0 分
+2026-10-17T20:47:09.00135641+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 280/333  损失 0.6224  学习率 6.46e-06  速度 2820 token/s  已用 19.7 分
+2026-10-17T20:47:51.556670543+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 290/333  损失 0.5815  学习率 4.28e-06  速度 2820 token/s  已用 20.4 分
+2026-10-17T20:48:34.833113288+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 300/333  损失 0.5987  学习率 2.54e-06  速度 2819 token/s  已用 21.1 分
+2026-10-17T20:49:16.901733645+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 310/333  损失 0.6012  学习率 1.24e-06  速度 2820 token/s  已用 21.8 分
+2026-10-17T20:50:00.72666449+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 320/333  损失 0.6071  学习率 3.97e-07  速度 2817 token/s  已用 22.6 分
+2026-10-17T20:50:42.202706557+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 330/333  损失 0.6124  学习率 2.12e-08  速度 2819 token/s  已用 23.3 分
+2026-10-17T20:50:53.396861935+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 333/333  损失 0.6194  学习率 0.00e+00  速度 2818 token/s  已用 23.4 分
+2026-10-17T20:50:53.397005371+08:00 dlc168pfkb9hcjoy-master-0 pytorch   第 3 轮结束  平均损失 0.6085  本轮步数 111
+2026-10-17T20:50:58.288495776+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 1  已完成 16/400  已用 4.9 秒  预计剩余 2.0 分
+2026-10-17T20:51:42.906050744+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 5  已完成 80/400  已用 49.5 秒  预计剩余 3.3 分
+2026-10-17T20:52:35.143997388+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 10  已完成 160/400  已用 101.7 秒  预计剩余 2.5 分
+2026-10-17T20:53:43.105843776+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 15  已完成 240/400  已用 169.7 秒  预计剩余 1.9 分
+2026-10-17T20:55:00.950693288+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 20  已完成 320/400  已用 247.5 秒  预计剩余 1.0 分
+2026-10-17T20:56:38.190235966+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 25  已完成 400/400  已用 344.8 秒  预计剩余 0.0 分
+2026-10-17T20:56:38.210483513+08:00 dlc168pfkb9hcjoy-master-0 pytorch   开发集  准确率 0.4850  正确 194/400  均长 98.1 token  用时 344.8 秒
+2026-10-17T20:56:38.545738611+08:00 dlc168pfkb9hcjoy-master-0 pytorch   检查点 checkpoints/epoch-3  文件 3 个
+2026-10-17T20:56:38.546722428+08:00 dlc168pfkb9hcjoy-master-0 pytorch   删除较早的检查点 checkpoints/epoch-2
+2026-10-17T20:56:38.546916235+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 结束 =====
+2026-10-17T20:56:38.546933448+08:00 dlc168pfkb9hcjoy-master-0 pytorch   总步数 333  用时 29.2 分  显存峰值 10.58 GiB  处理 token 3,962,898  速度 2263 token/s
+2026-10-17T20:56:38.558622795+08:00 dlc168pfkb9hcjoy-master-0 pytorch   产物已写出至 /mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train
+2026-10-17T20:56:38.558633041+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T20:56:38.558644736+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 汇总 =====
+2026-10-17T20:56:38.558662338+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T20:56:38.558665324+08:00 dlc168pfkb9hcjoy-master-0 pytorch 共计 4 项，OK 4，WARN 0，FAIL 0
+2026-10-17T20:56:40.470043166+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train/config.json' -> '/mnt/data/exp1/runs/P2-6c/M2/train/config.json'
+2026-10-17T20:56:40.470054083+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train/env.json' -> '/mnt/data/exp1/runs/P2-6c/M2/train/env.json'
+2026-10-17T20:56:40.47005619+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train/train.log' -> '/mnt/data/exp1/runs/P2-6c/M2/train/train.log'
+2026-10-17T20:56:40.926332164+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train/checkpoints/epoch-3' -> '/mnt/data/exp1/runs/P2-6c/M2/train/epoch-3'
+2026-10-17T20:56:40.926341856+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train/checkpoints/epoch-3/README.md' -> '/mnt/data/exp1/runs/P2-6c/M2/train/epoch-3/README.md'
+2026-10-17T20:56:40.926344211+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train/checkpoints/epoch-3/adapter_model.safetensors' -> '/mnt/data/exp1/runs/P2-6c/M2/train/epoch-3/adapter_model.safetensors'
+2026-10-17T20:56:40.926346321+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train/checkpoints/epoch-3/adapter_config.json' -> '/mnt/data/exp1/runs/P2-6c/M2/train/epoch-3/adapter_config.json'
+2026-10-17T20:56:40.92648199+08:00 dlc168pfkb9hcjoy-master-0 pytorch 产物已取回 /mnt/data/exp1/runs/P2-6c/M2/train
+2026-10-17T20:56:40.926682782+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== P2-6c 段 2/4 M3 P-Tuning v2 训练 =====
+2026-10-17T20:56:40.928315692+08:00 dlc168pfkb9hcjoy-master-0 pytorch 训练命令 python -m src.train --config configs/ptuning.yaml --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train --set train.lr=1.2e-2 --set ptuning.init_weights=null --set train.epochs=3 --set eval.mode=final --set output.save_total_limit=1 --set train.dtype=float16
+2026-10-17T20:56:42.084558377+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T20:56:42.084576898+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 环境 =====
+2026-10-17T20:56:42.084584086+08:00 dlc168pfkb9hcjoy-master-0 pytorch   方法 ptuning  设备 cuda  参数精度 float32  计算精度 torch.float16  种子 42
+2026-10-17T20:56:42.084586044+08:00 dlc168pfkb9hcjoy-master-0 pytorch   配置 configs/ptuning.yaml  覆盖 ['train.lr=1.2e-2', 'ptuning.init_weights=null', 'train.epochs=3', 'eval.mode=final', 'output.save_total_limit=1', 'train.dtype=float16']
+2026-10-17T20:56:44.175432904+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 载入 =====
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1778.16it/s]
+Loading weights:  55%|█████▍    | 170/311 [00:00<00:00, 1657.33it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-17T20:56:45.114363781+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T20:56:45.592682307+08:00 dlc168pfkb9hcjoy-master-0 pytorch   模型加载 1.4 秒
+2026-10-17T20:56:45.592731559+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 分词器结束标记  <|im_end|> 编号 151645
+2026-10-17T20:56:45.608573836+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 方法 =====
+2026-10-17T20:56:45.608590698+08:00 dlc168pfkb9hcjoy-master-0 pytorch   检查点形式 adapter
+2026-10-17T20:56:45.608593464+08:00 dlc168pfkb9hcjoy-master-0 pytorch   参数量 总量 597,196,800  可训练 1,146,880  占比 0.001920
+2026-10-17T20:56:45.608598402+08:00 dlc168pfkb9hcjoy-master-0 pytorch   注入位置 per-layer
+2026-10-17T20:56:45.608611321+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 存在可训练参数  1,146,880
+2026-10-17T20:56:45.608612634+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 数据 =====
+2026-10-17T20:56:45.736404078+08:00 dlc168pfkb9hcjoy-master-0 pytorch   训练集 7073 条  开发集 400 条
+2026-10-17T20:56:45.736413897+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 训练集条数  7073，期望 7073
+2026-10-17T20:56:48.962986741+08:00 dlc168pfkb9hcjoy-master-0 pytorch   训练文本 最长 479  均值 186.8 token  编码 3.2 秒
+2026-10-17T20:56:48.963011292+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 样本不超长  超 512 的 0 条，上限 512
+2026-10-17T20:56:49.070119039+08:00 dlc168pfkb9hcjoy-master-0 pytorch   开发集提示 最长 214 token
+2026-10-17T20:56:49.07125576+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 训练 =====
+2026-10-17T20:56:49.071271511+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮数 3  每轮步数 111  计划总步数 333  预热 9 步
+2026-10-17T20:56:49.071284266+08:00 dlc168pfkb9hcjoy-master-0 pytorch   微批 4  累积 16  有效批 64  学习率 1.20e-02  调度 cosine
+2026-10-17T20:57:16.084149225+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 10/333  损失 4.9331  学习率 1.20e-02  速度 4361 token/s  已用 0.5 分
+2026-10-17T20:57:43.426375988+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 20/333  损失 1.5052  学习率 1.20e-02  速度 4339 token/s  已用 0.9 分
+2026-10-17T20:58:12.430685796+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 30/333  损失 0.9865  学习率 1.19e-02  速度 4288 token/s  已用 1.4 分
+2026-10-17T20:58:40.469426231+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 40/333  损失 0.8601  学习率 1.17e-02  速度 4299 token/s  已用 1.9 分
+2026-10-17T20:59:07.865175755+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 50/333  损失 0.8159  学习率 1.15e-02  速度 4309 token/s  已用 2.3 分
+2026-10-17T20:59:35.973557571+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 60/333  损失 0.7742  学习率 1.13e-02  速度 4306 token/s  已用 2.8 分
+2026-10-17T21:00:03.678149148+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 70/333  损失 0.7666  学习率 1.10e-02  速度 4303 token/s  已用 3.2 分
+2026-10-17T21:00:31.533029916+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 80/333  损失 0.7611  学习率 1.06e-02  速度 4305 token/s  已用 3.7 分
+2026-10-17T21:00:59.536077067+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 90/333  损失 0.7416  学习率 1.02e-02  速度 4301 token/s  已用 4.2 分
+2026-10-17T21:01:27.042374475+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 100/333  损失 0.7113  学习率 9.81e-03  速度 4305 token/s  已用 4.6 分
+2026-10-17T21:01:53.960478044+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 1/3  步 110/333  损失 0.6853  学习率 9.35e-03  速度 4312 token/s  已用 5.1 分
+2026-10-17T21:01:55.432031338+08:00 dlc168pfkb9hcjoy-master-0 pytorch   第 1 轮结束  平均损失 1.2270  本轮步数 111
+2026-10-17T21:01:55.869012322+08:00 dlc168pfkb9hcjoy-master-0 pytorch   检查点 checkpoints/epoch-1  文件 3 个
+2026-10-17T21:02:20.386923486+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 120/333  损失 0.7276  学习率 8.85e-03  速度 4313 token/s  已用 5.5 分
+2026-10-17T21:02:47.972969438+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 130/333  损失 0.7049  学习率 8.32e-03  速度 4311 token/s  已用 6.0 分
+2026-10-17T21:03:15.774378231+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 140/333  损失 0.6914  学习率 7.78e-03  速度 4311 token/s  已用 6.4 分
+2026-10-17T21:03:43.275198702+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 150/333  损失 0.7002  学习率 7.21e-03  速度 4311 token/s  已用 6.9 分
+2026-10-17T21:04:11.16328463+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 160/333  损失 0.7243  学习率 6.64e-03  速度 4312 token/s  已用 7.4 分
+2026-10-17T21:04:39.319743782+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 170/333  损失 0.7096  学习率 6.06e-03  速度 4309 token/s  已用 7.8 分
+2026-10-17T21:05:07.563463254+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 180/333  损失 0.6919  学习率 5.48e-03  速度 4304 token/s  已用 8.3 分
+2026-10-17T21:05:34.677833027+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 190/333  损失 0.6933  学习率 4.90e-03  速度 4305 token/s  已用 8.8 分
+2026-10-17T21:06:01.435766685+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 200/333  损失 0.6989  学习率 4.33e-03  速度 4313 token/s  已用 9.2 分
+2026-10-17T21:06:29.52971598+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 210/333  损失 0.6779  学习率 3.78e-03  速度 4313 token/s  已用 9.7 分
+2026-10-17T21:06:57.951909656+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 2/3  步 220/333  损失 0.6746  学习率 3.26e-03  速度 4311 token/s  已用 10.1 分
+2026-10-17T21:07:01.915248752+08:00 dlc168pfkb9hcjoy-master-0 pytorch   第 2 轮结束  平均损失 0.6979  本轮步数 111
+2026-10-17T21:07:02.219598973+08:00 dlc168pfkb9hcjoy-master-0 pytorch   检查点 checkpoints/epoch-2  文件 3 个
+2026-10-17T21:07:02.220211693+08:00 dlc168pfkb9hcjoy-master-0 pytorch   删除较早的检查点 checkpoints/epoch-1
+2026-10-17T21:07:23.565751955+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 230/333  损失 0.6657  学习率 2.75e-03  速度 4312 token/s  已用 10.6 分
+2026-10-17T21:07:51.538776472+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 240/333  损失 0.6991  学习率 2.28e-03  速度 4311 token/s  已用 11.0 分
+2026-10-17T21:08:18.8322118+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 250/333  损失 0.7011  学习率 1.84e-03  速度 4314 token/s  已用 11.5 分
+2026-10-17T21:08:46.154426478+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 260/333  损失 0.6742  学习率 1.44e-03  速度 4313 token/s  已用 12.0 分
+2026-10-17T21:09:13.867798253+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 270/333  损失 0.6863  学习率 1.09e-03  速度 4312 token/s  已用 12.4 分
+2026-10-17T21:09:42.119250744+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 280/333  损失 0.6973  学习率 7.75e-04  速度 4311 token/s  已用 12.9 分
+2026-10-17T21:10:09.481866414+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 290/333  损失 0.6500  学习率 5.14e-04  速度 4313 token/s  已用 13.3 分
+2026-10-17T21:10:37.686370842+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 300/333  损失 0.6671  学习率 3.05e-04  速度 4312 token/s  已用 13.8 分
+2026-10-17T21:11:05.057941098+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 310/333  损失 0.6777  学习率 1.49e-04  速度 4315 token/s  已用 14.3 分
+2026-10-17T21:11:33.362051167+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 320/333  损失 0.6784  学习率 4.76e-05  速度 4312 token/s  已用 14.7 分
+2026-10-17T21:12:01.071167203+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 330/333  损失 0.6899  学习率 2.54e-06  速度 4313 token/s  已用 15.2 分
+2026-10-17T21:12:08.137839922+08:00 dlc168pfkb9hcjoy-master-0 pytorch   轮 3/3  步 333/333  损失 0.6742  学习率 0.00e+00  速度 4312 token/s  已用 15.3 分
+2026-10-17T21:12:08.137997449+08:00 dlc168pfkb9hcjoy-master-0 pytorch   第 3 轮结束  平均损失 0.6810  本轮步数 111
+2026-10-17T21:12:11.27798892+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 1  已完成 16/400  已用 3.1 秒  预计剩余 1.3 分
+2026-10-17T21:12:59.974165571+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 5  已完成 80/400  已用 51.8 秒  预计剩余 3.5 分
+2026-10-17T21:13:36.62623966+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 10  已完成 160/400  已用 88.5 秒  预计剩余 2.2 分
+2026-10-17T21:15:21.637794984+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 15  已完成 240/400  已用 193.5 秒  预计剩余 2.1 分
+2026-10-17T21:16:26.516963365+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 20  已完成 320/400  已用 258.4 秒  预计剩余 1.1 分
+2026-10-17T21:18:25.160685544+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 25  已完成 400/400  已用 377.0 秒  预计剩余 0.0 分
+2026-10-17T21:18:25.178576019+08:00 dlc168pfkb9hcjoy-master-0 pytorch   开发集  准确率 0.4350  正确 174/400  均长 106.6 token  用时 377.0 秒
+2026-10-17T21:18:25.500796573+08:00 dlc168pfkb9hcjoy-master-0 pytorch   检查点 checkpoints/epoch-3  文件 3 个
+2026-10-17T21:18:25.50150823+08:00 dlc168pfkb9hcjoy-master-0 pytorch   删除较早的检查点 checkpoints/epoch-2
+2026-10-17T21:18:25.50176997+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 结束 =====
+2026-10-17T21:18:25.501792145+08:00 dlc168pfkb9hcjoy-master-0 pytorch   总步数 333  用时 21.6 分  显存峰值 10.39 GiB  处理 token 3,962,898  速度 3057 token/s
+2026-10-17T21:18:25.509946331+08:00 dlc168pfkb9hcjoy-master-0 pytorch   产物已写出至 /mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train
+2026-10-17T21:18:25.509949706+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:18:25.509951754+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 汇总 =====
+2026-10-17T21:18:25.509963958+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:18:25.509966034+08:00 dlc168pfkb9hcjoy-master-0 pytorch 共计 4 项，OK 4，WARN 0，FAIL 0
+2026-10-17T21:18:27.252329804+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train/config.json' -> '/mnt/data/exp1/runs/P2-6c/M3/train/config.json'
+2026-10-17T21:18:27.252340876+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train/env.json' -> '/mnt/data/exp1/runs/P2-6c/M3/train/env.json'
+2026-10-17T21:18:27.25234312+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train/train.log' -> '/mnt/data/exp1/runs/P2-6c/M3/train/train.log'
+2026-10-17T21:18:27.614921127+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train/checkpoints/epoch-3' -> '/mnt/data/exp1/runs/P2-6c/M3/train/epoch-3'
+2026-10-17T21:18:27.614929657+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train/checkpoints/epoch-3/README.md' -> '/mnt/data/exp1/runs/P2-6c/M3/train/epoch-3/README.md'
+2026-10-17T21:18:27.614932235+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train/checkpoints/epoch-3/adapter_model.safetensors' -> '/mnt/data/exp1/runs/P2-6c/M3/train/epoch-3/adapter_model.safetensors'
+2026-10-17T21:18:27.614935073+08:00 dlc168pfkb9hcjoy-master-0 pytorch '/mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train/checkpoints/epoch-3/adapter_config.json' -> '/mnt/data/exp1/runs/P2-6c/M3/train/epoch-3/adapter_config.json'
+2026-10-17T21:18:27.615097628+08:00 dlc168pfkb9hcjoy-master-0 pytorch 产物已取回 /mnt/data/exp1/runs/P2-6c/M3/train
+2026-10-17T21:18:27.615267002+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== P2-6c 段 3/4 M2 测试集评测 =====
+2026-10-17T21:18:27.616912746+08:00 dlc168pfkb9hcjoy-master-0 pytorch 评测命令 python -m src.eval --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/data/exp1/runs/P2-6c/M2/eval --dataset gsm8k,arc --adapter /mnt/code/AI_lab1/exp1/runs/P2-6c-M2-train/checkpoints/epoch-3 --max-new-tokens 512 --dtype float16
+2026-10-17T21:18:28.760682948+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:18:28.760706176+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 环境 =====
+2026-10-17T21:18:28.760709147+08:00 dlc168pfkb9hcjoy-master-0 pytorch   设备 cuda  精度 torch.float16  种子 42
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1637.55it/s]
+Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 1371.05it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-17T21:18:31.702155881+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:18:32.488927832+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 模型加载  2.0 秒
+2026-10-17T21:18:32.488949007+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:18:32.488951476+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 数据集 gsm8k =====
+2026-10-17T21:18:32.585215746+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 数据行数  1319，期望 1319
+2026-10-17T21:18:32.585303771+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 标准答案完整  缺失 0 条
+2026-10-17T21:18:32.585409285+08:00 dlc168pfkb9hcjoy-master-0 pytorch   标准答案去重 353 种
+2026-10-17T21:18:32.893915537+08:00 dlc168pfkb9hcjoy-master-0 pytorch   提示长度 最长 224，均值 97.3 token
+2026-10-17T21:18:32.893928891+08:00 dlc168pfkb9hcjoy-master-0 pytorch   提示校验和 e3be7afa40b4fa52  模板指纹 391a0ffc735091ce
+2026-10-17T21:18:32.893930437+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:18:32.893931721+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 推理 =====
+2026-10-17T21:18:32.893936894+08:00 dlc168pfkb9hcjoy-master-0 pytorch   设备 cuda  精度 torch.float16  批大小 32  生成上限 512
+2026-10-17T21:18:32.89393803+08:00 dlc168pfkb9hcjoy-master-0 pytorch   模型加载 2.0 秒
+2026-10-17T21:18:38.284814646+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 1  已完成 32/1319  已用 5.4 秒  预计剩余 3.6 分
+2026-10-17T21:19:13.763544455+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 5  已完成 160/1319  已用 40.9 秒  预计剩余 4.9 分
+2026-10-17T21:19:49.612806923+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 10  已完成 320/1319  已用 76.7 秒  预计剩余 4.0 分
+2026-10-17T21:21:22.469130156+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 15  已完成 480/1319  已用 169.6 秒  预计剩余 4.9 分
+2026-10-17T21:23:07.781919219+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 20  已完成 640/1319  已用 274.9 秒  预计剩余 4.9 分
+2026-10-17T21:24:24.917066394+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 25  已完成 800/1319  已用 352.0 秒  预计剩余 3.8 分
+2026-10-17T21:26:11.030296043+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 30  已完成 960/1319  已用 458.1 秒  预计剩余 2.9 分
+2026-10-17T21:27:57.877796004+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 35  已完成 1120/1319  已用 565.0 秒  预计剩余 1.7 分
+2026-10-17T21:29:47.022463947+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 40  已完成 1280/1319  已用 674.1 秒  预计剩余 0.3 分
+2026-10-17T21:30:29.146469564+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 42  已完成 1319/1319  已用 716.2 秒  预计剩余 0.0 分
+2026-10-17T21:30:29.203586101+08:00 dlc168pfkb9hcjoy-master-0 pytorch   生成 716.2 秒  批次 42  显存峰值 3.65 GiB
+2026-10-17T21:30:29.204172433+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:30:29.204176713+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 结果 =====
+2026-10-17T21:30:29.204187851+08:00 dlc168pfkb9hcjoy-master-0 pytorch   准确率 0.4435  正确 585/1319
+2026-10-17T21:30:29.204199658+08:00 dlc168pfkb9hcjoy-master-0 pytorch   规则命中 {'cue': 12, 'failed': 2, 'marker': 1251, 'tail-number': 54}
+2026-10-17T21:30:29.204202189+08:00 dlc168pfkb9hcjoy-master-0 pytorch   标记命中率 0.9484
+2026-10-17T21:30:29.204204099+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 抽取失败率  0.0015，2 条
+2026-10-17T21:30:29.204207542+08:00 dlc168pfkb9hcjoy-master-0 pytorch [WARN] 截断率  0.0531
+2026-10-17T21:30:29.204373586+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 预测逐条对齐  1319 条，期望 1319 条
+2026-10-17T21:30:29.204377036+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:30:29.204379073+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 样例 =====
+2026-10-17T21:30:29.204380991+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] gsm8k-test-0301  标准答案 8
+2026-10-17T21:30:29.204412857+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 The first page is printed on the left back, so that means that the first page is made by folding a piece of paper vertically and then unfolding it. So, the first page is made by folding a piece of pap
+2026-10-17T21:30:29.204415109+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:30:29.204416673+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] gsm8k-test-1183  标准答案 11
+2026-10-17T21:30:29.204438275+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 The first apple fell out of the tree and landed on Newton's head, so he picked up one apple. The second apple fell out of the tree and landed on Newton's head, so he picked up another apple. The third
+2026-10-17T21:30:29.204440121+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:30:30.521963313+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:30:30.521978305+08:00 dlc168pfkb9hcjoy-master-0 pytorch   产物已写出至 /mnt/data/exp1/runs/P2-6c/M2/eval
+2026-10-17T21:30:30.610741167+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:30:30.610746511+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 数据集 arc =====
+2026-10-17T21:30:30.757013617+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 数据行数  1172，期望 1172
+2026-10-17T21:30:30.757088745+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 标准答案完整  缺失 0 条
+2026-10-17T21:30:30.757207261+08:00 dlc168pfkb9hcjoy-master-0 pytorch   标签分布 {'1': 3, '2': 10, '3': 7, '4': 2, 'A': 263, 'B': 301, 'C': 303, 'D': 283}
+2026-10-17T21:30:31.006923909+08:00 dlc168pfkb9hcjoy-master-0 pytorch   提示长度 最长 217，均值 86.6 token
+2026-10-17T21:30:31.006941545+08:00 dlc168pfkb9hcjoy-master-0 pytorch   提示校验和 786ac4b930e0f805  模板指纹 391a0ffc735091ce
+2026-10-17T21:30:31.006943682+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:30:31.006955189+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 推理 =====
+2026-10-17T21:30:31.006959111+08:00 dlc168pfkb9hcjoy-master-0 pytorch   设备 cuda  精度 torch.float16  批大小 64  生成上限 512
+2026-10-17T21:30:31.006960257+08:00 dlc168pfkb9hcjoy-master-0 pytorch   模型加载 2.0 秒
+2026-10-17T21:30:59.96507663+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 1  已完成 64/1172  已用 29.0 秒  预计剩余 8.4 分
+2026-10-17T21:32:57.290711241+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 5  已完成 320/1172  已用 146.3 秒  预计剩余 6.5 分
+2026-10-17T21:35:27.521484113+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 10  已完成 640/1172  已用 296.5 秒  预计剩余 4.1 分
+2026-10-17T21:38:02.190064358+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 15  已完成 960/1172  已用 451.2 秒  预计剩余 1.7 分
+2026-10-17T21:40:00.242744032+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 19  已完成 1172/1172  已用 569.2 秒  预计剩余 0.0 分
+2026-10-17T21:40:00.325681564+08:00 dlc168pfkb9hcjoy-master-0 pytorch   生成 569.2 秒  批次 19  显存峰值 5.99 GiB
+2026-10-17T21:40:00.326294722+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:40:00.326298765+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 结果 =====
+2026-10-17T21:40:00.326300757+08:00 dlc168pfkb9hcjoy-master-0 pytorch   准确率 0.4642  正确 544/1172
+2026-10-17T21:40:00.326307403+08:00 dlc168pfkb9hcjoy-master-0 pytorch   规则命中 {'answer-pattern': 350, 'bare-label': 70, 'failed': 279, 'leading-label': 8, 'option-text': 465}
+2026-10-17T21:40:00.326334836+08:00 dlc168pfkb9hcjoy-master-0 pytorch [FAIL] 抽取失败率  0.2381，279 条
+2026-10-17T21:40:00.326342723+08:00 dlc168pfkb9hcjoy-master-0 pytorch [FAIL] 截断率  0.2696
+2026-10-17T21:40:00.32649589+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 预测逐条对齐  1172 条，期望 1172 条
+2026-10-17T21:40:00.326498817+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:40:00.326501784+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 样例 =====
+2026-10-17T21:40:00.326504521+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] Mercury_SC_409171  标准答案 B
+2026-10-17T21:40:00.3265197+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 B The engineers tested different building designs to see which would be more safe during an earthquake. The results of the tests will help them decide which building designs are better for the future.
+2026-10-17T21:40:00.326522333+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:40:00.326525815+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] Mercury_7168805  标准答案 B
+2026-10-17T21:40:00.326527882+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 B The farmers would most likely see the population of mice and rats increase because they are a common prey for hawks and other birds of prey.
+2026-10-17T21:40:00.326530775+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:40:00.326532574+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] Mercury_7166425  标准答案 B
+2026-10-17T21:40:00.326534568+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 The flow of thermal energy is from the ice to the tea because the ice is cooler than the tea and the pitcher. The flow of thermal energy is from the ice to the tea because the ice is cooler than the t
+2026-10-17T21:40:00.326536458+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:40:00.326538018+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] MDSA_2007_8_3  标准答案 A
+2026-10-17T21:40:00.326542072+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 C The reason why not planting tree seedlings might affect people who need boards in the future is because there will be more trees available for logging, which will lead to more boards being made.
+2026-10-17T21:40:00.32654371+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:40:00.326545379+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] Mercury_7094290  标准答案 C
+2026-10-17T21:40:00.326548744+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 D The invention of the microscope allowed scientists to observe the microscopic structure of living organisms, which led to the discovery that living organisms could come from non-living matter.
+2026-10-17T21:40:00.326550308+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:40:01.644204752+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:40:01.644217824+08:00 dlc168pfkb9hcjoy-master-0 pytorch   产物已写出至 /mnt/data/exp1/runs/P2-6c/M2/eval
+2026-10-17T21:40:01.719807367+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:40:01.719811303+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 汇总 =====
+2026-10-17T21:40:01.719827324+08:00 dlc168pfkb9hcjoy-master-0 pytorch 失败  抽取失败率  0.2381，279 条
+2026-10-17T21:40:01.719829921+08:00 dlc168pfkb9hcjoy-master-0 pytorch 失败  截断率  0.2696
+2026-10-17T21:40:01.719839318+08:00 dlc168pfkb9hcjoy-master-0 pytorch 警告  截断率  0.0531
+2026-10-17T21:40:01.719840353+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:40:01.719844246+08:00 dlc168pfkb9hcjoy-master-0 pytorch 共计 11 项，OK 8，WARN 1，FAIL 2
+2026-10-17T21:40:02.280085811+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== P2-6c 段 4/4 M3 测试集评测 =====
+2026-10-17T21:40:02.281705926+08:00 dlc168pfkb9hcjoy-master-0 pytorch 评测命令 python -m src.eval --model-path /mnt/data/exp1/models/Qwen3-0.6B --data-dir /mnt/data/exp1/data/raw --output-dir /mnt/data/exp1/runs/P2-6c/M3/eval --dataset gsm8k,arc --adapter /mnt/code/AI_lab1/exp1/runs/P2-6c-M3-train/checkpoints/epoch-3 --max-new-tokens 512 --dtype float16
+2026-10-17T21:40:03.417901814+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:40:03.417922847+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 环境 =====
+2026-10-17T21:40:03.417924949+08:00 dlc168pfkb9hcjoy-master-0 pytorch   设备 cuda  精度 torch.float16  种子 42
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1667.59it/s]
+Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 1441.88it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+2026-10-17T21:40:06.457736938+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:40:06.962913674+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 模型加载  1.9 秒
+2026-10-17T21:40:06.962934514+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:40:06.962937295+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 数据集 gsm8k =====
+2026-10-17T21:40:07.015661783+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 数据行数  1319，期望 1319
+2026-10-17T21:40:07.015747062+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 标准答案完整  缺失 0 条
+2026-10-17T21:40:07.015851269+08:00 dlc168pfkb9hcjoy-master-0 pytorch   标准答案去重 353 种
+2026-10-17T21:40:07.327986158+08:00 dlc168pfkb9hcjoy-master-0 pytorch   提示长度 最长 224，均值 97.3 token
+2026-10-17T21:40:07.328004178+08:00 dlc168pfkb9hcjoy-master-0 pytorch   提示校验和 e3be7afa40b4fa52  模板指纹 391a0ffc735091ce
+2026-10-17T21:40:07.328006349+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:40:07.328008423+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 推理 =====
+2026-10-17T21:40:07.328010269+08:00 dlc168pfkb9hcjoy-master-0 pytorch   设备 cuda  精度 torch.float16  批大小 32  生成上限 512
+2026-10-17T21:40:07.328018053+08:00 dlc168pfkb9hcjoy-master-0 pytorch   模型加载 1.9 秒
+2026-10-17T21:40:12.105375699+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 1  已完成 32/1319  已用 4.8 秒  预计剩余 3.2 分
+2026-10-17T21:40:53.152605818+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 5  已完成 160/1319  已用 45.8 秒  预计剩余 5.5 分
+2026-10-17T21:41:42.92157215+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 10  已完成 320/1319  已用 95.6 秒  预计剩余 5.0 分
+2026-10-17T21:42:49.170820295+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 15  已完成 480/1319  已用 161.8 秒  预计剩余 4.7 分
+2026-10-17T21:44:16.931575881+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 20  已完成 640/1319  已用 249.6 秒  预计剩余 4.4 分
+2026-10-17T21:45:32.831677594+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 25  已完成 800/1319  已用 325.5 秒  预计剩余 3.5 分
+2026-10-17T21:46:35.761833164+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 30  已完成 960/1319  已用 388.4 秒  预计剩余 2.4 分
+2026-10-17T21:48:06.689508611+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 35  已完成 1120/1319  已用 479.4 秒  预计剩余 1.4 分
+2026-10-17T21:49:40.020024352+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 40  已完成 1280/1319  已用 572.7 秒  预计剩余 0.3 分
+2026-10-17T21:50:06.248341121+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 42  已完成 1319/1319  已用 598.9 秒  预计剩余 0.0 分
+2026-10-17T21:50:06.301912695+08:00 dlc168pfkb9hcjoy-master-0 pytorch   生成 598.9 秒  批次 42  显存峰值 3.71 GiB
+2026-10-17T21:50:06.30247415+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:50:06.302477398+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 结果 =====
+2026-10-17T21:50:06.302484201+08:00 dlc168pfkb9hcjoy-master-0 pytorch   准确率 0.3829  正确 505/1319
+2026-10-17T21:50:06.302496592+08:00 dlc168pfkb9hcjoy-master-0 pytorch   规则命中 {'cue': 12, 'marker': 1247, 'tail-number': 60}
+2026-10-17T21:50:06.302503392+08:00 dlc168pfkb9hcjoy-master-0 pytorch   标记命中率 0.9454
+2026-10-17T21:50:06.3025075+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 抽取失败率  0.0000，0 条
+2026-10-17T21:50:06.302509339+08:00 dlc168pfkb9hcjoy-master-0 pytorch [WARN] 截断率  0.0561
+2026-10-17T21:50:06.302644063+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 预测逐条对齐  1319 条，期望 1319 条
+2026-10-17T21:50:06.302651561+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:50:06.302655608+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 样例 =====
+2026-10-17T21:50:06.302658649+08:00 dlc168pfkb9hcjoy-master-0 pytorch   无抽取失败或降级的样本
+2026-10-17T21:50:07.484181979+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:50:07.484197728+08:00 dlc168pfkb9hcjoy-master-0 pytorch   产物已写出至 /mnt/data/exp1/runs/P2-6c/M3/eval
+2026-10-17T21:50:07.60263086+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:50:07.602638439+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 数据集 arc =====
+2026-10-17T21:50:07.6933405+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 数据行数  1172，期望 1172
+2026-10-17T21:50:07.693403215+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 标准答案完整  缺失 0 条
+2026-10-17T21:50:07.693506509+08:00 dlc168pfkb9hcjoy-master-0 pytorch   标签分布 {'1': 3, '2': 10, '3': 7, '4': 2, 'A': 263, 'B': 301, 'C': 303, 'D': 283}
+2026-10-17T21:50:07.938974283+08:00 dlc168pfkb9hcjoy-master-0 pytorch   提示长度 最长 217，均值 86.6 token
+2026-10-17T21:50:07.938990684+08:00 dlc168pfkb9hcjoy-master-0 pytorch   提示校验和 786ac4b930e0f805  模板指纹 391a0ffc735091ce
+2026-10-17T21:50:07.938992329+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:50:07.938993698+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 推理 =====
+2026-10-17T21:50:07.938998448+08:00 dlc168pfkb9hcjoy-master-0 pytorch   设备 cuda  精度 torch.float16  批大小 64  生成上限 512
+2026-10-17T21:50:07.938999789+08:00 dlc168pfkb9hcjoy-master-0 pytorch   模型加载 1.9 秒
+2026-10-17T21:50:10.851886235+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 1  已完成 64/1172  已用 2.9 秒  预计剩余 0.8 分
+2026-10-17T21:50:32.098449802+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 5  已完成 320/1172  已用 24.2 秒  预计剩余 1.1 分
+2026-10-17T21:50:54.375363648+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 10  已完成 640/1172  已用 46.4 秒  预计剩余 0.6 分
+2026-10-17T21:52:11.352561543+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 15  已完成 960/1172  已用 123.4 秒  预计剩余 0.5 分
+2026-10-17T21:53:28.745096768+08:00 dlc168pfkb9hcjoy-master-0 pytorch   批 19  已完成 1172/1172  已用 200.8 秒  预计剩余 0.0 分
+2026-10-17T21:53:28.777142648+08:00 dlc168pfkb9hcjoy-master-0 pytorch   生成 200.8 秒  批次 19  显存峰值 5.96 GiB
+2026-10-17T21:53:28.777760698+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:53:28.777764576+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 结果 =====
+2026-10-17T21:53:28.777777738+08:00 dlc168pfkb9hcjoy-master-0 pytorch   准确率 0.3805  正确 446/1172
+2026-10-17T21:53:28.777793273+08:00 dlc168pfkb9hcjoy-master-0 pytorch   规则命中 {'answer-pattern': 458, 'bare-label': 9, 'failed': 346, 'leading-label': 10, 'option-text': 349}
+2026-10-17T21:53:28.777795676+08:00 dlc168pfkb9hcjoy-master-0 pytorch [FAIL] 抽取失败率  0.2952，346 条
+2026-10-17T21:53:28.777797661+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 截断率  0.0034
+2026-10-17T21:53:28.777962104+08:00 dlc168pfkb9hcjoy-master-0 pytorch [OK] 预测逐条对齐  1172 条，期望 1172 条
+2026-10-17T21:53:28.777965+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:53:28.777967882+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 样例 =====
+2026-10-17T21:53:28.777972915+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] Mercury_7175875  标准答案 C
+2026-10-17T21:53:28.777975824+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 The most likely effect is that planetary days will become shorter.
+2026-10-17T21:53:28.7779806+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:53:28.777983311+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] Mercury_407327  标准答案 D
+2026-10-17T21:53:28.777985928+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 The independent variable is the manipulated speed.
+2026-10-17T21:53:28.777988287+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:53:28.777992947+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] MCAS_2014_5_7  标准答案 C
+2026-10-17T21:53:28.777995778+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 The most likely reason for this behavior is to store food that will be eaten over the winter months.
+2026-10-17T21:53:28.777998404+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:53:28.778000911+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] Mercury_7086660  标准答案 C
+2026-10-17T21:53:28.778006234+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 The presence of petrified palm trees most likely provides evidence for the statement that the area was once grassland.
+2026-10-17T21:53:28.778009012+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:53:28.778010699+08:00 dlc168pfkb9hcjoy-master-0 pytorch   [FAIL] MCAS_2003_8_11  标准答案 A
+2026-10-17T21:53:28.778012349+08:00 dlc168pfkb9hcjoy-master-0 pytorch     输出 The smallest unit of copper that still maintains the characteristics of copper is the atom.
+2026-10-17T21:53:28.778013968+08:00 dlc168pfkb9hcjoy-master-0 pytorch     抽取 None  规则 failed
+2026-10-17T21:53:30.023859562+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:53:30.023864649+08:00 dlc168pfkb9hcjoy-master-0 pytorch   产物已写出至 /mnt/data/exp1/runs/P2-6c/M3/eval
+2026-10-17T21:53:30.077561009+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:53:30.077582225+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== 汇总 =====
+2026-10-17T21:53:30.077590804+08:00 dlc168pfkb9hcjoy-master-0 pytorch 失败  抽取失败率  0.2952，346 条
+2026-10-17T21:53:30.077596246+08:00 dlc168pfkb9hcjoy-master-0 pytorch 警告  截断率  0.0561
+2026-10-17T21:53:30.07759908+08:00 dlc168pfkb9hcjoy-master-0 pytorch 
+2026-10-17T21:53:30.077600645+08:00 dlc168pfkb9hcjoy-master-0 pytorch 共计 11 项，OK 9，WARN 1，FAIL 1
+2026-10-17T21:53:30.632642+08:00 dlc168pfkb9hcjoy-master-0 pytorch ===== P2-6c 四段执行完毕，M2 评测退出码 1，M3 评测退出码 1 =====
